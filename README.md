@@ -34,7 +34,8 @@
 
 * How many observations (rows) are in your data?
 
-  * For our data set on California ACT scores in 2019, there are 2,310 observations. * For SAT scores, there are 2,580 observations and 25 features.  
+  * For our data set on California ACT scores in 2019, there are 2,310 observations.
+  * For SAT scores, there are 2,580 observations and 25 features.  
   * For our 2017 IRS data set, there are 166,538 observations.
 
 * How many features (columns) are in the data?
