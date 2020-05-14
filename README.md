@@ -22,10 +22,10 @@ These days, more universities decided to waive SAT requirements in their undergr
 
 ## Finding Data
 * Where did you download the data (e.g., a web URL)?
-The Data is from the [California Department of Education](https://www.cde.ca.gov/ds/sp/ai/) as well as the [IRS website](https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-2017-zip-code-data-soi).
+  The Data is from the [California Department of Education](https://www.cde.ca.gov/ds/sp/ai/) as well as the [IRS website](https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-2017-zip-code-data-soi).
 
 * How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
-The College Board, the creators and managers of the SAT, send data at the student level to the California Department of Education. After that, they aggregate the data using the school name, school district, and county to produce the state’s SAT Report. The CDE does the same process with the ACT inc to aggregate student-level data for the ACT.
+  The College Board, the creators and managers of the SAT, send data at the student level to the California Department of Education. After that, they aggregate the data using the school name, school district, and county to produce the state’s SAT Report. The CDE does the same process with the ACT inc to aggregate student-level data for the ACT.
 
 * How many observations (rows) are in your data?
   * For our data set on California ACT scores in 2019, there are 2,310 observations. * For SAT scores, there are 2,580 observations and 25 features.  
