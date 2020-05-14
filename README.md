@@ -30,7 +30,7 @@
 
 * How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
 
-  The College Board, the creators and managers of the SAT, send data at the student level to the California Department of Education. After that, they aggregate the data using the school name, school district, and county to produce the state’s SAT Report. The CDE does the same process with the ACT inc to aggregate student-level data for the ACT.
+  The College Board, the creators and managers of the SAT, send data at the student level to the California Department of Education. After that, they aggregate the data using the school name, school district, and county to produce the state’s SAT Report. The CDE does the same process with the ACT inc to aggregate student-level data for the ACT. The IRS aggregates data based on tax returns of the year that they collect, organized by zip codes.
 
 * How many observations (rows) are in your data?
 
