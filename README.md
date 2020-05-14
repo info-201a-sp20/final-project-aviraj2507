@@ -15,11 +15,11 @@
 * What data-driven questions do you hope to answer about this domain (share at least 3)?
 
   * Question: How does household income in different areas of California can impact standardized test scores?
-  Answer: Visualization using scatter plots with income data on one axis and test scores on the other.
+    >Answer: Visualization using scatter plots with income data on one axis and test scores on the other.
   * Question: Do geographic factors affect standardized test scores?
-  Answer: Map visualization with different areas colored differently based on respective average SAT scores.
+    >Answer: Map visualization with different areas colored differently based on respective average SAT scores.
   * Question: Do these socioeconomic factors impact one test more than others?
-  Answer: Aggregate score data vs. income data across multiple time periods with visualization techniques such as waterfall plot.
+    >Answer: Aggregate score data vs. income data across multiple time periods with visualization techniques such as waterfall plot.
 
 
 
