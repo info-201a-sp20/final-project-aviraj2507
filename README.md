@@ -3,7 +3,7 @@
 ## Domain of  Interest
 * Why are you interested in this field/domain?
 
-These days, more universities decided to waive SAT requirements in their undergraduate admission process. As UW students, most of us have experience taking the SAT or the ACT at some point in our lives, thus choosing this topic. It is interesting to see this transition happening and it would be awesome if we can find a way to explain such transitions with data collected across different demographic/socioeconomic groups.
+  These days, more universities decided to waive SAT requirements in their undergraduate admission process. As UW students, most of us have experience taking the SAT or the ACT at some point in our lives, thus choosing this topic. It is interesting to see this transition happening and it would be awesome if we can find a way to explain such transitions with data collected across different demographic/socioeconomic groups.
 
 * What other examples of data driven project have you found related to this domain (share at least 3)?
 
@@ -45,4 +45,4 @@ These days, more universities decided to waive SAT requirements in their undergr
 
 * What questions (from above) can be answered using the data in this dataset?
 
-Currently, we can group student  SAT and ACT averages based on the city they’re from. This could potentially tell us which cities had the highest or lowest test scores and compare this with income averages in the IRS data set. Something we may consider is the amount of students enrolled in a particular school and its proportion to the  density of the population within cities. The data can also potentially be skewed by outliers that will shift the mean.
+  Currently, we can group student  SAT and ACT averages based on the city they’re from. This could potentially tell us which cities had the highest or lowest test scores and compare this with income averages in the IRS data set. Something we may consider is the amount of students enrolled in a particular school and its proportion to the  density of the population within cities. The data can also potentially be skewed by outliers that will shift the mean.
