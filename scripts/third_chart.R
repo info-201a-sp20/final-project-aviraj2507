@@ -14,6 +14,8 @@ irs_tax_info <- read.csv("data/natl_2017_irs.csv", stringsAsFactors = FALSE)
 
 cali_county_income <- read.csv("data/ca-county_income.csv", stringsAsFactors = FALSE)
 
+cali_zip <- read.csv("data/ca-zip-mhi.csv", stringsAsFactors = FALSE)
+
 #Matching Zip Codes to School Name
 cali_school_zip <- cali_school_info %>%
   select(School, Zip)
@@ -43,7 +45,7 @@ cali_hs_satScores <- cali_sat_zip %>%
   mutate(TotalSatScore = sum(as.numeric(AvgScrRead), as.numeric(AvgScrWrite), as.numeric(AvgScrMath))) %>%
   filter(TotalSatScore != is.na(TotalSatScore))
 
-#Combining Zip Code Income and SAT Scores
+#Combining IRS Zip Code Income and SAT Scores
 cali_hs_satScores$Zip <- as.integer(cali_hs_satScores$Zip)
 
 cali_sat_income_by_zip <- left_join(cali_hs_satScores,
@@ -77,25 +79,38 @@ cali_county_sat_income <- cali_county_sat %>%
   left_join(cali_county_income) %>%
   select(cname, AvgScrRead, AvgScrMath, AvgScrWrite, TotalSatScore, MIH)
 
+#Combining California and ZIP Code MHI
+cali_hs_sat_zip <- cali_hs_satScores %>%
+  left_join(cali_zip)
+
+names(cali_hs_sat_zip)[7] <- "MedianHouseholdIncome"
+
+######################
+
 #Beginning Third Chart
-scatter_sat_zip_HS <- ggplot(data = cali_sat_income_by_zip,
-       aes(x = TotalSatScore, y = avg_tax_income)) +
+scatter_sat_zip_HS<- ggplot(data = cali_hs_sat_zip,
+                             aes(x = TotalSatScore, y = MedianHouseholdIncome)) +
   geom_point(size = 1, color = "darkblue") +
-  ylim(0,600) +
   geom_smooth(method=lm) +
   ggtitle("SAT Score vs ZIP Code Income by HS") +
   xlab("HS Average SAT Score") +
-  ylab("Zip Code Income Measure")
+  ylab("Zip Code Median Income")
 
-scatter_sat_zip_only <- ggplot(data = zip_and_income,
-       aes(x = AvgZipSat, y = avg_tax_income)) +
+#Zip Code Only
+zip_code_only_mhi <- cali_hs_sat_zip %>%
+  group_by(Zip) %>%
+  summarize(AvgSatScore = mean(TotalSatScore)) %>%
+  left_join(cali_zip)
+
+names(zip_code_only_mhi)[3] <- "MedianHouseholdIncome"
+
+scatter_zip_only <- ggplot(data = zip_code_only_mhi,
+       aes(x = AvgSatScore, y = MedianHouseholdIncome)) +
   geom_point(size = 1, color = "darkblue") +
-  ylim(0,600) +
   geom_smooth(method=lm) +
   ggtitle("SAT Score vs ZIP Code Income by Zip Code") +
-  xlab("Zip Code Average SAT Score") +
-  ylab("Zip Code Income Measure")
-
+  xlab("HS Average SAT Score") +
+  ylab("Zip Code Median Income")
 
 #Other Chart (By County)
 scatter_sat_county <- ggplot(data = cali_county_sat_income,

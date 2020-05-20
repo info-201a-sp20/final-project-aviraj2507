@@ -10,6 +10,8 @@ irs_tax_info <- read.csv("data/natl_2017_irs.csv", stringsAsFactors = FALSE)
 
 cali_county_income <- read.csv("data/ca-county_income.csv", stringsAsFactors = FALSE)
 
+cali_zip <- read.csv("data/ca-zip-mhi.csv", stringsAsFactors = FALSE)
+
 #Matching Zip Codes to School Name
 cali_school_zip <- cali_school_info %>%
   select(School, Zip)
@@ -39,7 +41,7 @@ cali_hs_satScores <- cali_sat_zip %>%
   mutate(TotalSatScore = sum(as.numeric(AvgScrRead), as.numeric(AvgScrWrite), as.numeric(AvgScrMath))) %>%
   filter(TotalSatScore != is.na(TotalSatScore))
 
-#Combining Zip Code Income and SAT Scores
+#Combining IRS Zip Code Income and SAT Scores
 cali_hs_satScores$Zip <- as.integer(cali_hs_satScores$Zip)
 
 cali_sat_income_by_zip <- left_join(cali_hs_satScores,
@@ -72,3 +74,9 @@ cali_county_income <- cali_county_income %>%
 cali_county_sat_income <- cali_county_sat %>%
   left_join(cali_county_income) %>%
   select(cname, AvgScrRead, AvgScrMath, AvgScrWrite, TotalSatScore, MIH)
+
+#Combining California and ZIP Code MHI
+cali_hs_sat_zip <- cali_hs_satScores %>%
+  left_join(cali_zip)
+
+names(cali_hs_sat_zip)[7] <- "MedianHouseholdIncome"
