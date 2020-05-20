@@ -18,7 +18,9 @@ cali_zip <- read.csv("data/ca-zip-mhi.csv", stringsAsFactors = FALSE)
 cali_school_zip <- cali_school_info %>%
   select(School, Zip)
 
-cali_sat_zip <- left_join(cali_sat, cali_school_zip, by = c("sname" = "School"))
+cali_sat_zip <- left_join(cali_sat,
+                          cali_school_zip,
+                          by = c("sname" = "School"))
 
 #Only California IRS Info
 cali_tax_info <- irs_tax_info %>%
@@ -43,21 +45,7 @@ cali_hs_satScores <- cali_sat_zip %>%
   mutate(TotalSatScore = sum(as.numeric(AvgScrRead), as.numeric(AvgScrWrite), as.numeric(AvgScrMath))) %>%
   filter(TotalSatScore != is.na(TotalSatScore))
 
-#Combining IRS Zip Code Income and SAT Scores
 cali_hs_satScores$Zip <- as.integer(cali_hs_satScores$Zip)
-
-cali_sat_income_by_zip <- left_join(cali_hs_satScores,
-                                    cali_tax_summary,
-                                    by = c("Zip" = "zipcode")) %>%
-  select(sname, Zip, TotalSatScore, avg_tax_income) %>%
-  filter(Zip != is.na(Zip), avg_tax_income != is.na(avg_tax_income))
-
-zip_and_income <- cali_sat_income_by_zip %>%
-  group_by(Zip) %>%
-  summarize(AvgZipSat = mean(TotalSatScore)) %>%
-  left_join(cali_tax_summary, by = c("Zip" = "zipcode")) %>%
-  select(Zip, AvgZipSat, avg_tax_income)
-
 
 #Combining County Income and SAT Scores
 nchar(" County, CA")
