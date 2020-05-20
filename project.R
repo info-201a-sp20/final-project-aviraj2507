@@ -11,6 +11,8 @@ irs_tax_info <- read.csv("data/natl_2017_irs.csv", stringsAsFactors = FALSE)
 cali_county_income <- read.csv("data/ca-county_income.csv", stringsAsFactors = FALSE)
 
 cali_zip <- read.csv("data/ca-zip-mhi.csv", stringsAsFactors = FALSE)
+# Source is http://www.usa.com/rank/california-state--median-household-income--zip-code-rank.htm
+# Data aggregated from ACS 2010 - 2014 ACS Data
 
 #Matching Zip Codes to School Name
 cali_school_zip <- cali_school_info %>%
