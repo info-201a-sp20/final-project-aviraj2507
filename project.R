@@ -1,6 +1,6 @@
 #Project - Midpoint Deliverable, Data Exploration
 library("dplyr")
-
+rm(list = ls())
 #Getting the datasets
 cali_sat <- read.csv("data/ca-sat15.csv",
                      stringsAsFactors = FALSE)
@@ -63,3 +63,4 @@ cali_hs_sat_zip <- cali_hs_satScores %>%
   left_join(cali_zip)
 
 names(cali_hs_sat_zip)[7] <- "MedianHouseholdIncome"
+write.csv(cali_hs_sat_zip, file = "cali_hs_sat_zip.csv")
