@@ -11,3 +11,4 @@ summary_table <- cali_hs_sat_zip_df %>%
   select(Zip, MedianHouseholdIncome, TotalSatScore) %>%
   group_by(Zip) %>%
   summarise(MedianHouseholdIncome = mean(MedianHouseholdIncome), TotalSatScore = mean(TotalSatScore))
+
