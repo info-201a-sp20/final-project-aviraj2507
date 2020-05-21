@@ -1,9 +1,8 @@
-#third chart
+library(dplyr)
 
-# Below is a copy of the script and data from project.R
+library(ggplot2)
 
-library("dplyr")
-library("ggplot2")
+rm(list = ls())
 
 #Getting the datasets
 cali_sat <- read.csv("data/ca-sat15.csv",
@@ -72,35 +71,22 @@ names(cali_hs_sat_zip)[7] <- "MedianHouseholdIncome"
 ######################
 
 #Beginning Third Chart
-scatter_sat_zip_HS<- ggplot(data = cali_hs_sat_zip,
-                             aes(x = TotalSatScore, y = MedianHouseholdIncome)) +
+
+cali_hs_sat_zip_df <- read.csv("data/cali_hs_sat_zip.csv",
+  stringsAsFactors
+  = FALSE
+)
+
+cali_hs_sat_zip_df <- na.omit(cali_hs_sat_zip_df)
+
+scatter_sat_zip_HS <- ggplot(
+  cali_hs_sat_zip_df,
+  aes(x = TotalSatScore, y = MedianHouseholdIncome)) +
   geom_point(size = 1, color = "darkblue") +
-  geom_smooth(method=lm) +
+  geom_smooth(method = lm) +
   ggtitle("SAT Score vs ZIP Code Income by HS") +
   xlab("HS Average SAT Score") +
   ylab("Zip Code Median Income")
 
-#Zip Code Only
-zip_code_only_mhi <- cali_hs_sat_zip %>%
-  group_by(Zip) %>%
-  summarize(AvgSatScore = mean(TotalSatScore)) %>%
-  left_join(cali_zip)
-
-names(zip_code_only_mhi)[3] <- "MedianHouseholdIncome"
-
-scatter_zip_only <- ggplot(data = zip_code_only_mhi,
-       aes(x = AvgSatScore, y = MedianHouseholdIncome)) +
-  geom_point(size = 1, color = "darkblue") +
-  geom_smooth(method=lm) +
-  ggtitle("SAT Score vs ZIP Code Income by Zip Code") +
-  xlab("HS Average SAT Score") +
-  ylab("Zip Code Median Income")
-
-#Other Chart (By County)
-scatter_sat_county <- ggplot(data = cali_county_sat_income,
-       aes(x = TotalSatScore, y = MIH)) +
-  geom_point(size = 2, color = "darkgreen") +
-  geom_smooth(method=lm) +
-  ggtitle("SAT Score vs Median Household Income, by County") +
-  xlab("Average County SAT Score") +
-  ylab("Median County Household Income")
+style_file("third_chart.R")
+lint("third_chart.R")
