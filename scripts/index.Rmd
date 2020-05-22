@@ -7,24 +7,30 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+source("first_chart.R")
 ```
 
-## R Markdown
+## Introduction
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Summary Information
 
-```{r cars}
-summary(cars)
+
+## Summary Table
+
+
+## First Visualization
+
+The purpose of this visualization is to highlight the potential relationship between geographical locations and the average SAT performace. Using map visualization, we can get a better insight on location vs. SAT performance. Here is the visualization:
+
+```{r, echo=F, warning=F}
+map_gen()
 ```
+From the map visualization we can see there seems to be a higher percentage of student passing the performance benchmark near San Francisco and Sacramento than other places. Student near Fresno seems to have lower performance than others. 
 
-## Including Plots
 
-You can also embed plots, for example:
+## Second Visualization
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Third Visualization
+
