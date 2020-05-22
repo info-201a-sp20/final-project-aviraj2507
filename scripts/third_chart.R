@@ -4,53 +4,60 @@ library(ggplot2)
 
 rm(list = ls())
 
-#Getting the datasets
-cali_sat <- read.csv("data/ca-sat15.csv",
-                     stringsAsFactors = FALSE)
+# Getting the datasets
+cali_sat <- read.csv("../data/ca-sat15.csv",
+  stringsAsFactors = FALSE
+)
 
-cali_school_info <- read.csv("data/ca-pubschls.csv",
-                             stringsAsFactors = FALSE)
+cali_school_info <- read.csv("../data/ca-pubschls.csv",
+  stringsAsFactors = FALSE
+)
 
-cali_county_income <- read.csv("data/ca-county_income.csv",
-                               stringsAsFactors = FALSE)
+cali_county_income <- read.csv("../data/ca-county_income.csv",
+  stringsAsFactors = FALSE
+)
 
-cali_zip <- read.csv("data/ca-zip-mhi.csv",
-                     stringsAsFactors = FALSE)
-# Source is http://www.usa.com/rank/california-state--median-household-income--zip-code-rank.htm
+cali_zip <- read.csv("../data/ca-zip-mhi.csv",
+  stringsAsFactors = FALSE
+)
+# Source is http://www.usa.com/rank/california-state--median-household-income--zip-code-rank.html
 # Data aggregated from ACS 2010 - 2014 ACS Data
 
-#Matching Zip Codes to School Name
+# Matching Zip Codes to School Name
 cali_school_zip <- cali_school_info %>%
   select(School, Zip)
 
 cali_sat_zip <- left_join(cali_sat,
-                          cali_school_zip,
-                          by = c("sname" = "School"))
+  cali_school_zip,
+  by = c("sname" = "School")
+)
 
-#Processing SAT Score File
+# Processing SAT Score File
 cali_sat_zip$Zip <- substr(cali_sat_zip$Zip, 1, 5)
 
-cali_hs_satScores <- cali_sat_zip %>%
+cali_hs_sat_scores <- cali_sat_zip %>%
   filter(rtype == "S") %>%
   select(sname, AvgScrRead, AvgScrMath, AvgScrWrite, Zip) %>%
   distinct(sname, .keep_all = TRUE) %>%
   group_by(sname) %>%
-  mutate(TotalSatScore = sum(as.numeric(AvgScrRead),
-                             as.numeric(AvgScrWrite),
-                             as.numeric(AvgScrMath))) %>%
+  mutate(TotalSatScore = sum(
+    as.numeric(AvgScrRead),
+    as.numeric(AvgScrWrite),
+    as.numeric(AvgScrMath)
+  )) %>%
   filter(TotalSatScore != is.na(TotalSatScore))
 
-cali_hs_satScores$Zip <- as.integer(cali_hs_satScores$Zip)
+cali_hs_sat_scores$Zip <- as.integer(cali_hs_sat_scores$Zip)
 
-#Combining County Income and SAT Scores
+# Combining County Income and SAT Scores
 nchar(" County, CA")
 
 cali_county_sat <- cali_sat_zip %>%
   filter(rtype == "C") %>%
   select(cname, AvgScrRead, AvgScrMath, AvgScrWrite) %>%
   mutate(TotalSatScore = as.numeric(AvgScrRead) +
-           as.numeric(AvgScrWrite) +
-           as.numeric(AvgScrMath)) %>%
+    as.numeric(AvgScrWrite) +
+    as.numeric(AvgScrMath)) %>%
   filter(TotalSatScore != is.na(TotalSatScore))
 
 cali_county_income <- cali_county_income %>%
@@ -58,10 +65,12 @@ cali_county_income <- cali_county_income %>%
 
 cali_county_sat_income <- cali_county_sat %>%
   left_join(cali_county_income) %>%
-  select(cname, AvgScrRead, AvgScrMath, AvgScrWrite,
-         TotalSatScore, MIH)
+  select(
+    cname, AvgScrRead, AvgScrMath, AvgScrWrite,
+    TotalSatScore, MIH
+  )
 
-#Combining California and ZIP Code MHI
+# Combining California and ZIP Code MHI
 cali_hs_sat_zip <- cali_hs_satScores %>%
   left_join(cali_zip)
 
@@ -70,23 +79,26 @@ names(cali_hs_sat_zip)[7] <- "MedianHouseholdIncome"
 
 ######################
 
-#Beginning Third Chart
+# Beginning Third Chart
 
-cali_hs_sat_zip_df <- read.csv("data/cali_hs_sat_zip.csv",
+cali_hs_sat_zip_df <- read.csv("../data/cali_hs_sat_zip.csv",
   stringsAsFactors
   = FALSE
 )
 
 cali_hs_sat_zip_df <- na.omit(cali_hs_sat_zip_df)
 
-scatter_sat_zip_HS <- ggplot(
+scatter_sat_zip_hs <- ggplot(
   cali_hs_sat_zip_df,
-  aes(x = TotalSatScore, y = MedianHouseholdIncome)) +
+  aes(x = TotalSatScore, y = MedianHouseholdIncome)
+) +
   geom_point(size = 1, color = "darkblue") +
   geom_smooth(method = lm) +
   ggtitle("SAT Score vs ZIP Code Income by HS") +
   xlab("HS Average SAT Score") +
   ylab("Zip Code Median Income")
+
+scatter_sat_zip_hs
 
 style_file("third_chart.R")
 lint("third_chart.R")
