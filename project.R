@@ -59,7 +59,7 @@ cali_county_sat_income <- cali_county_sat %>%
          TotalSatScore, MIH)
 
 #Combining California and ZIP Code MHI
-cali_hs_sat_zip <- cali_hs_satScores %>%
+cali_hs_sat_zip <- cali_hs_sat_scores %>%
   left_join(cali_zip)
 
 names(cali_hs_sat_zip)[7] <- "MedianHouseholdIncome"

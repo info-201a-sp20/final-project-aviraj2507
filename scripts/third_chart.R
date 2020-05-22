@@ -5,15 +5,15 @@ library(ggplot2)
 rm(list = ls())
 
 # Getting the datasets
-cali_sat <- read.csv("../data/ca-sat15.csv",
+cali_sat <- read.csv("data/ca-sat15.csv",
   stringsAsFactors = FALSE
 )
 
-cali_school_info <- read.csv("../data/ca-pubschls.csv",
+cali_school_info <- read.csv("data/ca-pubschls.csv",
   stringsAsFactors = FALSE
 )
 
-cali_county_income <- read.csv("../data/ca-county_income.csv",
+cali_county_income <- read.csv("data/ca-county_income.csv",
   stringsAsFactors = FALSE
 )
 
@@ -71,7 +71,7 @@ cali_county_sat_income <- cali_county_sat %>%
   )
 
 # Combining California and ZIP Code MHI
-cali_hs_sat_zip <- cali_hs_satScores %>%
+cali_hs_sat_zip <- cali_hs_sat_scores %>%
   left_join(cali_zip)
 
 names(cali_hs_sat_zip)[7] <- "MedianHouseholdIncome"
@@ -81,7 +81,7 @@ names(cali_hs_sat_zip)[7] <- "MedianHouseholdIncome"
 
 # Beginning Third Chart
 
-cali_hs_sat_zip_df <- read.csv("../data/cali_hs_sat_zip.csv",
+cali_hs_sat_zip_df <- read.csv("data/cali_hs_sat_zip.csv",
   stringsAsFactors
   = FALSE
 )
@@ -101,4 +101,5 @@ scatter_sat_zip_hs <- ggplot(
 scatter_sat_zip_hs
 
 style_file("third_chart.R")
+
 lint("third_chart.R")
