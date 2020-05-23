@@ -21,7 +21,7 @@ For our project, our domain of interest is to observe the transition of standard
 
 ## Summary Information
 
-```{r include=F}
+```{r include = FALSE}
 source("summary_info.R")
 ```
 
@@ -44,13 +44,14 @@ are different for different areas(Zip code) in California.
 library(rmarkdown)
 library(DT)
 source("summary_table.R")
-DT::datatable(summary_table, options = list(rows.print = 25),)
+DT::datatable(summary_table, options = list(rows.print = 25))
 ```
 
 From the table, we can clearly observe that zip codes in the beggining 
 of the list are the areas with way less than average household income
 and low sat scores whereas zip codes towards the end of the list are 
 the areas with way more average household incomes and higher sat scores.
+
 
 ## First Visualization
 
@@ -59,34 +60,14 @@ between geographical locations and the average SAT performace. Using map
 visualization, we can get a better insight on location vs. SAT performance.
 Here is the visualization:
 
-```{r, echo=F, warning=F}
-source("first_chart.R")
-map_gen()
-```
-
-=======
-```
-
-From the table, we can clearly observe that zip codes in the beggining 
-of the list are the areas with way less than average household income
-and low sat scores whereas zip codes towards the end of the list are 
-the areas with way more average household incomes and higher sat scores.
-
-## First Visualization
-
-The purpose of this visualization is to highlight the potential relationship
-between geographical locations and the average SAT performace. Using map
-visualization, we can get a better insight on location vs. SAT performance.
-Here is the visualization:
-
-```{r, echo=F, warning=F}
+```{r, echo = FALSE, warning = FALSE}
 source("first_chart.R")
 map_gen()
 ```
 
 From the map visualization we can see there seems to be a higher percentage
 of student passing the performance benchmark near San Francisco and Sacramento
-than other places. Student near Fresno seems to have lower performance than 
+than other places. Students near Fresno seem to have lower performance than 
 others. 
 
 

@@ -5,15 +5,15 @@ library(ggplot2)
 rm(list = ls())
 
 # Getting the datasets
-cali_sat <- read.csv("data/ca-sat15.csv",
+cali_sat <- read.csv("../data/ca-sat15.csv",
   stringsAsFactors = FALSE
 )
 
-cali_school_info <- read.csv("data/ca-pubschls.csv",
+cali_school_info <- read.csv("../data/ca-pubschls.csv",
   stringsAsFactors = FALSE
 )
 
-cali_county_income <- read.csv("data/ca-county_income.csv",
+cali_county_income <- read.csv("../data/ca-county_income.csv",
   stringsAsFactors = FALSE
 )
 
@@ -81,7 +81,7 @@ names(cali_hs_sat_zip)[7] <- "MedianHouseholdIncome"
 
 # Beginning Third Chart
 
-cali_hs_sat_zip_df <- read.csv("data/cali_hs_sat_zip.csv",
+cali_hs_sat_zip_df <- read.csv("../data/cali_hs_sat_zip.csv",
   stringsAsFactors
   = FALSE
 )
@@ -102,6 +102,3 @@ scatter_sat_zip_hs
 
 corr_sat_income <- round(cor(cali_hs_sat_zip_df$TotalSatScore, cali_hs_sat_zip_df$MedianHouseholdIncome),2)
 
-style_file("third_chart.R")
-
-lint("third_chart.R")
