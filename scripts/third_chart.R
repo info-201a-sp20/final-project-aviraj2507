@@ -1,3 +1,4 @@
+# This file contains the function for the third visualisation.
 library(dplyr)
 
 library(ggplot2)
@@ -90,17 +91,20 @@ cali_hs_sat_zip_df <- na.omit(cali_hs_sat_zip_df)
 
 chart_3 <- function(data) {
   chart <- ggplot(
-  cali_hs_sat_zip_df,
-  aes(x = TotalSatScore, y = MedianHouseholdIncome)
-) +
-  geom_point(size = 1, color = "darkblue") +
-  geom_smooth(method = lm) +
-  ggtitle("SAT Score vs ZIP Code Income by HS") +
-  xlab("HS Average SAT Score") +
-  ylab("Zip Code Median Income")
+    cali_hs_sat_zip_df,
+    aes(x = TotalSatScore, y = MedianHouseholdIncome)
+  ) +
+    geom_point(size = 1, color = "darkblue") +
+    geom_smooth(method = lm) +
+    ggtitle("SAT Score vs ZIP Code Income by HS") +
+    xlab("HS Average SAT Score") +
+    ylab("Zip Code Median Income")
   return(ggplotly(chart))
 }
 chart_three <- chart_3(cali_hs_sat_zip_df)
 
-corr_sat_income <- round(cor(cali_hs_sat_zip_df$TotalSatScore, cali_hs_sat_zip_df$MedianHouseholdIncome),2)
+corr_sat_income <- round(cor(
+  cali_hs_sat_zip_df$TotalSatScore,
+  cali_hs_sat_zip_df$MedianHouseholdIncome
+), 2)
 
