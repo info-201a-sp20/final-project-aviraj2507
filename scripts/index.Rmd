@@ -63,6 +63,26 @@ source("first_chart.R")
 map_gen()
 ```
 
+=======
+```
+
+From the table, we can clearly observe that zip codes in the beggining 
+of the list are the areas with way less than average household income
+and low sat scores whereas zip codes towards the end of the list are 
+the areas with way more average household incomes and higher sat scores.
+
+## First Visualization
+
+The purpose of this visualization is to highlight the potential relationship
+between geographical locations and the average SAT performace. Using map
+visualization, we can get a better insight on location vs. SAT performance.
+Here is the visualization:
+
+```{r, echo=F, warning=F}
+source("first_chart.R")
+map_gen()
+```
+
 From the map visualization we can see there seems to be a higher percentage
 of student passing the performance benchmark near San Francisco and Sacramento
 than other places. Student near Fresno seems to have lower performance than 
@@ -74,6 +94,7 @@ others.
 The purpose of this visualization is to compare HS average SAT score and Median income by zip code. In particular, the key displays bar colors by zip code. 
 
 ```{r, echo = FALSE, warning = FALSE}
+
 source("second_chart.R")
 ggplotly(plot_ca)
 ```
