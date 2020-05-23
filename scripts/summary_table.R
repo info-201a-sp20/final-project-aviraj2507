@@ -13,8 +13,8 @@ summary_table <- cali_hs_sat_zip_df %>%
   select(Zip, MedianHouseholdIncome, TotalSatScore) %>%
   group_by(Zip) %>%
   summarise(
-    MedianHouseholdIncome = mean(MedianHouseholdIncome), TotalSatScore
+    household_income = mean(MedianHouseholdIncome), overall_sat_score
     = mean(TotalSatScore)
   ) %>%
-  arrange(Zip)
+  arrange(overall_sat_score)
 
