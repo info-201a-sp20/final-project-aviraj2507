@@ -10,20 +10,19 @@ knitr::opts_chunk$set(echo = TRUE)
 source("summary_info.R")
 source("summary_table.R")
 source("first_chart.R")
+source("second_chart.R")
 library("knitr")
-<<<<<<< HEAD
 ```
 
 ## Introduction
-For our project, our domain of interest is to observe the transition of standardized tests being a requirement for admission by universities. Specifically, we have narrowed our scope to analyze the relationship between average SAT scores and their relationship to income across cities in California. As an objective of our project, we would like to uncover some of the discepencies from area to area and how it affects students' score. Thus, findings from our report will reveal whether standardized test are a true reflection of a student's capabilities. The source of the data is from [California Department Of Education](https://www.cde.ca.gov/ds/sp/ai/) and [IRS website](https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-2017-zip-code-data-soi). 
 
-
-
-## Purpose of the Project
-
->>>>>>> 4772b320236dea4e863e4033a87c5e2a3e851d21
+For our project, our domain of interest is to observe the transition of standardized tests being a requirement for admission by universities. Specifically, we have narrowed our scope to analyze the relationship between average SAT scores and their relationship to income across zip codes in California. As an objective of our project, we would like to uncover some of the discepencies from area to area and how it affects students' score. Thus, findings from our report will reveal whether standardized test are a true reflection of a student's capabilities. The source of the data is from [California Department Of Education](https://www.cde.ca.gov/ds/sp/ai/) and [IRS website](https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-2017-zip-code-data-soi). 
 
 ## Summary Information
+
+```{r include=F}
+source("summary_info.R")
+```
 
 The summary includes some interesting analysis of how household income
 corelates to a student's total SAT score. Based on our data, the mean
@@ -41,6 +40,7 @@ The summary table portrays how total sat score and mean household income
 are different for different areas(Zip code) in California.
 
 ```{r kable_example, echo = FALSE, warning = FALSE}
+source("summary_table.R")
 kable(summary_table)
 ```
 
@@ -57,6 +57,7 @@ visualization, we can get a better insight on location vs. SAT performance.
 Here is the visualization:
 
 ```{r, echo=F, warning=F}
+source("first_chart.R")
 map_gen()
 ```
 
@@ -67,9 +68,13 @@ others.
 
 
 ## Second Visualization
+The purpose of this visualization is to compare HS average SAT score and Median income by zip code. In particular, the key displays bar colors by zip code. 
 ```{r, echo = FALSE}
+source("second_chart.R")
 ggplotly(plot_ca)
 ```
+
+From the bar chart we observe an upward trend as SAT score and median income increase. Towards the 1500 range in SAT score, not only do we see a concentration of data but the color key reflects that many of the zip codes are 955xx which is Humboldt county. Towards the upper boundary of highest SAT scores we see more 945xx zip codes which is Alameda county in the Bay area. This further confirms what we see from our map visualization.
 
 ## Third Visualization
 
