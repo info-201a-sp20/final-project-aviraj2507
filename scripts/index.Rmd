@@ -7,9 +7,6 @@ output: html_document
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-source("summary_info.R")
-source("summary_table.R")
-source("first_chart.R")
 library("knitr")
 ```
 
@@ -17,6 +14,10 @@ library("knitr")
 
 
 ## Summary Information
+
+```{r include=F}
+source("summary_info.R")
+```
 
 The summary includes some interesting analysis of how household income
 corelates to a student's total SAT score. Based on our data, the mean
@@ -34,6 +35,7 @@ The summary table portrays how total sat score and mean household income
 are different for different areas(Zip code) in California.
 
 ```{r kable_example, echo = FALSE, warning = FALSE}
+source("summary_table.R")
 kable(summary_table)
 ```
 
@@ -50,6 +52,7 @@ visualization, we can get a better insight on location vs. SAT performance.
 Here is the visualization:
 
 ```{r, echo=F, warning=F}
+source("first_chart.R")
 map_gen()
 ```
 

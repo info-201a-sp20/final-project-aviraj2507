@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 
 <meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -4224,7 +4225,6 @@ summary {
   border: none;
   display: inline-block;
   border-radius: 4px;
-  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -4265,24 +4265,3857 @@ summary {
 
 <div id="purpose-of-the-project" class="section level2">
 <h2>Purpose of the Project</h2>
-<p>These days, more universities decided to waive SAT requirements in their undergraduate admission process. As UW students, most of us have experience taking the SAT or the ACT at some point in our lives, thus this topic is huge relevance and importance to us. It is interesting to see this transition happening and is important to find a way to explain such transitions with data collected across different demographic/socioeconomic groups.</p>
-<p>The Data is from the <a href="https://www.cde.ca.gov/ds/sp/ai/">California Department of Education</a> as well as the <a href="https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-2017-zip-code-data-soi">IRS website</a>.</p>
 </div>
 <div id="summary-information" class="section level2">
 <h2>Summary Information</h2>
-<p>The summary includes some interesting analysis of how household income corelates to a student’s total SAT score. Based on our data, the mean and median household income for California is <code>summary_info.R summary_information$mean_household_income</code> and <code>summary_info.R summary_information$median_household_income</code> respectively.The average SAT score for kids in below average income household was <code>summary_info.R summary_information$avg_score_below_mean_inc</code> and for kids in above average income household was <code>summary_info.R summary_information$avg_score_above_mean_inc</code>.The zip code with the highest median household income was <code>summary_info.R summary_information$zip_with_max_income</code>.</p>
+<p>The summary includes some interesting analysis of how household income corelates to a student’s total SAT score. Based on our data, the mean and median household income for California is 6.271717610^{4} and 5.664610^{4} respectively.The average SAT score for kids in below average income household was 1364.5 and for kids in above average income household was 1539.2824074.The zip code with the highest median household income was 95070, 95070.</p>
 </div>
 <div id="summary-table" class="section level2">
 <h2>Summary Table</h2>
 <p>The summary table portrays how total sat score and mean household income are different for different areas(Zip code) in California.</p>
-<p><code>{summary_table.R kable_example, echo = FALSE} kable(summary_table)</code></p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Zip</th>
+<th align="right">household_income</th>
+<th align="right">overall_sat_score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">94609</td>
+<td align="right">56378</td>
+<td align="right">987.000</td>
+</tr>
+<tr class="even">
+<td align="right">94804</td>
+<td align="right">49541</td>
+<td align="right">1069.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92102</td>
+<td align="right">41575</td>
+<td align="right">1087.000</td>
+</tr>
+<tr class="even">
+<td align="right">90004</td>
+<td align="right">38493</td>
+<td align="right">1088.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93204</td>
+<td align="right">29302</td>
+<td align="right">1105.000</td>
+</tr>
+<tr class="even">
+<td align="right">90016</td>
+<td align="right">38050</td>
+<td align="right">1111.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90061</td>
+<td align="right">34566</td>
+<td align="right">1115.500</td>
+</tr>
+<tr class="even">
+<td align="right">90002</td>
+<td align="right">30214</td>
+<td align="right">1118.500</td>
+</tr>
+<tr class="odd">
+<td align="right">90221</td>
+<td align="right">42753</td>
+<td align="right">1120.000</td>
+</tr>
+<tr class="even">
+<td align="right">90303</td>
+<td align="right">40807</td>
+<td align="right">1127.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90017</td>
+<td align="right">21009</td>
+<td align="right">1129.000</td>
+</tr>
+<tr class="even">
+<td align="right">94710</td>
+<td align="right">60952</td>
+<td align="right">1130.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93703</td>
+<td align="right">28406</td>
+<td align="right">1134.000</td>
+</tr>
+<tr class="even">
+<td align="right">90011</td>
+<td align="right">29889</td>
+<td align="right">1138.600</td>
+</tr>
+<tr class="odd">
+<td align="right">93702</td>
+<td align="right">26031</td>
+<td align="right">1140.000</td>
+</tr>
+<tr class="even">
+<td align="right">94605</td>
+<td align="right">57610</td>
+<td align="right">1150.667</td>
+</tr>
+<tr class="odd">
+<td align="right">90043</td>
+<td align="right">38738</td>
+<td align="right">1152.000</td>
+</tr>
+<tr class="even">
+<td align="right">93640</td>
+<td align="right">25741</td>
+<td align="right">1158.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93668</td>
+<td align="right">38665</td>
+<td align="right">1163.000</td>
+</tr>
+<tr class="even">
+<td align="right">91342</td>
+<td align="right">60899</td>
+<td align="right">1165.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90220</td>
+<td align="right">45474</td>
+<td align="right">1166.000</td>
+</tr>
+<tr class="even">
+<td align="right">91405</td>
+<td align="right">38162</td>
+<td align="right">1168.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93622</td>
+<td align="right">32125</td>
+<td align="right">1170.000</td>
+</tr>
+<tr class="even">
+<td align="right">93648</td>
+<td align="right">32175</td>
+<td align="right">1171.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94124</td>
+<td align="right">49594</td>
+<td align="right">1173.000</td>
+</tr>
+<tr class="even">
+<td align="right">90650</td>
+<td align="right">60523</td>
+<td align="right">1174.500</td>
+</tr>
+<tr class="odd">
+<td align="right">90001</td>
+<td align="right">34050</td>
+<td align="right">1175.000</td>
+</tr>
+<tr class="even">
+<td align="right">94107</td>
+<td align="right">120610</td>
+<td align="right">1175.500</td>
+</tr>
+<tr class="odd">
+<td align="right">90805</td>
+<td align="right">45197</td>
+<td align="right">1178.000</td>
+</tr>
+<tr class="even">
+<td align="right">94621</td>
+<td align="right">30528</td>
+<td align="right">1179.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90023</td>
+<td align="right">37082</td>
+<td align="right">1181.000</td>
+</tr>
+<tr class="even">
+<td align="right">90026</td>
+<td align="right">46435</td>
+<td align="right">1184.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90003</td>
+<td align="right">30016</td>
+<td align="right">1184.500</td>
+</tr>
+<tr class="even">
+<td align="right">90047</td>
+<td align="right">40528</td>
+<td align="right">1184.667</td>
+</tr>
+<tr class="odd">
+<td align="right">90037</td>
+<td align="right">26638</td>
+<td align="right">1188.500</td>
+</tr>
+<tr class="even">
+<td align="right">94606</td>
+<td align="right">37288</td>
+<td align="right">1190.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91331</td>
+<td align="right">51345</td>
+<td align="right">1191.000</td>
+</tr>
+<tr class="even">
+<td align="right">92356</td>
+<td align="right">33582</td>
+<td align="right">1192.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93646</td>
+<td align="right">27914</td>
+<td align="right">1193.000</td>
+</tr>
+<tr class="even">
+<td align="right">95825</td>
+<td align="right">37382</td>
+<td align="right">1193.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92275</td>
+<td align="right">19375</td>
+<td align="right">1195.000</td>
+</tr>
+<tr class="even">
+<td align="right">90248</td>
+<td align="right">51956</td>
+<td align="right">1195.500</td>
+</tr>
+<tr class="odd">
+<td align="right">94610</td>
+<td align="right">73850</td>
+<td align="right">1198.500</td>
+</tr>
+<tr class="even">
+<td align="right">90028</td>
+<td align="right">31742</td>
+<td align="right">1201.750</td>
+</tr>
+<tr class="odd">
+<td align="right">90255</td>
+<td align="right">35985</td>
+<td align="right">1202.250</td>
+</tr>
+<tr class="even">
+<td align="right">93726</td>
+<td align="right">32471</td>
+<td align="right">1203.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90301</td>
+<td align="right">37813</td>
+<td align="right">1207.500</td>
+</tr>
+<tr class="even">
+<td align="right">92410</td>
+<td align="right">27120</td>
+<td align="right">1208.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92115</td>
+<td align="right">42828</td>
+<td align="right">1208.500</td>
+</tr>
+<tr class="even">
+<td align="right">94303</td>
+<td align="right">89464</td>
+<td align="right">1210.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93223</td>
+<td align="right">32273</td>
+<td align="right">1212.000</td>
+</tr>
+<tr class="even">
+<td align="right">92707</td>
+<td align="right">57038</td>
+<td align="right">1213.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93727</td>
+<td align="right">46394</td>
+<td align="right">1213.000</td>
+</tr>
+<tr class="even">
+<td align="right">90262</td>
+<td align="right">42057</td>
+<td align="right">1215.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90031</td>
+<td align="right">34656</td>
+<td align="right">1216.333</td>
+</tr>
+<tr class="even">
+<td align="right">92236</td>
+<td align="right">40897</td>
+<td align="right">1217.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93534</td>
+<td align="right">35600</td>
+<td align="right">1217.000</td>
+</tr>
+<tr class="even">
+<td align="right">94603</td>
+<td align="right">40962</td>
+<td align="right">1217.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94801</td>
+<td align="right">38856</td>
+<td align="right">1217.000</td>
+</tr>
+<tr class="even">
+<td align="right">90015</td>
+<td align="right">28953</td>
+<td align="right">1219.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90064</td>
+<td align="right">86573</td>
+<td align="right">1221.000</td>
+</tr>
+<tr class="even">
+<td align="right">95315</td>
+<td align="right">44771</td>
+<td align="right">1221.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95823</td>
+<td align="right">36731</td>
+<td align="right">1223.000</td>
+</tr>
+<tr class="even">
+<td align="right">90810</td>
+<td align="right">49087</td>
+<td align="right">1225.500</td>
+</tr>
+<tr class="odd">
+<td align="right">90018</td>
+<td align="right">32104</td>
+<td align="right">1226.500</td>
+</tr>
+<tr class="even">
+<td align="right">93247</td>
+<td align="right">34505</td>
+<td align="right">1230.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90042</td>
+<td align="right">51427</td>
+<td align="right">1231.500</td>
+</tr>
+<tr class="even">
+<td align="right">90022</td>
+<td align="right">39051</td>
+<td align="right">1232.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93710</td>
+<td align="right">42844</td>
+<td align="right">1233.000</td>
+</tr>
+<tr class="even">
+<td align="right">91103</td>
+<td align="right">59099</td>
+<td align="right">1234.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93304</td>
+<td align="right">35150</td>
+<td align="right">1237.000</td>
+</tr>
+<tr class="even">
+<td align="right">93535</td>
+<td align="right">42835</td>
+<td align="right">1237.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94110</td>
+<td align="right">84488</td>
+<td align="right">1239.000</td>
+</tr>
+<tr class="even">
+<td align="right">92220</td>
+<td align="right">39917</td>
+<td align="right">1240.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92274</td>
+<td align="right">27890</td>
+<td align="right">1240.000</td>
+</tr>
+<tr class="even">
+<td align="right">92571</td>
+<td align="right">51116</td>
+<td align="right">1240.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90291</td>
+<td align="right">81025</td>
+<td align="right">1241.000</td>
+</tr>
+<tr class="even">
+<td align="right">93550</td>
+<td align="right">38502</td>
+<td align="right">1243.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93307</td>
+<td align="right">34358</td>
+<td align="right">1243.500</td>
+</tr>
+<tr class="even">
+<td align="right">92411</td>
+<td align="right">32747</td>
+<td align="right">1244.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91402</td>
+<td align="right">39009</td>
+<td align="right">1245.000</td>
+</tr>
+<tr class="even">
+<td align="right">93647</td>
+<td align="right">32898</td>
+<td align="right">1245.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93927</td>
+<td align="right">52233</td>
+<td align="right">1245.000</td>
+</tr>
+<tr class="even">
+<td align="right">95205</td>
+<td align="right">33357</td>
+<td align="right">1246.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93926</td>
+<td align="right">51044</td>
+<td align="right">1250.000</td>
+</tr>
+<tr class="even">
+<td align="right">90007</td>
+<td align="right">22646</td>
+<td align="right">1251.333</td>
+</tr>
+<tr class="odd">
+<td align="right">90201</td>
+<td align="right">37013</td>
+<td align="right">1251.667</td>
+</tr>
+<tr class="even">
+<td align="right">95333</td>
+<td align="right">42366</td>
+<td align="right">1253.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90019</td>
+<td align="right">43244</td>
+<td align="right">1254.000</td>
+</tr>
+<tr class="even">
+<td align="right">92553</td>
+<td align="right">42984</td>
+<td align="right">1257.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91352</td>
+<td align="right">49088</td>
+<td align="right">1257.500</td>
+</tr>
+<tr class="even">
+<td align="right">90746</td>
+<td align="right">75031</td>
+<td align="right">1258.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94601</td>
+<td align="right">39601</td>
+<td align="right">1260.000</td>
+</tr>
+<tr class="even">
+<td align="right">90033</td>
+<td align="right">27190</td>
+<td align="right">1260.667</td>
+</tr>
+<tr class="odd">
+<td align="right">93203</td>
+<td align="right">35429</td>
+<td align="right">1261.000</td>
+</tr>
+<tr class="even">
+<td align="right">94806</td>
+<td align="right">52173</td>
+<td align="right">1263.250</td>
+</tr>
+<tr class="odd">
+<td align="right">93625</td>
+<td align="right">42250</td>
+<td align="right">1264.000</td>
+</tr>
+<tr class="even">
+<td align="right">91304</td>
+<td align="right">58361</td>
+<td align="right">1265.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92405</td>
+<td align="right">37591</td>
+<td align="right">1265.000</td>
+</tr>
+<tr class="even">
+<td align="right">94564</td>
+<td align="right">74283</td>
+<td align="right">1265.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93060</td>
+<td align="right">54782</td>
+<td align="right">1268.000</td>
+</tr>
+<tr class="even">
+<td align="right">93618</td>
+<td align="right">38269</td>
+<td align="right">1268.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95917</td>
+<td align="right">44500</td>
+<td align="right">1268.000</td>
+</tr>
+<tr class="even">
+<td align="right">90280</td>
+<td align="right">43526</td>
+<td align="right">1268.500</td>
+</tr>
+<tr class="odd">
+<td align="right">90260</td>
+<td align="right">51769</td>
+<td align="right">1268.667</td>
+</tr>
+<tr class="even">
+<td align="right">93543</td>
+<td align="right">57588</td>
+<td align="right">1271.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90723</td>
+<td align="right">43784</td>
+<td align="right">1272.000</td>
+</tr>
+<tr class="even">
+<td align="right">95203</td>
+<td align="right">37264</td>
+<td align="right">1273.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92570</td>
+<td align="right">42698</td>
+<td align="right">1274.000</td>
+</tr>
+<tr class="even">
+<td align="right">93656</td>
+<td align="right">45485</td>
+<td align="right">1275.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92345</td>
+<td align="right">42323</td>
+<td align="right">1275.333</td>
+</tr>
+<tr class="even">
+<td align="right">90304</td>
+<td align="right">36778</td>
+<td align="right">1276.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94544</td>
+<td align="right">59699</td>
+<td align="right">1276.000</td>
+</tr>
+<tr class="even">
+<td align="right">95207</td>
+<td align="right">38563</td>
+<td align="right">1276.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90270</td>
+<td align="right">36450</td>
+<td align="right">1277.000</td>
+</tr>
+<tr class="even">
+<td align="right">92201</td>
+<td align="right">40024</td>
+<td align="right">1277.500</td>
+</tr>
+<tr class="odd">
+<td align="right">94590</td>
+<td align="right">40826</td>
+<td align="right">1278.000</td>
+</tr>
+<tr class="even">
+<td align="right">91977</td>
+<td align="right">60124</td>
+<td align="right">1280.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93662</td>
+<td align="right">43442</td>
+<td align="right">1281.000</td>
+</tr>
+<tr class="even">
+<td align="right">92101</td>
+<td align="right">52314</td>
+<td align="right">1281.800</td>
+</tr>
+<tr class="odd">
+<td align="right">93620</td>
+<td align="right">34869</td>
+<td align="right">1282.000</td>
+</tr>
+<tr class="even">
+<td align="right">95422</td>
+<td align="right">25934</td>
+<td align="right">1282.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90606</td>
+<td align="right">63833</td>
+<td align="right">1283.000</td>
+</tr>
+<tr class="even">
+<td align="right">90745</td>
+<td align="right">71757</td>
+<td align="right">1283.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92337</td>
+<td align="right">69966</td>
+<td align="right">1283.000</td>
+</tr>
+<tr class="even">
+<td align="right">94541</td>
+<td align="right">57895</td>
+<td align="right">1283.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95610</td>
+<td align="right">50536</td>
+<td align="right">1283.000</td>
+</tr>
+<tr class="even">
+<td align="right">92404</td>
+<td align="right">38767</td>
+<td align="right">1284.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94112</td>
+<td align="right">71505</td>
+<td align="right">1284.333</td>
+</tr>
+<tr class="even">
+<td align="right">91767</td>
+<td align="right">49206</td>
+<td align="right">1284.500</td>
+</tr>
+<tr class="odd">
+<td align="right">92231</td>
+<td align="right">34733</td>
+<td align="right">1288.000</td>
+</tr>
+<tr class="even">
+<td align="right">92240</td>
+<td align="right">35315</td>
+<td align="right">1288.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95206</td>
+<td align="right">42404</td>
+<td align="right">1289.333</td>
+</tr>
+<tr class="even">
+<td align="right">93267</td>
+<td align="right">33162</td>
+<td align="right">1291.500</td>
+</tr>
+<tr class="odd">
+<td align="right">95122</td>
+<td align="right">57470</td>
+<td align="right">1291.667</td>
+</tr>
+<tr class="even">
+<td align="right">91746</td>
+<td align="right">59502</td>
+<td align="right">1294.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94608</td>
+<td align="right">55959</td>
+<td align="right">1294.000</td>
+</tr>
+<tr class="even">
+<td align="right">95828</td>
+<td align="right">45439</td>
+<td align="right">1294.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91303</td>
+<td align="right">46187</td>
+<td align="right">1297.000</td>
+</tr>
+<tr class="even">
+<td align="right">91401</td>
+<td align="right">48994</td>
+<td align="right">1297.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95485</td>
+<td align="right">29708</td>
+<td align="right">1298.000</td>
+</tr>
+<tr class="even">
+<td align="right">93033</td>
+<td align="right">55210</td>
+<td align="right">1300.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93313</td>
+<td align="right">64803</td>
+<td align="right">1300.000</td>
+</tr>
+<tr class="even">
+<td align="right">93505</td>
+<td align="right">57731</td>
+<td align="right">1300.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91722</td>
+<td align="right">63740</td>
+<td align="right">1300.500</td>
+</tr>
+<tr class="even">
+<td align="right">92377</td>
+<td align="right">80130</td>
+<td align="right">1301.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93291</td>
+<td align="right">50833</td>
+<td align="right">1301.000</td>
+</tr>
+<tr class="even">
+<td align="right">95961</td>
+<td align="right">46441</td>
+<td align="right">1301.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92551</td>
+<td align="right">50449</td>
+<td align="right">1301.500</td>
+</tr>
+<tr class="even">
+<td align="right">95407</td>
+<td align="right">53652</td>
+<td align="right">1303.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91744</td>
+<td align="right">57789</td>
+<td align="right">1303.333</td>
+</tr>
+<tr class="even">
+<td align="right">92316</td>
+<td align="right">48788</td>
+<td align="right">1304.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93637</td>
+<td align="right">49121</td>
+<td align="right">1304.000</td>
+</tr>
+<tr class="even">
+<td align="right">90045</td>
+<td align="right">78082</td>
+<td align="right">1305.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91343</td>
+<td align="right">55238</td>
+<td align="right">1305.000</td>
+</tr>
+<tr class="even">
+<td align="right">92105</td>
+<td align="right">36893</td>
+<td align="right">1306.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95330</td>
+<td align="right">63248</td>
+<td align="right">1306.000</td>
+</tr>
+<tr class="even">
+<td align="right">96055</td>
+<td align="right">40747</td>
+<td align="right">1306.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91340</td>
+<td align="right">55217</td>
+<td align="right">1307.000</td>
+</tr>
+<tr class="even">
+<td align="right">92324</td>
+<td align="right">41278</td>
+<td align="right">1307.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92363</td>
+<td align="right">32710</td>
+<td align="right">1308.000</td>
+</tr>
+<tr class="even">
+<td align="right">93955</td>
+<td align="right">52420</td>
+<td align="right">1308.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94520</td>
+<td align="right">47656</td>
+<td align="right">1309.000</td>
+</tr>
+<tr class="even">
+<td align="right">95012</td>
+<td align="right">52015</td>
+<td align="right">1310.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95076</td>
+<td align="right">56671</td>
+<td align="right">1310.500</td>
+</tr>
+<tr class="even">
+<td align="right">90710</td>
+<td align="right">54630</td>
+<td align="right">1311.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90638</td>
+<td align="right">79858</td>
+<td align="right">1312.000</td>
+</tr>
+<tr class="even">
+<td align="right">92335</td>
+<td align="right">43092</td>
+<td align="right">1312.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95363</td>
+<td align="right">53466</td>
+<td align="right">1312.000</td>
+</tr>
+<tr class="even">
+<td align="right">92109</td>
+<td align="right">67025</td>
+<td align="right">1313.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93280</td>
+<td align="right">39206</td>
+<td align="right">1313.000</td>
+</tr>
+<tr class="even">
+<td align="right">94577</td>
+<td align="right">64660</td>
+<td align="right">1313.500</td>
+</tr>
+<tr class="odd">
+<td align="right">90670</td>
+<td align="right">51935</td>
+<td align="right">1314.000</td>
+</tr>
+<tr class="even">
+<td align="right">92234</td>
+<td align="right">43170</td>
+<td align="right">1315.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92336</td>
+<td align="right">87425</td>
+<td align="right">1315.000</td>
+</tr>
+<tr class="even">
+<td align="right">91702</td>
+<td align="right">54769</td>
+<td align="right">1316.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92805</td>
+<td align="right">54422</td>
+<td align="right">1316.000</td>
+</tr>
+<tr class="even">
+<td align="right">93905</td>
+<td align="right">42807</td>
+<td align="right">1317.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95838</td>
+<td align="right">39481</td>
+<td align="right">1317.000</td>
+</tr>
+<tr class="even">
+<td align="right">91731</td>
+<td align="right">36955</td>
+<td align="right">1318.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93552</td>
+<td align="right">56738</td>
+<td align="right">1318.000</td>
+</tr>
+<tr class="even">
+<td align="right">95127</td>
+<td align="right">70692</td>
+<td align="right">1318.333</td>
+</tr>
+<tr class="odd">
+<td align="right">91344</td>
+<td align="right">77247</td>
+<td align="right">1319.000</td>
+</tr>
+<tr class="even">
+<td align="right">91763</td>
+<td align="right">49056</td>
+<td align="right">1320.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93212</td>
+<td align="right">34565</td>
+<td align="right">1320.000</td>
+</tr>
+<tr class="even">
+<td align="right">91733</td>
+<td align="right">40930</td>
+<td align="right">1321.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95820</td>
+<td align="right">40730</td>
+<td align="right">1321.000</td>
+</tr>
+<tr class="even">
+<td align="right">93610</td>
+<td align="right">39051</td>
+<td align="right">1322.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90640</td>
+<td align="right">47436</td>
+<td align="right">1323.000</td>
+</tr>
+<tr class="even">
+<td align="right">92806</td>
+<td align="right">62828</td>
+<td align="right">1323.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93454</td>
+<td align="right">52564</td>
+<td align="right">1323.500</td>
+</tr>
+<tr class="even">
+<td align="right">91752</td>
+<td align="right">62372</td>
+<td align="right">1324.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93960</td>
+<td align="right">47098</td>
+<td align="right">1324.000</td>
+</tr>
+<tr class="even">
+<td align="right">95360</td>
+<td align="right">42213</td>
+<td align="right">1324.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95367</td>
+<td align="right">59056</td>
+<td align="right">1325.000</td>
+</tr>
+<tr class="even">
+<td align="right">92250</td>
+<td align="right">43264</td>
+<td align="right">1326.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92557</td>
+<td align="right">60655</td>
+<td align="right">1327.000</td>
+</tr>
+<tr class="even">
+<td align="right">95210</td>
+<td align="right">38510</td>
+<td align="right">1327.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93286</td>
+<td align="right">41579</td>
+<td align="right">1329.000</td>
+</tr>
+<tr class="even">
+<td align="right">93306</td>
+<td align="right">52203</td>
+<td align="right">1329.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95301</td>
+<td align="right">48488</td>
+<td align="right">1329.000</td>
+</tr>
+<tr class="even">
+<td align="right">91384</td>
+<td align="right">102273</td>
+<td align="right">1330.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95357</td>
+<td align="right">53235</td>
+<td align="right">1330.000</td>
+</tr>
+<tr class="even">
+<td align="right">91762</td>
+<td align="right">50707</td>
+<td align="right">1331.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93215</td>
+<td align="right">36321</td>
+<td align="right">1331.000</td>
+</tr>
+<tr class="even">
+<td align="right">93704</td>
+<td align="right">48461</td>
+<td align="right">1332.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95334</td>
+<td align="right">50740</td>
+<td align="right">1332.000</td>
+</tr>
+<tr class="even">
+<td align="right">91950</td>
+<td align="right">39533</td>
+<td align="right">1333.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95912</td>
+<td align="right">50764</td>
+<td align="right">1333.000</td>
+</tr>
+<tr class="even">
+<td align="right">92154</td>
+<td align="right">60162</td>
+<td align="right">1333.667</td>
+</tr>
+<tr class="odd">
+<td align="right">90660</td>
+<td align="right">56607</td>
+<td align="right">1334.000</td>
+</tr>
+<tr class="even">
+<td align="right">92503</td>
+<td align="right">55051</td>
+<td align="right">1334.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92504</td>
+<td align="right">57052</td>
+<td align="right">1334.000</td>
+</tr>
+<tr class="even">
+<td align="right">92801</td>
+<td align="right">47672</td>
+<td align="right">1336.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93309</td>
+<td align="right">47369</td>
+<td align="right">1337.000</td>
+</tr>
+<tr class="even">
+<td align="right">95831</td>
+<td align="right">68679</td>
+<td align="right">1337.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92004</td>
+<td align="right">36500</td>
+<td align="right">1338.000</td>
+</tr>
+<tr class="even">
+<td align="right">95322</td>
+<td align="right">40732</td>
+<td align="right">1339.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91016</td>
+<td align="right">72168</td>
+<td align="right">1339.333</td>
+</tr>
+<tr class="even">
+<td align="right">93906</td>
+<td align="right">55082</td>
+<td align="right">1340.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94607</td>
+<td align="right">34192</td>
+<td align="right">1340.000</td>
+</tr>
+<tr class="even">
+<td align="right">94619</td>
+<td align="right">78676</td>
+<td align="right">1340.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95621</td>
+<td align="right">51827</td>
+<td align="right">1340.000</td>
+</tr>
+<tr class="even">
+<td align="right">91911</td>
+<td align="right">48891</td>
+<td align="right">1343.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92627</td>
+<td align="right">57708</td>
+<td align="right">1343.000</td>
+</tr>
+<tr class="even">
+<td align="right">90601</td>
+<td align="right">70841</td>
+<td align="right">1344.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92392</td>
+<td align="right">56277</td>
+<td align="right">1344.333</td>
+</tr>
+<tr class="even">
+<td align="right">93657</td>
+<td align="right">49785</td>
+<td align="right">1345.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93263</td>
+<td align="right">40833</td>
+<td align="right">1346.000</td>
+</tr>
+<tr class="even">
+<td align="right">90305</td>
+<td align="right">62558</td>
+<td align="right">1347.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95627</td>
+<td align="right">57664</td>
+<td align="right">1348.000</td>
+</tr>
+<tr class="even">
+<td align="right">92408</td>
+<td align="right">33750</td>
+<td align="right">1349.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92555</td>
+<td align="right">73352</td>
+<td align="right">1349.000</td>
+</tr>
+<tr class="even">
+<td align="right">92843</td>
+<td align="right">52536</td>
+<td align="right">1349.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93722</td>
+<td align="right">54381</td>
+<td align="right">1349.000</td>
+</tr>
+<tr class="even">
+<td align="right">91706</td>
+<td align="right">51234</td>
+<td align="right">1350.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92225</td>
+<td align="right">43638</td>
+<td align="right">1350.000</td>
+</tr>
+<tr class="even">
+<td align="right">94612</td>
+<td align="right">30879</td>
+<td align="right">1350.500</td>
+</tr>
+<tr class="odd">
+<td align="right">93274</td>
+<td align="right">45591</td>
+<td align="right">1350.667</td>
+</tr>
+<tr class="even">
+<td align="right">90065</td>
+<td align="right">52794</td>
+<td align="right">1351.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91107</td>
+<td align="right">84761</td>
+<td align="right">1352.000</td>
+</tr>
+<tr class="even">
+<td align="right">95546</td>
+<td align="right">26281</td>
+<td align="right">1352.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95691</td>
+<td align="right">65769</td>
+<td align="right">1353.000</td>
+</tr>
+<tr class="even">
+<td align="right">92021</td>
+<td align="right">50035</td>
+<td align="right">1354.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92804</td>
+<td align="right">52408</td>
+<td align="right">1354.000</td>
+</tr>
+<tr class="even">
+<td align="right">94134</td>
+<td align="right">60230</td>
+<td align="right">1354.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90059</td>
+<td align="right">33678</td>
+<td align="right">1356.000</td>
+</tr>
+<tr class="even">
+<td align="right">92545</td>
+<td align="right">40119</td>
+<td align="right">1357.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93257</td>
+<td align="right">39551</td>
+<td align="right">1357.000</td>
+</tr>
+<tr class="even">
+<td align="right">94545</td>
+<td align="right">71723</td>
+<td align="right">1357.667</td>
+</tr>
+<tr class="odd">
+<td align="right">93635</td>
+<td align="right">45056</td>
+<td align="right">1358.500</td>
+</tr>
+<tr class="even">
+<td align="right">95938</td>
+<td align="right">60750</td>
+<td align="right">1358.500</td>
+</tr>
+<tr class="odd">
+<td align="right">91010</td>
+<td align="right">60118</td>
+<td align="right">1359.000</td>
+</tr>
+<tr class="even">
+<td align="right">91311</td>
+<td align="right">80279</td>
+<td align="right">1359.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92368</td>
+<td align="right">33125</td>
+<td align="right">1359.000</td>
+</tr>
+<tr class="even">
+<td align="right">94547</td>
+<td align="right">100204</td>
+<td align="right">1359.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91766</td>
+<td align="right">48896</td>
+<td align="right">1360.000</td>
+</tr>
+<tr class="even">
+<td align="right">95468</td>
+<td align="right">44412</td>
+<td align="right">1360.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90621</td>
+<td align="right">56219</td>
+<td align="right">1361.000</td>
+</tr>
+<tr class="even">
+<td align="right">92262</td>
+<td align="right">46519</td>
+<td align="right">1362.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95324</td>
+<td align="right">51286</td>
+<td align="right">1362.000</td>
+</tr>
+<tr class="even">
+<td align="right">92233</td>
+<td align="right">32328</td>
+<td align="right">1363.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94518</td>
+<td align="right">73040</td>
+<td align="right">1364.000</td>
+</tr>
+<tr class="even">
+<td align="right">94591</td>
+<td align="right">73870</td>
+<td align="right">1364.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90250</td>
+<td align="right">45766</td>
+<td align="right">1365.000</td>
+</tr>
+<tr class="even">
+<td align="right">93210</td>
+<td align="right">50290</td>
+<td align="right">1366.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93654</td>
+<td align="right">47882</td>
+<td align="right">1366.000</td>
+</tr>
+<tr class="even">
+<td align="right">92344</td>
+<td align="right">69171</td>
+<td align="right">1367.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92704</td>
+<td align="right">59412</td>
+<td align="right">1367.500</td>
+</tr>
+<tr class="even">
+<td align="right">90715</td>
+<td align="right">64701</td>
+<td align="right">1369.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90046</td>
+<td align="right">56337</td>
+<td align="right">1370.000</td>
+</tr>
+<tr class="even">
+<td align="right">91506</td>
+<td align="right">70408</td>
+<td align="right">1370.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92311</td>
+<td align="right">45889</td>
+<td align="right">1370.000</td>
+</tr>
+<tr class="even">
+<td align="right">93308</td>
+<td align="right">41737</td>
+<td align="right">1370.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92583</td>
+<td align="right">39528</td>
+<td align="right">1370.500</td>
+</tr>
+<tr class="even">
+<td align="right">92530</td>
+<td align="right">49552</td>
+<td align="right">1371.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95316</td>
+<td align="right">67639</td>
+<td align="right">1372.000</td>
+</tr>
+<tr class="even">
+<td align="right">95212</td>
+<td align="right">59965</td>
+<td align="right">1372.500</td>
+</tr>
+<tr class="odd">
+<td align="right">91761</td>
+<td align="right">61270</td>
+<td align="right">1373.000</td>
+</tr>
+<tr class="even">
+<td align="right">90241</td>
+<td align="right">56059</td>
+<td align="right">1374.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94014</td>
+<td align="right">71668</td>
+<td align="right">1374.000</td>
+</tr>
+<tr class="even">
+<td align="right">93230</td>
+<td align="right">53008</td>
+<td align="right">1375.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91042</td>
+<td align="right">57640</td>
+<td align="right">1377.000</td>
+</tr>
+<tr class="even">
+<td align="right">95457</td>
+<td align="right">42829</td>
+<td align="right">1379.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95673</td>
+<td align="right">50854</td>
+<td align="right">1379.000</td>
+</tr>
+<tr class="even">
+<td align="right">91601</td>
+<td align="right">47202</td>
+<td align="right">1379.500</td>
+</tr>
+<tr class="odd">
+<td align="right">91710</td>
+<td align="right">71825</td>
+<td align="right">1379.500</td>
+</tr>
+<tr class="even">
+<td align="right">92395</td>
+<td align="right">38709</td>
+<td align="right">1379.500</td>
+</tr>
+<tr class="odd">
+<td align="right">95304</td>
+<td align="right">78640</td>
+<td align="right">1381.000</td>
+</tr>
+<tr class="even">
+<td align="right">90032</td>
+<td align="right">45208</td>
+<td align="right">1381.333</td>
+</tr>
+<tr class="odd">
+<td align="right">92509</td>
+<td align="right">57286</td>
+<td align="right">1381.667</td>
+</tr>
+<tr class="even">
+<td align="right">92376</td>
+<td align="right">44965</td>
+<td align="right">1383.333</td>
+</tr>
+<tr class="odd">
+<td align="right">92867</td>
+<td align="right">78072</td>
+<td align="right">1385.000</td>
+</tr>
+<tr class="even">
+<td align="right">93243</td>
+<td align="right">60724</td>
+<td align="right">1385.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95469</td>
+<td align="right">49545</td>
+<td align="right">1386.000</td>
+</tr>
+<tr class="even">
+<td align="right">93268</td>
+<td align="right">46615</td>
+<td align="right">1387.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95951</td>
+<td align="right">37500</td>
+<td align="right">1387.000</td>
+</tr>
+<tr class="even">
+<td align="right">91325</td>
+<td align="right">57883</td>
+<td align="right">1388.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92407</td>
+<td align="right">51702</td>
+<td align="right">1388.000</td>
+</tr>
+<tr class="even">
+<td align="right">92124</td>
+<td align="right">80625</td>
+<td align="right">1389.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94561</td>
+<td align="right">77706</td>
+<td align="right">1389.000</td>
+</tr>
+<tr class="even">
+<td align="right">95987</td>
+<td align="right">55355</td>
+<td align="right">1389.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92507</td>
+<td align="right">41051</td>
+<td align="right">1390.000</td>
+</tr>
+<tr class="even">
+<td align="right">93930</td>
+<td align="right">42454</td>
+<td align="right">1390.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90604</td>
+<td align="right">65640</td>
+<td align="right">1392.000</td>
+</tr>
+<tr class="even">
+<td align="right">90706</td>
+<td align="right">49360</td>
+<td align="right">1392.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91768</td>
+<td align="right">47177</td>
+<td align="right">1393.000</td>
+</tr>
+<tr class="even">
+<td align="right">90744</td>
+<td align="right">41578</td>
+<td align="right">1397.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92114</td>
+<td align="right">57287</td>
+<td align="right">1398.000</td>
+</tr>
+<tr class="even">
+<td align="right">93706</td>
+<td align="right">29197</td>
+<td align="right">1399.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94109</td>
+<td align="right">63173</td>
+<td align="right">1399.000</td>
+</tr>
+<tr class="even">
+<td align="right">96021</td>
+<td align="right">39756</td>
+<td align="right">1399.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90041</td>
+<td align="right">64545</td>
+<td align="right">1400.000</td>
+</tr>
+<tr class="even">
+<td align="right">95988</td>
+<td align="right">48443</td>
+<td align="right">1400.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90815</td>
+<td align="right">79525</td>
+<td align="right">1401.000</td>
+</tr>
+<tr class="even">
+<td align="right">94503</td>
+<td align="right">81918</td>
+<td align="right">1402.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95326</td>
+<td align="right">54366</td>
+<td align="right">1403.000</td>
+</tr>
+<tr class="even">
+<td align="right">91962</td>
+<td align="right">100398</td>
+<td align="right">1404.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91406</td>
+<td align="right">50381</td>
+<td align="right">1405.000</td>
+</tr>
+<tr class="even">
+<td align="right">94509</td>
+<td align="right">54372</td>
+<td align="right">1405.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95425</td>
+<td align="right">57400</td>
+<td align="right">1406.000</td>
+</tr>
+<tr class="even">
+<td align="right">94580</td>
+<td align="right">71177</td>
+<td align="right">1406.667</td>
+</tr>
+<tr class="odd">
+<td align="right">93245</td>
+<td align="right">51280</td>
+<td align="right">1407.000</td>
+</tr>
+<tr class="even">
+<td align="right">95202</td>
+<td align="right">15023</td>
+<td align="right">1407.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95827</td>
+<td align="right">50528</td>
+<td align="right">1407.000</td>
+</tr>
+<tr class="even">
+<td align="right">92505</td>
+<td align="right">55947</td>
+<td align="right">1409.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95834</td>
+<td align="right">56651</td>
+<td align="right">1409.500</td>
+</tr>
+<tr class="even">
+<td align="right">91910</td>
+<td align="right">54640</td>
+<td align="right">1411.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92342</td>
+<td align="right">66775</td>
+<td align="right">1411.000</td>
+</tr>
+<tr class="even">
+<td align="right">94579</td>
+<td align="right">75481</td>
+<td align="right">1411.000</td>
+</tr>
+<tr class="odd">
+<td align="right">96007</td>
+<td align="right">38907</td>
+<td align="right">1411.000</td>
+</tr>
+<tr class="even">
+<td align="right">95136</td>
+<td align="right">87500</td>
+<td align="right">1412.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95612</td>
+<td align="right">53194</td>
+<td align="right">1412.000</td>
+</tr>
+<tr class="even">
+<td align="right">92223</td>
+<td align="right">64738</td>
+<td align="right">1413.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93240</td>
+<td align="right">26054</td>
+<td align="right">1413.000</td>
+</tr>
+<tr class="even">
+<td align="right">95695</td>
+<td align="right">52274</td>
+<td align="right">1414.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93015</td>
+<td align="right">56567</td>
+<td align="right">1415.000</td>
+</tr>
+<tr class="even">
+<td align="right">93292</td>
+<td align="right">51341</td>
+<td align="right">1415.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91723</td>
+<td align="right">60532</td>
+<td align="right">1415.500</td>
+</tr>
+<tr class="even">
+<td align="right">93436</td>
+<td align="right">54980</td>
+<td align="right">1416.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92882</td>
+<td align="right">71793</td>
+<td align="right">1418.000</td>
+</tr>
+<tr class="even">
+<td align="right">95692</td>
+<td align="right">62043</td>
+<td align="right">1418.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90731</td>
+<td align="right">49786</td>
+<td align="right">1420.500</td>
+</tr>
+<tr class="even">
+<td align="right">91724</td>
+<td align="right">75420</td>
+<td align="right">1421.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91932</td>
+<td align="right">48117</td>
+<td align="right">1422.000</td>
+</tr>
+<tr class="even">
+<td align="right">92243</td>
+<td align="right">42206</td>
+<td align="right">1422.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93541</td>
+<td align="right">53750</td>
+<td align="right">1422.000</td>
+</tr>
+<tr class="even">
+<td align="right">95350</td>
+<td align="right">40461</td>
+<td align="right">1422.000</td>
+</tr>
+<tr class="odd">
+<td align="right">96094</td>
+<td align="right">41772</td>
+<td align="right">1422.000</td>
+</tr>
+<tr class="even">
+<td align="right">94565</td>
+<td align="right">55865</td>
+<td align="right">1422.500</td>
+</tr>
+<tr class="odd">
+<td align="right">90066</td>
+<td align="right">68346</td>
+<td align="right">1423.000</td>
+</tr>
+<tr class="even">
+<td align="right">95356</td>
+<td align="right">65208</td>
+<td align="right">1424.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90034</td>
+<td align="right">56743</td>
+<td align="right">1425.000</td>
+</tr>
+<tr class="even">
+<td align="right">92590</td>
+<td align="right">49423</td>
+<td align="right">1425.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95023</td>
+<td align="right">69678</td>
+<td align="right">1425.000</td>
+</tr>
+<tr class="even">
+<td align="right">92121</td>
+<td align="right">103598</td>
+<td align="right">1426.500</td>
+</tr>
+<tr class="odd">
+<td align="right">93036</td>
+<td align="right">65701</td>
+<td align="right">1427.000</td>
+</tr>
+<tr class="even">
+<td align="right">95694</td>
+<td align="right">58517</td>
+<td align="right">1427.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95932</td>
+<td align="right">46453</td>
+<td align="right">1427.000</td>
+</tr>
+<tr class="even">
+<td align="right">90713</td>
+<td align="right">87095</td>
+<td align="right">1427.500</td>
+</tr>
+<tr class="odd">
+<td align="right">92111</td>
+<td align="right">55635</td>
+<td align="right">1427.500</td>
+</tr>
+<tr class="even">
+<td align="right">95648</td>
+<td align="right">70820</td>
+<td align="right">1428.500</td>
+</tr>
+<tr class="odd">
+<td align="right">91941</td>
+<td align="right">71661</td>
+<td align="right">1430.000</td>
+</tr>
+<tr class="even">
+<td align="right">94971</td>
+<td align="right">42500</td>
+<td align="right">1430.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95348</td>
+<td align="right">40903</td>
+<td align="right">1430.000</td>
+</tr>
+<tr class="even">
+<td align="right">92054</td>
+<td align="right">50568</td>
+<td align="right">1431.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92567</td>
+<td align="right">55069</td>
+<td align="right">1432.000</td>
+</tr>
+<tr class="even">
+<td align="right">93645</td>
+<td align="right">93529</td>
+<td align="right">1432.500</td>
+</tr>
+<tr class="odd">
+<td align="right">95020</td>
+<td align="right">82748</td>
+<td align="right">1432.500</td>
+</tr>
+<tr class="even">
+<td align="right">93630</td>
+<td align="right">42303</td>
+<td align="right">1436.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95336</td>
+<td align="right">56885</td>
+<td align="right">1436.500</td>
+</tr>
+<tr class="even">
+<td align="right">96019</td>
+<td align="right">40455</td>
+<td align="right">1437.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95818</td>
+<td align="right">58272</td>
+<td align="right">1438.333</td>
+</tr>
+<tr class="even">
+<td align="right">92647</td>
+<td align="right">74637</td>
+<td align="right">1439.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93631</td>
+<td align="right">58381</td>
+<td align="right">1439.000</td>
+</tr>
+<tr class="even">
+<td align="right">94568</td>
+<td align="right">113616</td>
+<td align="right">1441.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90813</td>
+<td align="right">31215</td>
+<td align="right">1441.500</td>
+</tr>
+<tr class="even">
+<td align="right">92544</td>
+<td align="right">42084</td>
+<td align="right">1441.500</td>
+</tr>
+<tr class="odd">
+<td align="right">92626</td>
+<td align="right">80132</td>
+<td align="right">1441.500</td>
+</tr>
+<tr class="even">
+<td align="right">95670</td>
+<td align="right">55656</td>
+<td align="right">1442.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93277</td>
+<td align="right">51056</td>
+<td align="right">1443.000</td>
+</tr>
+<tr class="even">
+<td align="right">90012</td>
+<td align="right">29492</td>
+<td align="right">1444.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90605</td>
+<td align="right">66706</td>
+<td align="right">1444.000</td>
+</tr>
+<tr class="even">
+<td align="right">95351</td>
+<td align="right">34732</td>
+<td align="right">1444.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95403</td>
+<td align="right">63029</td>
+<td align="right">1446.000</td>
+</tr>
+<tr class="even">
+<td align="right">91104</td>
+<td align="right">70811</td>
+<td align="right">1447.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91770</td>
+<td align="right">47078</td>
+<td align="right">1447.000</td>
+</tr>
+<tr class="even">
+<td align="right">94531</td>
+<td align="right">88693</td>
+<td align="right">1447.500</td>
+</tr>
+<tr class="odd">
+<td align="right">95623</td>
+<td align="right">55878</td>
+<td align="right">1447.500</td>
+</tr>
+<tr class="even">
+<td align="right">93013</td>
+<td align="right">68884</td>
+<td align="right">1448.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93221</td>
+<td align="right">48470</td>
+<td align="right">1449.000</td>
+</tr>
+<tr class="even">
+<td align="right">92840</td>
+<td align="right">61934</td>
+<td align="right">1450.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95531</td>
+<td align="right">41136</td>
+<td align="right">1450.000</td>
+</tr>
+<tr class="even">
+<td align="right">96093</td>
+<td align="right">44554</td>
+<td align="right">1450.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95490</td>
+<td align="right">37692</td>
+<td align="right">1451.000</td>
+</tr>
+<tr class="even">
+<td align="right">92139</td>
+<td align="right">59679</td>
+<td align="right">1452.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92399</td>
+<td align="right">59302</td>
+<td align="right">1452.000</td>
+</tr>
+<tr class="even">
+<td align="right">95991</td>
+<td align="right">43165</td>
+<td align="right">1452.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92027</td>
+<td align="right">53473</td>
+<td align="right">1453.500</td>
+</tr>
+<tr class="even">
+<td align="right">93536</td>
+<td align="right">70724</td>
+<td align="right">1453.500</td>
+</tr>
+<tr class="odd">
+<td align="right">94115</td>
+<td align="right">85330</td>
+<td align="right">1453.500</td>
+</tr>
+<tr class="even">
+<td align="right">91791</td>
+<td align="right">70841</td>
+<td align="right">1454.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92860</td>
+<td align="right">85361</td>
+<td align="right">1454.000</td>
+</tr>
+<tr class="even">
+<td align="right">93030</td>
+<td align="right">57860</td>
+<td align="right">1454.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95632</td>
+<td align="right">61255</td>
+<td align="right">1454.500</td>
+</tr>
+<tr class="even">
+<td align="right">94121</td>
+<td align="right">70220</td>
+<td align="right">1455.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95209</td>
+<td align="right">72218</td>
+<td align="right">1455.000</td>
+</tr>
+<tr class="even">
+<td align="right">95476</td>
+<td align="right">60100</td>
+<td align="right">1455.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93301</td>
+<td align="right">30963</td>
+<td align="right">1456.000</td>
+</tr>
+<tr class="even">
+<td align="right">92841</td>
+<td align="right">53059</td>
+<td align="right">1457.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94080</td>
+<td align="right">78378</td>
+<td align="right">1457.000</td>
+</tr>
+<tr class="even">
+<td align="right">95133</td>
+<td align="right">72459</td>
+<td align="right">1457.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94116</td>
+<td align="right">84828</td>
+<td align="right">1458.000</td>
+</tr>
+<tr class="even">
+<td align="right">95380</td>
+<td align="right">39743</td>
+<td align="right">1458.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95382</td>
+<td align="right">64874</td>
+<td align="right">1458.000</td>
+</tr>
+<tr class="even">
+<td align="right">95829</td>
+<td align="right">74530</td>
+<td align="right">1458.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95963</td>
+<td align="right">39485</td>
+<td align="right">1458.000</td>
+</tr>
+<tr class="even">
+<td align="right">95966</td>
+<td align="right">40775</td>
+<td align="right">1458.500</td>
+</tr>
+<tr class="odd">
+<td align="right">90063</td>
+<td align="right">39206</td>
+<td align="right">1459.000</td>
+</tr>
+<tr class="even">
+<td align="right">91106</td>
+<td align="right">72192</td>
+<td align="right">1459.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92117</td>
+<td align="right">65319</td>
+<td align="right">1459.000</td>
+</tr>
+<tr class="even">
+<td align="right">95451</td>
+<td align="right">45392</td>
+<td align="right">1459.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91701</td>
+<td align="right">76994</td>
+<td align="right">1459.500</td>
+</tr>
+<tr class="even">
+<td align="right">92028</td>
+<td align="right">57223</td>
+<td align="right">1461.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92307</td>
+<td align="right">57124</td>
+<td align="right">1461.000</td>
+</tr>
+<tr class="even">
+<td align="right">95835</td>
+<td align="right">80449</td>
+<td align="right">1461.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95843</td>
+<td align="right">64773</td>
+<td align="right">1461.500</td>
+</tr>
+<tr class="even">
+<td align="right">94533</td>
+<td align="right">56973</td>
+<td align="right">1461.667</td>
+</tr>
+<tr class="odd">
+<td align="right">92880</td>
+<td align="right">101303</td>
+<td align="right">1462.000</td>
+</tr>
+<tr class="even">
+<td align="right">95982</td>
+<td align="right">63816</td>
+<td align="right">1462.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92251</td>
+<td align="right">76526</td>
+<td align="right">1463.000</td>
+</tr>
+<tr class="even">
+<td align="right">93314</td>
+<td align="right">96446</td>
+<td align="right">1464.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95126</td>
+<td align="right">72877</td>
+<td align="right">1464.000</td>
+</tr>
+<tr class="even">
+<td align="right">95540</td>
+<td align="right">42655</td>
+<td align="right">1464.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92025</td>
+<td align="right">45433</td>
+<td align="right">1465.333</td>
+</tr>
+<tr class="even">
+<td align="right">92584</td>
+<td align="right">75928</td>
+<td align="right">1466.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94534</td>
+<td align="right">91882</td>
+<td align="right">1466.000</td>
+</tr>
+<tr class="even">
+<td align="right">93611</td>
+<td align="right">77930</td>
+<td align="right">1466.333</td>
+</tr>
+<tr class="odd">
+<td align="right">92277</td>
+<td align="right">37316</td>
+<td align="right">1467.000</td>
+</tr>
+<tr class="even">
+<td align="right">95608</td>
+<td align="right">55256</td>
+<td align="right">1467.500</td>
+</tr>
+<tr class="odd">
+<td align="right">90027</td>
+<td align="right">50316</td>
+<td align="right">1468.000</td>
+</tr>
+<tr class="even">
+<td align="right">91739</td>
+<td align="right">100049</td>
+<td align="right">1468.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95236</td>
+<td align="right">76542</td>
+<td align="right">1468.000</td>
+</tr>
+<tr class="even">
+<td align="right">95993</td>
+<td align="right">64034</td>
+<td align="right">1469.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91915</td>
+<td align="right">99606</td>
+<td align="right">1471.500</td>
+</tr>
+<tr class="even">
+<td align="right">95662</td>
+<td align="right">65122</td>
+<td align="right">1472.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90804</td>
+<td align="right">44629</td>
+<td align="right">1473.000</td>
+</tr>
+<tr class="even">
+<td align="right">95415</td>
+<td align="right">34643</td>
+<td align="right">1473.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91776</td>
+<td align="right">48302</td>
+<td align="right">1474.000</td>
+</tr>
+<tr class="even">
+<td align="right">94525</td>
+<td align="right">81667</td>
+<td align="right">1474.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91773</td>
+<td align="right">78501</td>
+<td align="right">1475.000</td>
+</tr>
+<tr class="even">
+<td align="right">95376</td>
+<td align="right">62262</td>
+<td align="right">1475.667</td>
+</tr>
+<tr class="odd">
+<td align="right">93514</td>
+<td align="right">51250</td>
+<td align="right">1476.000</td>
+</tr>
+<tr class="even">
+<td align="right">93940</td>
+<td align="right">67716</td>
+<td align="right">1476.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92780</td>
+<td align="right">64089</td>
+<td align="right">1477.000</td>
+</tr>
+<tr class="even">
+<td align="right">95320</td>
+<td align="right">55599</td>
+<td align="right">1477.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95620</td>
+<td align="right">66291</td>
+<td align="right">1478.000</td>
+</tr>
+<tr class="even">
+<td align="right">91913</td>
+<td align="right">84741</td>
+<td align="right">1478.333</td>
+</tr>
+<tr class="odd">
+<td align="right">95928</td>
+<td align="right">45906</td>
+<td align="right">1479.000</td>
+</tr>
+<tr class="even">
+<td align="right">92563</td>
+<td align="right">77105</td>
+<td align="right">1480.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95240</td>
+<td align="right">40021</td>
+<td align="right">1480.000</td>
+</tr>
+<tr class="even">
+<td align="right">96020</td>
+<td align="right">42433</td>
+<td align="right">1480.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92106</td>
+<td align="right">81973</td>
+<td align="right">1480.250</td>
+</tr>
+<tr class="even">
+<td align="right">92701</td>
+<td align="right">39060</td>
+<td align="right">1480.500</td>
+</tr>
+<tr class="odd">
+<td align="right">95386</td>
+<td align="right">47868</td>
+<td align="right">1480.500</td>
+</tr>
+<tr class="even">
+<td align="right">95045</td>
+<td align="right">55250</td>
+<td align="right">1481.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95758</td>
+<td align="right">70003</td>
+<td align="right">1482.000</td>
+</tr>
+<tr class="even">
+<td align="right">96130</td>
+<td align="right">54527</td>
+<td align="right">1483.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92284</td>
+<td align="right">42517</td>
+<td align="right">1484.000</td>
+</tr>
+<tr class="even">
+<td align="right">95379</td>
+<td align="right">54792</td>
+<td align="right">1484.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95901</td>
+<td align="right">42319</td>
+<td align="right">1484.000</td>
+</tr>
+<tr class="even">
+<td align="right">90245</td>
+<td align="right">84004</td>
+<td align="right">1485.500</td>
+</tr>
+<tr class="odd">
+<td align="right">92352</td>
+<td align="right">72479</td>
+<td align="right">1486.000</td>
+</tr>
+<tr class="even">
+<td align="right">95948</td>
+<td align="right">44423</td>
+<td align="right">1486.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95519</td>
+<td align="right">50051</td>
+<td align="right">1487.000</td>
+</tr>
+<tr class="even">
+<td align="right">94513</td>
+<td align="right">89607</td>
+<td align="right">1487.500</td>
+</tr>
+<tr class="odd">
+<td align="right">95659</td>
+<td align="right">54444</td>
+<td align="right">1487.500</td>
+</tr>
+<tr class="even">
+<td align="right">91786</td>
+<td align="right">51105</td>
+<td align="right">1490.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92398</td>
+<td align="right">63750</td>
+<td align="right">1490.000</td>
+</tr>
+<tr class="even">
+<td align="right">92591</td>
+<td align="right">70380</td>
+<td align="right">1490.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93901</td>
+<td align="right">49491</td>
+<td align="right">1490.000</td>
+</tr>
+<tr class="even">
+<td align="right">94066</td>
+<td align="right">81369</td>
+<td align="right">1490.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95437</td>
+<td align="right">38276</td>
+<td align="right">1490.000</td>
+</tr>
+<tr class="even">
+<td align="right">93455</td>
+<td align="right">72212</td>
+<td align="right">1491.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94559</td>
+<td align="right">58363</td>
+<td align="right">1491.000</td>
+</tr>
+<tr class="even">
+<td align="right">96150</td>
+<td align="right">47500</td>
+<td align="right">1493.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95355</td>
+<td align="right">56646</td>
+<td align="right">1494.333</td>
+</tr>
+<tr class="even">
+<td align="right">91750</td>
+<td align="right">76912</td>
+<td align="right">1495.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93523</td>
+<td align="right">53456</td>
+<td align="right">1496.000</td>
+</tr>
+<tr class="even">
+<td align="right">93546</td>
+<td align="right">65156</td>
+<td align="right">1497.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92708</td>
+<td align="right">82005</td>
+<td align="right">1497.500</td>
+</tr>
+<tr class="even">
+<td align="right">91351</td>
+<td align="right">70858</td>
+<td align="right">1498.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91978</td>
+<td align="right">66483</td>
+<td align="right">1498.000</td>
+</tr>
+<tr class="even">
+<td align="right">95307</td>
+<td align="right">45631</td>
+<td align="right">1498.500</td>
+</tr>
+<tr class="odd">
+<td align="right">95037</td>
+<td align="right">95435</td>
+<td align="right">1499.500</td>
+</tr>
+<tr class="even">
+<td align="right">92069</td>
+<td align="right">52457</td>
+<td align="right">1500.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92562</td>
+<td align="right">75448</td>
+<td align="right">1500.000</td>
+</tr>
+<tr class="even">
+<td align="right">95624</td>
+<td align="right">80233</td>
+<td align="right">1500.333</td>
+</tr>
+<tr class="odd">
+<td align="right">95249</td>
+<td align="right">41458</td>
+<td align="right">1501.000</td>
+</tr>
+<tr class="even">
+<td align="right">92374</td>
+<td align="right">66590</td>
+<td align="right">1501.500</td>
+</tr>
+<tr class="odd">
+<td align="right">92844</td>
+<td align="right">48345</td>
+<td align="right">1502.000</td>
+</tr>
+<tr class="even">
+<td align="right">95642</td>
+<td align="right">43981</td>
+<td align="right">1502.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94521</td>
+<td align="right">84819</td>
+<td align="right">1502.500</td>
+</tr>
+<tr class="even">
+<td align="right">93510</td>
+<td align="right">89403</td>
+<td align="right">1503.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92126</td>
+<td align="right">85707</td>
+<td align="right">1504.000</td>
+</tr>
+<tr class="even">
+<td align="right">92371</td>
+<td align="right">50744</td>
+<td align="right">1504.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92691</td>
+<td align="right">93713</td>
+<td align="right">1504.000</td>
+</tr>
+<tr class="even">
+<td align="right">94558</td>
+<td align="right">72720</td>
+<td align="right">1504.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95123</td>
+<td align="right">90881</td>
+<td align="right">1505.333</td>
+</tr>
+<tr class="even">
+<td align="right">95688</td>
+<td align="right">81860</td>
+<td align="right">1506.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94574</td>
+<td align="right">81788</td>
+<td align="right">1507.000</td>
+</tr>
+<tr class="even">
+<td align="right">90704</td>
+<td align="right">55882</td>
+<td align="right">1508.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92683</td>
+<td align="right">53559</td>
+<td align="right">1508.000</td>
+</tr>
+<tr class="even">
+<td align="right">95453</td>
+<td align="right">45299</td>
+<td align="right">1508.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93444</td>
+<td align="right">61379</td>
+<td align="right">1509.000</td>
+</tr>
+<tr class="even">
+<td align="right">94062</td>
+<td align="right">126557</td>
+<td align="right">1509.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95377</td>
+<td align="right">96860</td>
+<td align="right">1509.000</td>
+</tr>
+<tr class="even">
+<td align="right">92057</td>
+<td align="right">64976</td>
+<td align="right">1510.500</td>
+</tr>
+<tr class="odd">
+<td align="right">91335</td>
+<td align="right">51398</td>
+<td align="right">1510.667</td>
+</tr>
+<tr class="even">
+<td align="right">92832</td>
+<td align="right">58853</td>
+<td align="right">1511.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90631</td>
+<td align="right">66553</td>
+<td align="right">1512.000</td>
+</tr>
+<tr class="even">
+<td align="right">92314</td>
+<td align="right">46518</td>
+<td align="right">1512.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94122</td>
+<td align="right">86070</td>
+<td align="right">1512.000</td>
+</tr>
+<tr class="even">
+<td align="right">95111</td>
+<td align="right">57047</td>
+<td align="right">1512.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95678</td>
+<td align="right">62969</td>
+<td align="right">1512.000</td>
+</tr>
+<tr class="even">
+<td align="right">94560</td>
+<td align="right">86521</td>
+<td align="right">1512.500</td>
+</tr>
+<tr class="odd">
+<td align="right">95062</td>
+<td align="right">62253</td>
+<td align="right">1513.000</td>
+</tr>
+<tr class="even">
+<td align="right">92081</td>
+<td align="right">54565</td>
+<td align="right">1514.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95461</td>
+<td align="right">52143</td>
+<td align="right">1514.000</td>
+</tr>
+<tr class="even">
+<td align="right">94587</td>
+<td align="right">82564</td>
+<td align="right">1515.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94901</td>
+<td align="right">76909</td>
+<td align="right">1515.000</td>
+</tr>
+<tr class="even">
+<td align="right">96080</td>
+<td align="right">39288</td>
+<td align="right">1515.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90501</td>
+<td align="right">59878</td>
+<td align="right">1516.000</td>
+</tr>
+<tr class="even">
+<td align="right">93065</td>
+<td align="right">94173</td>
+<td align="right">1516.750</td>
+</tr>
+<tr class="odd">
+<td align="right">93312</td>
+<td align="right">93588</td>
+<td align="right">1517.000</td>
+</tr>
+<tr class="even">
+<td align="right">91745</td>
+<td align="right">76447</td>
+<td align="right">1518.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91790</td>
+<td align="right">66057</td>
+<td align="right">1518.000</td>
+</tr>
+<tr class="even">
+<td align="right">92508</td>
+<td align="right">92684</td>
+<td align="right">1518.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95242</td>
+<td align="right">64355</td>
+<td align="right">1519.000</td>
+</tr>
+<tr class="even">
+<td align="right">96097</td>
+<td align="right">28953</td>
+<td align="right">1519.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92026</td>
+<td align="right">53820</td>
+<td align="right">1521.000</td>
+</tr>
+<tr class="even">
+<td align="right">95366</td>
+<td align="right">75300</td>
+<td align="right">1521.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95821</td>
+<td align="right">38777</td>
+<td align="right">1521.667</td>
+</tr>
+<tr class="even">
+<td align="right">95361</td>
+<td align="right">57652</td>
+<td align="right">1522.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93667</td>
+<td align="right">53385</td>
+<td align="right">1523.000</td>
+</tr>
+<tr class="even">
+<td align="right">92078</td>
+<td align="right">55530</td>
+<td align="right">1530.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95492</td>
+<td align="right">81093</td>
+<td align="right">1530.000</td>
+</tr>
+<tr class="even">
+<td align="right">95631</td>
+<td align="right">63901</td>
+<td align="right">1530.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95959</td>
+<td align="right">58913</td>
+<td align="right">1530.000</td>
+</tr>
+<tr class="even">
+<td align="right">96027</td>
+<td align="right">43430</td>
+<td align="right">1531.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90230</td>
+<td align="right">73786</td>
+<td align="right">1532.000</td>
+</tr>
+<tr class="even">
+<td align="right">91205</td>
+<td align="right">37414</td>
+<td align="right">1533.000</td>
+</tr>
+<tr class="odd">
+<td align="right">96101</td>
+<td align="right">41016</td>
+<td align="right">1533.000</td>
+</tr>
+<tr class="even">
+<td align="right">92071</td>
+<td align="right">74393</td>
+<td align="right">1534.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92260</td>
+<td align="right">50309</td>
+<td align="right">1534.000</td>
+</tr>
+<tr class="even">
+<td align="right">94015</td>
+<td align="right">78564</td>
+<td align="right">1534.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95757</td>
+<td align="right">87782</td>
+<td align="right">1537.500</td>
+</tr>
+<tr class="even">
+<td align="right">95536</td>
+<td align="right">50227</td>
+<td align="right">1538.000</td>
+</tr>
+<tr class="odd">
+<td align="right">96145</td>
+<td align="right">68887</td>
+<td align="right">1538.000</td>
+</tr>
+<tr class="even">
+<td align="right">93644</td>
+<td align="right">44223</td>
+<td align="right">1540.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93720</td>
+<td align="right">77092</td>
+<td align="right">1541.000</td>
+</tr>
+<tr class="even">
+<td align="right">92122</td>
+<td align="right">71307</td>
+<td align="right">1542.000</td>
+</tr>
+<tr class="odd">
+<td align="right">96067</td>
+<td align="right">46318</td>
+<td align="right">1543.000</td>
+</tr>
+<tr class="even">
+<td align="right">96122</td>
+<td align="right">34945</td>
+<td align="right">1543.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93001</td>
+<td align="right">54945</td>
+<td align="right">1544.000</td>
+</tr>
+<tr class="even">
+<td align="right">93561</td>
+<td align="right">60513</td>
+<td align="right">1547.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92592</td>
+<td align="right">89541</td>
+<td align="right">1549.000</td>
+</tr>
+<tr class="even">
+<td align="right">92861</td>
+<td align="right">150864</td>
+<td align="right">1549.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95747</td>
+<td align="right">92678</td>
+<td align="right">1549.000</td>
+</tr>
+<tr class="even">
+<td align="right">95687</td>
+<td align="right">73684</td>
+<td align="right">1550.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95448</td>
+<td align="right">62076</td>
+<td align="right">1552.000</td>
+</tr>
+<tr class="even">
+<td align="right">95553</td>
+<td align="right">41393</td>
+<td align="right">1552.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94551</td>
+<td align="right">98321</td>
+<td align="right">1554.000</td>
+</tr>
+<tr class="even">
+<td align="right">96056</td>
+<td align="right">44348</td>
+<td align="right">1554.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93023</td>
+<td align="right">64843</td>
+<td align="right">1555.000</td>
+</tr>
+<tr class="even">
+<td align="right">91709</td>
+<td align="right">97609</td>
+<td align="right">1556.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91801</td>
+<td align="right">51225</td>
+<td align="right">1558.000</td>
+</tr>
+<tr class="even">
+<td align="right">95667</td>
+<td align="right">55710</td>
+<td align="right">1559.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95685</td>
+<td align="right">60648</td>
+<td align="right">1559.000</td>
+</tr>
+<tr class="even">
+<td align="right">95628</td>
+<td align="right">72739</td>
+<td align="right">1559.500</td>
+</tr>
+<tr class="odd">
+<td align="right">92036</td>
+<td align="right">51667</td>
+<td align="right">1560.000</td>
+</tr>
+<tr class="even">
+<td align="right">93003</td>
+<td align="right">69616</td>
+<td align="right">1560.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91502</td>
+<td align="right">40208</td>
+<td align="right">1561.000</td>
+</tr>
+<tr class="even">
+<td align="right">91711</td>
+<td align="right">89508</td>
+<td align="right">1561.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95125</td>
+<td align="right">102479</td>
+<td align="right">1561.500</td>
+</tr>
+<tr class="even">
+<td align="right">92663</td>
+<td align="right">86967</td>
+<td align="right">1562.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95051</td>
+<td align="right">101292</td>
+<td align="right">1562.500</td>
+</tr>
+<tr class="even">
+<td align="right">91367</td>
+<td align="right">77152</td>
+<td align="right">1563.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93110</td>
+<td align="right">75915</td>
+<td align="right">1564.000</td>
+</tr>
+<tr class="even">
+<td align="right">92869</td>
+<td align="right">88160</td>
+<td align="right">1565.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91321</td>
+<td align="right">57654</td>
+<td align="right">1567.000</td>
+</tr>
+<tr class="even">
+<td align="right">93460</td>
+<td align="right">91737</td>
+<td align="right">1567.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91411</td>
+<td align="right">43758</td>
+<td align="right">1568.000</td>
+</tr>
+<tr class="even">
+<td align="right">93555</td>
+<td align="right">62533</td>
+<td align="right">1568.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94903</td>
+<td align="right">86196</td>
+<td align="right">1569.000</td>
+</tr>
+<tr class="even">
+<td align="right">95436</td>
+<td align="right">53368</td>
+<td align="right">1569.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95661</td>
+<td align="right">72459</td>
+<td align="right">1569.000</td>
+</tr>
+<tr class="even">
+<td align="right">95073</td>
+<td align="right">80133</td>
+<td align="right">1571.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95340</td>
+<td align="right">49688</td>
+<td align="right">1572.000</td>
+</tr>
+<tr class="even">
+<td align="right">95018</td>
+<td align="right">72161</td>
+<td align="right">1573.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94019</td>
+<td align="right">103378</td>
+<td align="right">1574.000</td>
+</tr>
+<tr class="even">
+<td align="right">95969</td>
+<td align="right">41982</td>
+<td align="right">1575.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91737</td>
+<td align="right">98407</td>
+<td align="right">1578.000</td>
+</tr>
+<tr class="even">
+<td align="right">93730</td>
+<td align="right">120672</td>
+<td align="right">1578.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95121</td>
+<td align="right">85514</td>
+<td align="right">1578.000</td>
+</tr>
+<tr class="even">
+<td align="right">94928</td>
+<td align="right">57484</td>
+<td align="right">1578.500</td>
+</tr>
+<tr class="odd">
+<td align="right">93465</td>
+<td align="right">83194</td>
+<td align="right">1580.000</td>
+</tr>
+<tr class="even">
+<td align="right">95003</td>
+<td align="right">83902</td>
+<td align="right">1582.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92019</td>
+<td align="right">74797</td>
+<td align="right">1584.000</td>
+</tr>
+<tr class="even">
+<td align="right">94553</td>
+<td align="right">76669</td>
+<td align="right">1584.000</td>
+</tr>
+<tr class="odd">
+<td align="right">96161</td>
+<td align="right">75172</td>
+<td align="right">1584.000</td>
+</tr>
+<tr class="even">
+<td align="right">90277</td>
+<td align="right">99398</td>
+<td align="right">1586.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90720</td>
+<td align="right">95631</td>
+<td align="right">1586.000</td>
+</tr>
+<tr class="even">
+<td align="right">92821</td>
+<td align="right">80163</td>
+<td align="right">1586.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94945</td>
+<td align="right">83638</td>
+<td align="right">1586.000</td>
+</tr>
+<tr class="even">
+<td align="right">93021</td>
+<td align="right">99537</td>
+<td align="right">1588.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92673</td>
+<td align="right">125629</td>
+<td align="right">1589.000</td>
+</tr>
+<tr class="even">
+<td align="right">93311</td>
+<td align="right">87720</td>
+<td align="right">1592.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95633</td>
+<td align="right">70938</td>
+<td align="right">1592.000</td>
+</tr>
+<tr class="even">
+<td align="right">95501</td>
+<td align="right">38175</td>
+<td align="right">1592.500</td>
+</tr>
+<tr class="odd">
+<td align="right">92373</td>
+<td align="right">63948</td>
+<td align="right">1593.000</td>
+</tr>
+<tr class="even">
+<td align="right">90272</td>
+<td align="right">157938</td>
+<td align="right">1594.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91350</td>
+<td align="right">97921</td>
+<td align="right">1594.000</td>
+</tr>
+<tr class="even">
+<td align="right">95008</td>
+<td align="right">88987</td>
+<td align="right">1594.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95713</td>
+<td align="right">60720</td>
+<td align="right">1594.000</td>
+</tr>
+<tr class="even">
+<td align="right">92083</td>
+<td align="right">46073</td>
+<td align="right">1595.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90405</td>
+<td align="right">78756</td>
+<td align="right">1596.000</td>
+</tr>
+<tr class="even">
+<td align="right">95338</td>
+<td align="right">47692</td>
+<td align="right">1597.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94403</td>
+<td align="right">95189</td>
+<td align="right">1598.000</td>
+</tr>
+<tr class="even">
+<td align="right">95650</td>
+<td align="right">84133</td>
+<td align="right">1598.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93422</td>
+<td align="right">66014</td>
+<td align="right">1599.000</td>
+</tr>
+<tr class="even">
+<td align="right">94947</td>
+<td align="right">81879</td>
+<td align="right">1600.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94954</td>
+<td align="right">81980</td>
+<td align="right">1600.000</td>
+</tr>
+<tr class="even">
+<td align="right">93420</td>
+<td align="right">66506</td>
+<td align="right">1602.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93103</td>
+<td align="right">67383</td>
+<td align="right">1605.000</td>
+</tr>
+<tr class="even">
+<td align="right">91355</td>
+<td align="right">89596</td>
+<td align="right">1606.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93442</td>
+<td align="right">52579</td>
+<td align="right">1607.000</td>
+</tr>
+<tr class="even">
+<td align="right">94546</td>
+<td align="right">75500</td>
+<td align="right">1607.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92629</td>
+<td align="right">88384</td>
+<td align="right">1608.000</td>
+</tr>
+<tr class="even">
+<td align="right">92630</td>
+<td align="right">84785</td>
+<td align="right">1608.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92020</td>
+<td align="right">49851</td>
+<td align="right">1611.000</td>
+</tr>
+<tr class="even">
+<td align="right">92596</td>
+<td align="right">85914</td>
+<td align="right">1611.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95603</td>
+<td align="right">56049</td>
+<td align="right">1611.000</td>
+</tr>
+<tr class="even">
+<td align="right">95765</td>
+<td align="right">87100</td>
+<td align="right">1611.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91377</td>
+<td align="right">117326</td>
+<td align="right">1611.500</td>
+</tr>
+<tr class="even">
+<td align="right">92675</td>
+<td align="right">72465</td>
+<td align="right">1612.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93012</td>
+<td align="right">93523</td>
+<td align="right">1612.000</td>
+</tr>
+<tr class="even">
+<td align="right">94044</td>
+<td align="right">96719</td>
+<td align="right">1612.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95482</td>
+<td align="right">45953</td>
+<td align="right">1612.500</td>
+</tr>
+<tr class="even">
+<td align="right">91741</td>
+<td align="right">81250</td>
+<td align="right">1613.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95971</td>
+<td align="right">51869</td>
+<td align="right">1613.000</td>
+</tr>
+<tr class="even">
+<td align="right">94063</td>
+<td align="right">54003</td>
+<td align="right">1613.500</td>
+</tr>
+<tr class="odd">
+<td align="right">95035</td>
+<td align="right">98899</td>
+<td align="right">1614.000</td>
+</tr>
+<tr class="even">
+<td align="right">92807</td>
+<td align="right">94697</td>
+<td align="right">1616.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92653</td>
+<td align="right">92806</td>
+<td align="right">1620.000</td>
+</tr>
+<tr class="even">
+<td align="right">95118</td>
+<td align="right">90984</td>
+<td align="right">1622.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91381</td>
+<td align="right">114608</td>
+<td align="right">1623.000</td>
+</tr>
+<tr class="even">
+<td align="right">95864</td>
+<td align="right">83467</td>
+<td align="right">1623.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92118</td>
+<td align="right">90876</td>
+<td align="right">1624.000</td>
+</tr>
+<tr class="even">
+<td align="right">93117</td>
+<td align="right">55801</td>
+<td align="right">1625.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94523</td>
+<td align="right">81685</td>
+<td align="right">1625.000</td>
+</tr>
+<tr class="even">
+<td align="right">95682</td>
+<td align="right">77416</td>
+<td align="right">1630.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95460</td>
+<td align="right">49470</td>
+<td align="right">1631.000</td>
+</tr>
+<tr class="even">
+<td align="right">92648</td>
+<td align="right">85857</td>
+<td align="right">1634.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95132</td>
+<td align="right">98026</td>
+<td align="right">1635.000</td>
+</tr>
+<tr class="even">
+<td align="right">92692</td>
+<td align="right">102045</td>
+<td align="right">1637.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94550</td>
+<td align="right">102952</td>
+<td align="right">1637.000</td>
+</tr>
+<tr class="even">
+<td align="right">95405</td>
+<td align="right">72156</td>
+<td align="right">1638.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95926</td>
+<td align="right">37296</td>
+<td align="right">1639.333</td>
+</tr>
+<tr class="even">
+<td align="right">91360</td>
+<td align="right">91617</td>
+<td align="right">1642.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95521</td>
+<td align="right">32711</td>
+<td align="right">1644.333</td>
+</tr>
+<tr class="even">
+<td align="right">94501</td>
+<td align="right">70935</td>
+<td align="right">1644.500</td>
+</tr>
+<tr class="odd">
+<td align="right">91302</td>
+<td align="right">121715</td>
+<td align="right">1646.000</td>
+</tr>
+<tr class="even">
+<td align="right">93063</td>
+<td align="right">83974</td>
+<td align="right">1648.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95066</td>
+<td align="right">108919</td>
+<td align="right">1648.000</td>
+</tr>
+<tr class="even">
+<td align="right">96001</td>
+<td align="right">46422</td>
+<td align="right">1649.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93950</td>
+<td align="right">70230</td>
+<td align="right">1650.000</td>
+</tr>
+<tr class="even">
+<td align="right">95949</td>
+<td align="right">60459</td>
+<td align="right">1650.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94510</td>
+<td align="right">89500</td>
+<td align="right">1652.000</td>
+</tr>
+<tr class="even">
+<td align="right">95401</td>
+<td align="right">52813</td>
+<td align="right">1653.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92886</td>
+<td align="right">110054</td>
+<td align="right">1654.000</td>
+</tr>
+<tr class="even">
+<td align="right">94538</td>
+<td align="right">87652</td>
+<td align="right">1654.500</td>
+</tr>
+<tr class="odd">
+<td align="right">92008</td>
+<td align="right">66000</td>
+<td align="right">1657.000</td>
+</tr>
+<tr class="even">
+<td align="right">92040</td>
+<td align="right">64787</td>
+<td align="right">1657.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92009</td>
+<td align="right">102212</td>
+<td align="right">1658.000</td>
+</tr>
+<tr class="even">
+<td align="right">95472</td>
+<td align="right">68804</td>
+<td align="right">1658.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95762</td>
+<td align="right">117700</td>
+<td align="right">1658.000</td>
+</tr>
+<tr class="even">
+<td align="right">95630</td>
+<td align="right">100308</td>
+<td align="right">1661.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92688</td>
+<td align="right">100694</td>
+<td align="right">1663.000</td>
+</tr>
+<tr class="even">
+<td align="right">94952</td>
+<td align="right">75221</td>
+<td align="right">1663.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91320</td>
+<td align="right">106365</td>
+<td align="right">1667.000</td>
+</tr>
+<tr class="even">
+<td align="right">95124</td>
+<td align="right">106660</td>
+<td align="right">1668.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90265</td>
+<td align="right">124814</td>
+<td align="right">1670.000</td>
+</tr>
+<tr class="even">
+<td align="right">91748</td>
+<td align="right">60896</td>
+<td align="right">1673.000</td>
+</tr>
+<tr class="odd">
+<td align="right">93101</td>
+<td align="right">54945</td>
+<td align="right">1674.000</td>
+</tr>
+<tr class="even">
+<td align="right">92833</td>
+<td align="right">67019</td>
+<td align="right">1675.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94596</td>
+<td align="right">78856</td>
+<td align="right">1679.000</td>
+</tr>
+<tr class="even">
+<td align="right">92064</td>
+<td align="right">96297</td>
+<td align="right">1680.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94030</td>
+<td align="right">92006</td>
+<td align="right">1680.000</td>
+</tr>
+<tr class="even">
+<td align="right">95746</td>
+<td align="right">118919</td>
+<td align="right">1681.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91214</td>
+<td align="right">89849</td>
+<td align="right">1684.000</td>
+</tr>
+<tr class="even">
+<td align="right">92656</td>
+<td align="right">101292</td>
+<td align="right">1685.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90035</td>
+<td align="right">75327</td>
+<td align="right">1688.000</td>
+</tr>
+<tr class="even">
+<td align="right">93401</td>
+<td align="right">52906</td>
+<td align="right">1692.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94401</td>
+<td align="right">72279</td>
+<td align="right">1693.000</td>
+</tr>
+<tr class="even">
+<td align="right">91780</td>
+<td align="right">63045</td>
+<td align="right">1701.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94010</td>
+<td align="right">118125</td>
+<td align="right">1703.000</td>
+</tr>
+<tr class="even">
+<td align="right">94611</td>
+<td align="right">107577</td>
+<td align="right">1706.500</td>
+</tr>
+<tr class="odd">
+<td align="right">90703</td>
+<td align="right">90613</td>
+<td align="right">1708.667</td>
+</tr>
+<tr class="even">
+<td align="right">94960</td>
+<td align="right">108295</td>
+<td align="right">1711.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92037</td>
+<td align="right">95306</td>
+<td align="right">1712.000</td>
+</tr>
+<tr class="even">
+<td align="right">92129</td>
+<td align="right">109267</td>
+<td align="right">1713.500</td>
+</tr>
+<tr class="odd">
+<td align="right">91789</td>
+<td align="right">93509</td>
+<td align="right">1715.000</td>
+</tr>
+<tr class="even">
+<td align="right">92128</td>
+<td align="right">90298</td>
+<td align="right">1715.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91301</td>
+<td align="right">109913</td>
+<td align="right">1720.000</td>
+</tr>
+<tr class="even">
+<td align="right">94402</td>
+<td align="right">115807</td>
+<td align="right">1720.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94598</td>
+<td align="right">121337</td>
+<td align="right">1720.000</td>
+</tr>
+<tr class="even">
+<td align="right">95006</td>
+<td align="right">75510</td>
+<td align="right">1720.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94939</td>
+<td align="right">93750</td>
+<td align="right">1721.000</td>
+</tr>
+<tr class="even">
+<td align="right">95409</td>
+<td align="right">65425</td>
+<td align="right">1721.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95945</td>
+<td align="right">42778</td>
+<td align="right">1721.000</td>
+</tr>
+<tr class="even">
+<td align="right">92131</td>
+<td align="right">119924</td>
+<td align="right">1723.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92660</td>
+<td align="right">112008</td>
+<td align="right">1724.000</td>
+</tr>
+<tr class="even">
+<td align="right">95148</td>
+<td align="right">107324</td>
+<td align="right">1724.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94941</td>
+<td align="right">121209</td>
+<td align="right">1725.000</td>
+</tr>
+<tr class="even">
+<td align="right">94526</td>
+<td align="right">128802</td>
+<td align="right">1725.500</td>
+</tr>
+<tr class="odd">
+<td align="right">94536</td>
+<td align="right">92107</td>
+<td align="right">1727.500</td>
+</tr>
+<tr class="even">
+<td align="right">90266</td>
+<td align="right">142071</td>
+<td align="right">1732.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92602</td>
+<td align="right">104149</td>
+<td align="right">1732.000</td>
+</tr>
+<tr class="even">
+<td align="right">92651</td>
+<td align="right">98697</td>
+<td align="right">1734.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91362</td>
+<td align="right">100747</td>
+<td align="right">1735.000</td>
+</tr>
+<tr class="even">
+<td align="right">91030</td>
+<td align="right">80479</td>
+<td align="right">1736.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94704</td>
+<td align="right">30997</td>
+<td align="right">1737.000</td>
+</tr>
+<tr class="even">
+<td align="right">91765</td>
+<td align="right">90966</td>
+<td align="right">1741.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94582</td>
+<td align="right">138371</td>
+<td align="right">1744.500</td>
+</tr>
+<tr class="even">
+<td align="right">94706</td>
+<td align="right">81746</td>
+<td align="right">1745.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94002</td>
+<td align="right">105985</td>
+<td align="right">1748.000</td>
+</tr>
+<tr class="even">
+<td align="right">94025</td>
+<td align="right">119095</td>
+<td align="right">1748.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90212</td>
+<td align="right">84516</td>
+<td align="right">1751.000</td>
+</tr>
+<tr class="even">
+<td align="right">94583</td>
+<td align="right">121948</td>
+<td align="right">1753.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90630</td>
+<td align="right">84051</td>
+<td align="right">1757.500</td>
+</tr>
+<tr class="even">
+<td align="right">93923</td>
+<td align="right">98219</td>
+<td align="right">1760.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92604</td>
+<td align="right">91180</td>
+<td align="right">1761.000</td>
+</tr>
+<tr class="even">
+<td align="right">95616</td>
+<td align="right">45332</td>
+<td align="right">1763.000</td>
+</tr>
+<tr class="odd">
+<td align="right">90274</td>
+<td align="right">156250</td>
+<td align="right">1774.000</td>
+</tr>
+<tr class="even">
+<td align="right">94549</td>
+<td align="right">137344</td>
+<td align="right">1777.000</td>
+</tr>
+<tr class="odd">
+<td align="right">95060</td>
+<td align="right">62365</td>
+<td align="right">1789.000</td>
+</tr>
+<tr class="even">
+<td align="right">95070</td>
+<td align="right">167386</td>
+<td align="right">1790.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94566</td>
+<td align="right">120401</td>
+<td align="right">1790.500</td>
+</tr>
+<tr class="even">
+<td align="right">95030</td>
+<td align="right">154107</td>
+<td align="right">1792.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91007</td>
+<td align="right">72255</td>
+<td align="right">1805.000</td>
+</tr>
+<tr class="even">
+<td align="right">91011</td>
+<td align="right">152210</td>
+<td align="right">1836.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94556</td>
+<td align="right">133088</td>
+<td align="right">1836.000</td>
+</tr>
+<tr class="even">
+<td align="right">95120</td>
+<td align="right">152721</td>
+<td align="right">1844.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91006</td>
+<td align="right">84021</td>
+<td align="right">1847.000</td>
+</tr>
+<tr class="even">
+<td align="right">92130</td>
+<td align="right">131166</td>
+<td align="right">1858.000</td>
+</tr>
+<tr class="odd">
+<td align="right">91108</td>
+<td align="right">120152</td>
+<td align="right">1871.000</td>
+</tr>
+<tr class="even">
+<td align="right">92620</td>
+<td align="right">102160</td>
+<td align="right">1881.000</td>
+</tr>
+<tr class="odd">
+<td align="right">92831</td>
+<td align="right">57333</td>
+<td align="right">1881.000</td>
+</tr>
+<tr class="even">
+<td align="right">95014</td>
+<td align="right">130961</td>
+<td align="right">1889.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94563</td>
+<td align="right">166147</td>
+<td align="right">1894.000</td>
+</tr>
+<tr class="even">
+<td align="right">94301</td>
+<td align="right">134907</td>
+<td align="right">1908.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94306</td>
+<td align="right">111602</td>
+<td align="right">1974.000</td>
+</tr>
+<tr class="even">
+<td align="right">95129</td>
+<td align="right">107493</td>
+<td align="right">2001.000</td>
+</tr>
+<tr class="odd">
+<td align="right">94539</td>
+<td align="right">144152</td>
+<td align="right">2023.000</td>
+</tr>
+</tbody>
+</table>
 <p>From the table, we can clearly observe that zip codes in the beggining of the list are the areas with way less than average household income and low sat scores whereas zip codes towards the end of the list are the areas with way more average household incomes and high sat scores.</p>
 </div>
 <div id="first-visualization" class="section level2">
 <h2>First Visualization</h2>
 <p>The purpose of this visualization is to highlight the potential relationship between geographical locations and the average SAT performace. Using map visualization, we can get a better insight on location vs. SAT performance. Here is the visualization:</p>
-<div id="htmlwidget-a6bd4b3696ea6f4eec1a" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a6bd4b3696ea6f4eec1a">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[37.7145526491228,38.38228835,39.5622451578947,38.1607896842105,39.1690653793103,37.9381432103659,41.7834300769231,38.62243696,36.6766094508929,39.5149737254902,40.7376582808219,32.8238445360825,36.74001292,35.3488024044944,36.175943875,38.9676546567164,40.4147173333333,34.065498915493,37.0894821981982,38.0219385517241,39.3510244646465,37.2679605743243,36.5067650765306,38.3469428666667,39.09423805,33.7385744978479,38.8579780231214,33.8004229273927,38.5523750108225,36.7831045121951,34.2590883997175,32.9001085348595,37.7558216776316,37.8567155097403,35.4147506826923,37.5072262563025,34.6388913555556,37.310359037182,36.9819485754717,40.6047811783439,41.51434133,38.2421611060606,38.3830912639405,37.615769436,38.8105485588235,40.117277474359,36.2219409726962,37.9104235573771,34.2719243159851,38.5604691744186,39.1344557115385],[-122.104931793372,-120.784018,-121.635796616541,-120.604846315789,-122.117876206897,-122.027597439024,-124.162513076923,-120.714982,-119.756396004464,-122.099693333333,-124.064386027397,-115.461388659794,-118.0704836,-118.925736404494,-119.674932291667,-122.754309253731,-120.611739824561,-118.227903728688,-119.949657837838,-122.59189362069,-123.440090505051,-120.630188918919,-121.511611989796,-122.330715,-120.995319375,-117.86743974175,-121.083312138728,-117.057815907591,-121.385052943723,-121.338862439024,-117.30053309322,-117.092038355879,-122.433662171053,-121.255596006494,-120.673650865385,-122.287242016807,-120.044636611111,-121.901143816047,-121.935161509434,-122.248105477707,-122.5262988,-122.068412878788,-122.711401375465,-120.94158276,-121.449496470588,-122.197709230769,-119.207474846416,-120.27401557377,-119.037066505576,-121.707911744186,-121.478453653846],10,null,null,{"interactive":true,"className":"","stroke":true,"color":["#6245A3","#4F349A","#593C9F","#39208F","#FFFFFF","#8368B6","#A690CA","#000080","#B5A2D3","#DCD2EA","#6A4DA8","#B39FD2","#CCBFE1","#BCABD7","#C4B5DC","#B19DD1","#C2B2DB","#B4A0D2","#D9CEE8","#2D168A","#8166B5","#D7CCE7","#CABCE0","#9279BF","#30198C","#775CAF","#2C168A","#C3B4DC","#967DC1","#8F76BD","#B19ED1","#6D51AA","#6E52AA","#A38DC9","#492E97","#5B3FA0","#5A3D9F","#39208F","#7357AD","#482D96","#8267B6","#8A70BA","#6A4EA8","#B4A1D2","#7C60B2","#664AA6","#C9BADF","#5A3D9F","#9F88C6","#6145A3","#876CB8"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["#6245A3","#4F349A","#593C9F","#39208F","#FFFFFF","#8368B6","#A690CA","#000080","#B5A2D3","#DCD2EA","#6A4DA8","#B39FD2","#CCBFE1","#BCABD7","#C4B5DC","#B19DD1","#C2B2DB","#B4A0D2","#D9CEE8","#2D168A","#8166B5","#D7CCE7","#CABCE0","#9279BF","#30198C","#775CAF","#2C168A","#C3B4DC","#967DC1","#8F76BD","#B19ED1","#6D51AA","#6E52AA","#A38DC9","#492E97","#5B3FA0","#5A3D9F","#39208F","#7357AD","#482D96","#8267B6","#8A70BA","#6A4EA8","#B4A1D2","#7C60B2","#664AA6","#C9BADF","#5A3D9F","#9F88C6","#6145A3","#876CB8"],"fillOpacity":1},null,null,["Alameda County<br>58.16% of 12th grade student passed benchmark.","Amador County<br>62.26% of 12th grade student passed benchmark.","Butte County<br>60.25% of 12th grade student passed benchmark.","Calaveras County<br>66.67% of 12th grade student passed benchmark.","Colusa County<br>18.92% of 12th grade student passed benchmark.","Contra Costa County<br>50.28% of 12th grade student passed benchmark.","Del Norte County<br>41.67% of 12th grade student passed benchmark.","El Dorado County<br>73.18% of 12th grade student passed benchmark.","Fresno County<br>37.79% of 12th grade student passed benchmark.","Glenn County<br>27.78% of 12th grade student passed benchmark.","Humboldt County<br>56.33% of 12th grade student passed benchmark.","Imperial County<br>38.32% of 12th grade student passed benchmark.","Inyo County<br>31.82% of 12th grade student passed benchmark.","Kern County<br>35.96% of 12th grade student passed benchmark.","Kings County<br>33.86% of 12th grade student passed benchmark.","Lake County<br>38.92% of 12th grade student passed benchmark.","Lassen County<br>34.43% of 12th grade student passed benchmark.","Los Angeles County<br>38.12% of 12th grade student passed benchmark.","Madera County<br>28.73% of 12th grade student passed benchmark.","Marin County<br>68.81% of 12th grade student passed benchmark.","Mendocino County<br>50.69% of 12th grade student passed benchmark.","Merced County<br>29.12% of 12th grade student passed benchmark.","Monterey County<br>32.43% of 12th grade student passed benchmark.","Napa County<br>46.49% of 12th grade student passed benchmark.","Nevada County<br>68.28% of 12th grade student passed benchmark.","Orange County<br>53.13% of 12th grade student passed benchmark.","Placer County<br>68.91% of 12th grade student passed benchmark.","Riverside County<br>34.11% of 12th grade student passed benchmark.","Sacramento County<br>45.63% of 12th grade student passed benchmark.","San Benito County<br>47.35% of 12th grade student passed benchmark.","San Bernardino County<br>38.72% of 12th grade student passed benchmark.","San Diego County<br>55.52% of 12th grade student passed benchmark.","San Francisco County<br>55.32% of 12th grade student passed benchmark.","San Joaquin County<br>42.29% of 12th grade student passed benchmark.","San Luis Obispo County<br>63.65% of 12th grade student passed benchmark.","San Mateo County<br>59.65% of 12th grade student passed benchmark.","Santa Barbara County<br>60.03% of 12th grade student passed benchmark.","Santa Clara County<br>66.76% of 12th grade student passed benchmark.","Santa Cruz County<br>54.17% of 12th grade student passed benchmark.","Shasta County<br>63.73% of 12th grade student passed benchmark.","Siskiyou County<br>50.46% of 12th grade student passed benchmark.","Solano County<br>48.65% of 12th grade student passed benchmark.","Sonoma County<br>56.26% of 12th grade student passed benchmark.","Stanislaus County<br>38.1% of 12th grade student passed benchmark.","Sutter County<br>52.09% of 12th grade student passed benchmark.","Tehama County<br>57.14% of 12th grade student passed benchmark.","Tulare County<br>32.7% of 12th grade student passed benchmark.","Tuolumne County<br>60% of 12th grade student passed benchmark.","Ventura County<br>43.38% of 12th grade student passed benchmark.","Yolo County<br>58.37% of 12th grade student passed benchmark.","Yuba County<br>49.44% of 12th grade student passed benchmark."],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[32.8238445360825,41.7834300769231],"lng":[-124.162513076923,-115.461388659794]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-f18691fbc996c1be56fd" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f18691fbc996c1be56fd">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[37.7145526491228,38.38228835,39.5622451578947,38.1607896842105,39.1690653793103,37.9381432103659,41.7834300769231,38.62243696,36.6766094508929,39.5149737254902,40.7376582808219,32.8238445360825,36.74001292,35.3488024044944,36.175943875,38.9676546567164,40.4147173333333,34.065498915493,37.0894821981982,38.0219385517241,39.3510244646465,37.2679605743243,36.5067650765306,38.3469428666667,39.09423805,33.7385744978479,38.8579780231214,33.8004229273927,38.5523750108225,36.7831045121951,34.2590883997175,32.9001085348595,37.7558216776316,37.8567155097403,35.4147506826923,37.5072262563025,34.6388913555556,37.310359037182,36.9819485754717,40.6047811783439,41.51434133,38.2421611060606,38.3830912639405,37.615769436,38.8105485588235,40.117277474359,36.2219409726962,37.9104235573771,34.2719243159851,38.5604691744186,39.1344557115385],[-122.104931793372,-120.784018,-121.635796616541,-120.604846315789,-122.117876206897,-122.027597439024,-124.162513076923,-120.714982,-119.756396004464,-122.099693333333,-124.064386027397,-115.461388659794,-118.0704836,-118.925736404494,-119.674932291667,-122.754309253731,-120.611739824561,-118.227903728688,-119.949657837838,-122.59189362069,-123.440090505051,-120.630188918919,-121.511611989796,-122.330715,-120.995319375,-117.86743974175,-121.083312138728,-117.057815907591,-121.385052943723,-121.338862439024,-117.30053309322,-117.092038355879,-122.433662171053,-121.255596006494,-120.673650865385,-122.287242016807,-120.044636611111,-121.901143816047,-121.935161509434,-122.248105477707,-122.5262988,-122.068412878788,-122.711401375465,-120.94158276,-121.449496470588,-122.197709230769,-119.207474846416,-120.27401557377,-119.037066505576,-121.707911744186,-121.478453653846],10,null,null,{"interactive":true,"className":"","stroke":true,"color":["#6245A3","#4F349A","#583C9F","#39208F","#FFFFFF","#8368B6","#A590CA","#000080","#B5A2D3","#DCD2EA","#6A4DA8","#B39FD2","#CCBFE1","#BCABD7","#C4B5DC","#B09DD1","#C2B2DB","#B4A0D2","#D8CEE8","#2C168A","#8166B5","#D7CCE7","#CABCE0","#9279BF","#30198C","#775CAF","#2C168A","#C3B4DC","#967DC1","#8F75BD","#B19ED1","#6D51AA","#6E52AA","#A38DC9","#492E97","#5B3FA0","#593D9F","#39208F","#7357AD","#482D96","#8267B6","#8A70BA","#6A4EA8","#B4A0D3","#7B60B2","#664AA6","#C9BADF","#5A3D9F","#9F88C6","#6145A3","#866CB8"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["#6245A3","#4F349A","#583C9F","#39208F","#FFFFFF","#8368B6","#A590CA","#000080","#B5A2D3","#DCD2EA","#6A4DA8","#B39FD2","#CCBFE1","#BCABD7","#C4B5DC","#B09DD1","#C2B2DB","#B4A0D2","#D8CEE8","#2C168A","#8166B5","#D7CCE7","#CABCE0","#9279BF","#30198C","#775CAF","#2C168A","#C3B4DC","#967DC1","#8F75BD","#B19ED1","#6D51AA","#6E52AA","#A38DC9","#492E97","#5B3FA0","#593D9F","#39208F","#7357AD","#482D96","#8267B6","#8A70BA","#6A4EA8","#B4A0D3","#7B60B2","#664AA6","#C9BADF","#5A3D9F","#9F88C6","#6145A3","#866CB8"],"fillOpacity":1},null,null,["Alameda County<br>58.16% of 12th grade student passed benchmark.","Amador County<br>62.26% of 12th grade student passed benchmark.","Butte County<br>60.25% of 12th grade student passed benchmark.","Calaveras County<br>66.67% of 12th grade student passed benchmark.","Colusa County<br>18.92% of 12th grade student passed benchmark.","Contra Costa County<br>50.28% of 12th grade student passed benchmark.","Del Norte County<br>41.67% of 12th grade student passed benchmark.","El Dorado County<br>73.18% of 12th grade student passed benchmark.","Fresno County<br>37.79% of 12th grade student passed benchmark.","Glenn County<br>27.78% of 12th grade student passed benchmark.","Humboldt County<br>56.33% of 12th grade student passed benchmark.","Imperial County<br>38.32% of 12th grade student passed benchmark.","Inyo County<br>31.82% of 12th grade student passed benchmark.","Kern County<br>35.96% of 12th grade student passed benchmark.","Kings County<br>33.86% of 12th grade student passed benchmark.","Lake County<br>38.92% of 12th grade student passed benchmark.","Lassen County<br>34.43% of 12th grade student passed benchmark.","Los Angeles County<br>38.12% of 12th grade student passed benchmark.","Madera County<br>28.73% of 12th grade student passed benchmark.","Marin County<br>68.81% of 12th grade student passed benchmark.","Mendocino County<br>50.69% of 12th grade student passed benchmark.","Merced County<br>29.12% of 12th grade student passed benchmark.","Monterey County<br>32.43% of 12th grade student passed benchmark.","Napa County<br>46.49% of 12th grade student passed benchmark.","Nevada County<br>68.28% of 12th grade student passed benchmark.","Orange County<br>53.13% of 12th grade student passed benchmark.","Placer County<br>68.91% of 12th grade student passed benchmark.","Riverside County<br>34.11% of 12th grade student passed benchmark.","Sacramento County<br>45.63% of 12th grade student passed benchmark.","San Benito County<br>47.35% of 12th grade student passed benchmark.","San Bernardino County<br>38.72% of 12th grade student passed benchmark.","San Diego County<br>55.52% of 12th grade student passed benchmark.","San Francisco County<br>55.32% of 12th grade student passed benchmark.","San Joaquin County<br>42.29% of 12th grade student passed benchmark.","San Luis Obispo County<br>63.65% of 12th grade student passed benchmark.","San Mateo County<br>59.65% of 12th grade student passed benchmark.","Santa Barbara County<br>60.03% of 12th grade student passed benchmark.","Santa Clara County<br>66.76% of 12th grade student passed benchmark.","Santa Cruz County<br>54.17% of 12th grade student passed benchmark.","Shasta County<br>63.73% of 12th grade student passed benchmark.","Siskiyou County<br>50.46% of 12th grade student passed benchmark.","Solano County<br>48.65% of 12th grade student passed benchmark.","Sonoma County<br>56.26% of 12th grade student passed benchmark.","Stanislaus County<br>38.1% of 12th grade student passed benchmark.","Sutter County<br>52.09% of 12th grade student passed benchmark.","Tehama County<br>57.14% of 12th grade student passed benchmark.","Tulare County<br>32.7% of 12th grade student passed benchmark.","Tuolumne County<br>60% of 12th grade student passed benchmark.","Ventura County<br>43.38% of 12th grade student passed benchmark.","Yolo County<br>58.37% of 12th grade student passed benchmark.","Yuba County<br>49.44% of 12th grade student passed benchmark."],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[32.8238445360825,41.7834300769231],"lng":[-124.162513076923,-115.461388659794]}},"evals":[],"jsHooks":[]}</script>
 <p>From the map visualization we can see there seems to be a higher percentage of student passing the performance benchmark near San Francisco and Sacramento than other places. Student near Fresno seems to have lower performance than others.</p>
 </div>
 <div id="second-visualization" class="section level2">
