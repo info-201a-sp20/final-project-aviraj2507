@@ -8,6 +8,8 @@ cali_hs_sat_zip_df <- read.csv("../data/cali_hs_sat_zip.csv",
 )
 cali_hs_sat_zip_df <- na.omit(cali_hs_sat_zip_df)
 
+options(scipen = 999)
+
 summarise <- function(dataset) {
   output <- list()
   mean_income <- mean(dataset[[7]], na.rm = TRUE)
@@ -28,4 +30,6 @@ summarise <- function(dataset) {
 }
 
 summary_information <- summarise(cali_hs_sat_zip_df)
-
+mean_household_income <- round(summary_information$mean_household_income,0)
+avg_score_above_mean_inc <- round(summary_information$avg_score_above_mean_inc,
+                                  1)
