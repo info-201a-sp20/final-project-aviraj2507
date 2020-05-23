@@ -87,7 +87,7 @@ From the bar chart we observe an upward trend as SAT score and median income inc
 
 The purpose of this visualization is to plot the HS average SAT score versus Median income by zip code, to show any linear or nonlinear relationships. We have a trend line to highlight how income and SAT scores are related. 
 
-```{r, echo = FALSE, warning = FALSE, include=FALSE}
+```{r, echo = FALSE, warning = FALSE, message=FALSE}
 
 source("third_chart.R")
 chart_three
