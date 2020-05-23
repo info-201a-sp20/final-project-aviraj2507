@@ -54,5 +54,6 @@ map_gen <- function() {
                        "% of 12th grade student passed benchmark."
                        ))
 }
+chart_one <- map_gen()
 
 lint("first_chart.R")

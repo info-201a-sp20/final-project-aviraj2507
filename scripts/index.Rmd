@@ -62,7 +62,7 @@ Here is the visualization:
 
 ```{r, echo = FALSE, warning = FALSE}
 source("first_chart.R")
-map_gen()
+chart_one
 ```
 
 From the map visualization we can see there seems to be a higher percentage
@@ -78,7 +78,7 @@ The purpose of this visualization is to compare HS average SAT score and Median 
 ```{r, echo = FALSE, warning = FALSE}
 
 source("second_chart.R")
-ggplotly(plot_ca)
+chart_two
 ```
 
 From the bar chart we observe an upward trend as SAT score and median income increase. Towards the 1500 range in SAT score, not only do we see a concentration of data but the color key reflects that many of the zip codes are 955xx which is Humboldt county. Towards the upper boundary of highest SAT scores we see more 945xx zip codes which is Alameda county in the Bay area. This further confirms what we see from our map visualization.
@@ -90,7 +90,7 @@ The purpose of this visualization is to plot the HS average SAT score versus Med
 ```{r, echo = FALSE, warning = FALSE}
 
 source("third_chart.R")
-ggplotly(scatter_sat_zip_hs)
+chart_three
 ```
 
 From this scatterplot, we observe a linear relationship between SAT scores and income. We can easily follow the trendline to see a trend up in SAT scores as median zip code income increases. The correlation between the two is `r corr_sat_income`. Based on the trendline, there seemed to be several high schools that outperformed their expected SAT score based on their zip code median income, as well as some underperforming richer high schools. To the top right of the graph, schools that are well above the trendline shows the schools despite having access to more resources, performed about as well with other schools with less resources. 
