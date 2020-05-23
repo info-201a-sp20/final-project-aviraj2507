@@ -64,8 +64,6 @@ source("first_chart.R")
 map_gen()
 ```
 
-=======
-```
 
 From the table, we can clearly observe that zip codes in the beggining 
 of the list are the areas with way less than average household income
