@@ -100,6 +100,8 @@ scatter_sat_zip_hs <- ggplot(
 
 scatter_sat_zip_hs
 
+corr_sat_income <- round(cor(cali_hs_sat_zip_df$TotalSatScore, cali_hs_sat_zip_df$MedianHouseholdIncome),2)
+
 style_file("third_chart.R")
 
 lint("third_chart.R")

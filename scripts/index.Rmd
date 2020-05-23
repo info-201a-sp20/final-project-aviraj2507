@@ -11,12 +11,13 @@ source("summary_info.R")
 source("summary_table.R")
 source("first_chart.R")
 source("second_chart.R")
+source("third_chart.R")
 library("knitr")
 ```
 
 ## Introduction
 
-For our project, our domain of interest is to observe the transition of standardized tests being a requirement for admission by universities. Specifically, we have narrowed our scope to analyze the relationship between average SAT scores and their relationship to income across zip codes in California. As an objective of our project, we would like to uncover some of the discepencies from area to area and how it affects students' score. Thus, findings from our report will reveal whether standardized test are a true reflection of a student's capabilities. The source of the data is from [California Department Of Education](https://www.cde.ca.gov/ds/sp/ai/) and [IRS website](https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-2017-zip-code-data-soi). 
+For our project, our domain of interest is to observe the transition of standardized tests being a requirement for admission by universities. Specifically, we have narrowed our scope to analyze the relationship between average SAT scores and their relationship to income across zip codes in California. As an objective of our project, we would like to uncover some of the discepencies from area to area and how it affects students' score. Thus, findings from our report will reveal whether standardized test are a true reflection of a student's capabilities. The source of the data is from [California Department Of Education](https://www.cde.ca.gov/ds/sp/ai/) and [ACS 2010 - 2014 ACS Data](http://www.usa.com/rank/california-state--median-household-income--zip-code-rank.html). 
 
 ## Summary Information
 
@@ -102,3 +103,13 @@ ggplotly(plot_ca)
 From the bar chart we observe an upward trend as SAT score and median income increase. Towards the 1500 range in SAT score, not only do we see a concentration of data but the color key reflects that many of the zip codes are 955xx which is Humboldt county. Towards the upper boundary of highest SAT scores we see more 945xx zip codes which is Alameda county in the Bay area. This further confirms what we see from our map visualization.
 
 ## Third Visualization
+
+The purpose of this visualization is to plot the HS average SAT score versus Median income by zip code, to show any linear or nonlinear relationships. We have a trend line to highlight how income and SAT scores are related. 
+
+```{r, echo = FALSE, warning = FALSE}
+
+source("third_chart.R")
+ggplotly(scatter_sat_zip_hs)
+```
+
+From this scatterplot, we observe a linear relationship between SAT scores and income. We can easily follow the trendline to see a trend up in SAT scores as median zip code income increases. The correlation between the two is `r corr_sat_income`. Based on the trendline, there seemed to be several high schools that outperformed their expected SAT score based on their zip code median income, as well as some underperforming richer high schools. To the top right of the graph, schools that are well above the trendline shows the schools despite having access to more resources, performed about as well with other schools with less resources. 
