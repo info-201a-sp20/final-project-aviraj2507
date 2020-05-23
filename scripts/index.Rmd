@@ -74,9 +74,8 @@ others.
 The purpose of this visualization is to compare HS average SAT score and Median income by zip code. In particular, the key displays bar colors by zip code. 
 
 ```{r, echo = FALSE, warning = FALSE}
-
 source("second_chart.R")
-ggplotly(plot_ca)
+chart_2(cali_hs_sat_zip_df)
 ```
 
 From the bar chart we observe an upward trend as SAT score and median income increase. Towards the 1500 range in SAT score, not only do we see a concentration of data but the color key reflects that many of the zip codes are 955xx which is Humboldt county. Towards the upper boundary of highest SAT scores we see more 945xx zip codes which is Alameda county in the Bay area. This further confirms what we see from our map visualization.
