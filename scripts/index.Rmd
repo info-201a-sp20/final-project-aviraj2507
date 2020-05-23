@@ -27,27 +27,29 @@ source("summary_info.R")
 The summary includes some interesting analysis of how household income
 corelates to a student's total SAT score. Based on our data, the mean
 and median household income for California is 
-`r summary_information$mean_household_income` and `r summary_information$median_household_income`
+`r mean_household_income` and `r summary_information$median_household_income`
 respectively.The average SAT score for kids in below average income
 household was `r summary_information$avg_score_below_mean_inc` and for kids
 in above average income household was 
-`r summary_information$avg_score_above_mean_inc`.The zip code with the highest
-median household income was `r summary_information$zip_with_max_income`.
+`r avg_score_above_mean_inc`.The zip code with the highest
+median household income was `r summary_information$zip_with_max_income[1]`.
 
 ## Summary Table
 
 The summary table portrays how total sat score and mean household income
 are different for different areas(Zip code) in California.
 
-```{r kable_example, echo = FALSE, warning = FALSE}
+```{r, layout = "l-body-outset", echo = FALSE, warning = FALSE}
+library(rmarkdown)
+library(DT)
 source("summary_table.R")
-kable(summary_table)
+DT::datatable(summary_table, options = list(rows.print = 25),)
 ```
 
 From the table, we can clearly observe that zip codes in the beggining 
 of the list are the areas with way less than average household income
 and low sat scores whereas zip codes towards the end of the list are 
-the areas with way more average household incomes and high sat scores.
+the areas with way more average household incomes and higher sat scores.
 
 ## First Visualization
 
@@ -68,8 +70,11 @@ others.
 
 
 ## Second Visualization
+
 The purpose of this visualization is to compare HS average SAT score and Median income by zip code. In particular, the key displays bar colors by zip code. 
-```{r, echo = FALSE}
+
+```{r, echo = FALSE, warning = FALSE}
+
 source("second_chart.R")
 ggplotly(plot_ca)
 ```
