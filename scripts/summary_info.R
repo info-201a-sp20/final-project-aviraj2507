@@ -1,15 +1,22 @@
+# This file contains a function that returns a list
+# containing information about the data
 library(dplyr)
 
 rm(list = ls())
 
+#reads in csv file to convert into a dataframe
 cali_hs_sat_zip_df <- read.csv("../data/cali_hs_sat_zip.csv",
   stringsAsFactors
   = FALSE
 )
+
+#omits NA values
 cali_hs_sat_zip_df <- na.omit(cali_hs_sat_zip_df)
 
 options(scipen = 999)
 
+# a function that returns some information about the data
+# in the form of a list.
 summarise <- function(dataset) {
   output <- list()
   mean_income <- mean(dataset[[7]], na.rm = TRUE)
@@ -30,6 +37,8 @@ summarise <- function(dataset) {
 }
 
 summary_information <- summarise(cali_hs_sat_zip_df)
-mean_household_income <- round(summary_information$mean_household_income,0)
-avg_score_above_mean_inc <- round(summary_information$avg_score_above_mean_inc,
-                                  1)
+mean_household_income <- round(summary_information$mean_household_income, 0)
+avg_score_above_mean_inc <- round(
+  summary_information$avg_score_above_mean_inc,
+  1
+)
