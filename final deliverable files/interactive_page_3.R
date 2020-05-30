@@ -29,7 +29,7 @@ build_third_plot(cali_hs_sat_zip_df, x_axis)
 
 #Making Binned Bar Graph
 
-binned_income_interactive <- function(dataframe, bin, y_axis) {
+binned_income_interactive <- function(dataframe, bin, y_axis = "AvgTotalSATScore") {
   df <- dataframe %>%
     filter(MedianHouseholdIncome != is.na(MedianHouseholdIncome)) %>%
     mutate(income_bin_primary =
@@ -50,12 +50,11 @@ binned_income_interactive <- function(dataframe, bin, y_axis) {
               AvgWrite = mean(AvgScrWrite))
   
     plot <- ggplot(df,
-                   aes(x = income_bin, y = y_axis)) + 
+                   aes(x = income_bin,
+                       y = AvgTotalSATScore)) + 
       geom_bar(stat = "identity", fill = "DarkBlue") +
       xlab("Income Bin") +
       ylab(y_axis)
     
     return(plot)
 }
-
-binned_income_interactive(cali_hs_sat_zip_df, 20000, "AvgTotalSATScore")
