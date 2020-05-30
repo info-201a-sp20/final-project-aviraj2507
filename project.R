@@ -1,6 +1,7 @@
 #Project - Midpoint Deliverable, Data Exploration
 library("dplyr")
 rm(list = ls())
+
 #Getting the datasets
 cali_sat <- read.csv("data/ca-sat15.csv",
                      stringsAsFactors = FALSE)
@@ -59,7 +60,7 @@ cali_county_sat_income <- cali_county_sat %>%
          TotalSatScore, MIH)
 
 #Combining California and ZIP Code MHI
-cali_hs_sat_zip <- cali_hs_sat_scores %>%
+cali_hs_sat_zip <- cali_hs_satScores %>%
   left_join(cali_zip)
 
 names(cali_hs_sat_zip)[7] <- "MedianHouseholdIncome"
