@@ -37,6 +37,7 @@ page_two <- fluidPage(
     outputId = "summary_table"
   )
 )
+
 page_six_sidepanel <- sidebarPanel(
   selectInput(
     h2("Contents:"),
