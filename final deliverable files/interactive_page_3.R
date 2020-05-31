@@ -3,6 +3,7 @@
 library(dplyr)
 library(ggplot2)
 library(plotly)
+library(shiny)
 
 cali_hs_sat_zip_df <- read.csv("../data/cali_hs_sat_zip.csv",
                                stringsAsFactors
@@ -77,3 +78,22 @@ binned_income_interactive <- function(dataframe, bin, yvar = "AvgTotalSATScore")
 }
 
 binned_income_interactive(cali_hs_sat_zip_df, 40000, yvar = "AvgMath")
+
+third_page_sidebar <- sidebarPanel(
+  selectInput("y_var_bar", label = "SAT Score Breakdown",
+              choices = list(
+                "Total" = "AvgTotalSATScore",
+                "Reading" = "AvgRead",
+                "Writing" = "AvgWrite",
+                "Math" = "AvgMath")),
+  numericInput("income_bin_var",
+               label = "Income Bin Breakdown",
+               value = 25000,
+               min = 10000,
+               max = 10000,
+               step = 1000))
+
+third_page_main <- mainPanel(
+  plotlyOutput("income_bar"),
+  titlePanel("SAT Scores binned by Income")
+)
