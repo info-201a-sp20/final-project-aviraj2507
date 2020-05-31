@@ -46,6 +46,11 @@ page_two <- fluidPage(
   )
 )
 
+page_three <- tabPanel(
+  third_page_sidebar,
+  third_page_main
+)
+
 page_six_sidepanel <- sidebarPanel(
   selectInput(
     h2("Contents:"),
