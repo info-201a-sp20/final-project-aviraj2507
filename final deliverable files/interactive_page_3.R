@@ -77,7 +77,7 @@ binned_income_interactive <- function(dataframe, bin, yvar = "AvgTotalSATScore")
   return(plot)
 }
 
-binned_income_interactive(cali_hs_sat_zip_df, 40000, yvar = "AvgMath")
+binned_income_interactive(cali_hs_sat_zip_df, 25000, yvar = "AvgTotalSATScore")
 
 third_page_sidebar <- sidebarPanel(
   selectInput("y_var_bar", label = "SAT Score Breakdown",
