@@ -4,7 +4,6 @@ library(plotly)
 library(shiny)
 library(DT)
 
-rm(list = ls())
 
 source("intro_page.R")
 source("summary_takeaway_page.R")

@@ -4,7 +4,6 @@ library(plotly)
 library(shiny)
 library(DT)
 
-rm(list = ls())
 
 cali_hs_sat_zip_df <- read.csv("../data/cali_hs_sat_zip.csv",
                                stringsAsFactors
