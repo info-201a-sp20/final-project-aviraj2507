@@ -1,7 +1,9 @@
 # server.R
 library(dplyr)
 library(plotly)
+library(leaflet)
 
+source("Interactive_page_1.R")
 source("interactive_page_3.R")
 source("interactive_page_2.R")
 source("summary_table_page.R")
@@ -27,5 +29,11 @@ server <- function(input, output) {
   #Summary Table for summary_table page
   output$summary_table <- DT::renderDataTable({ 
     return(sum_tb(cali_hs_sat_zip_df))
+  })
+  
+  output$map_vis <- renderLeaflet({
+    return(map_gen(
+      input$map_vis_type, input$map_vis_year
+    ))
   })
 }

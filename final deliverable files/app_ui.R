@@ -37,7 +37,7 @@ page_one <- tabPanel(
   page_one_mainpanel
 )
 
-page_two <- fluidPage(
+page_two <- tabPanel(
   h1("Summary Table"),
   tags$p(textInput(
     label = NULL,
@@ -46,11 +46,6 @@ page_two <- fluidPage(
   tableOutput(
     outputId = "summary_table"
   )
-)
-
-page_three <- tabPanel(
-  third_page_sidebar,
-  third_page_main
 )
 
 page_six_sidepanel <- sidebarPanel(
