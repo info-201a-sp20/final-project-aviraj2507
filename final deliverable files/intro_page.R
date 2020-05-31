@@ -1,5 +1,7 @@
 # Introduction Page
 
+information <- list()
+
 information$overview <- "For our project, our domain of interest is to observe
 the transition of standardized tests being a requirement for admission by
 universities. Specifically, we have narrowed our scope to analyze the 

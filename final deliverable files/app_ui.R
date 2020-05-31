@@ -6,15 +6,23 @@ library(DT)
 
 rm(list = ls())
 
+source("intro_page.R")
+source("summary_takeaway_page.R")
+source("interactive_page_3.R")
+source("interactive_page_2.R")
+source("summary_table_page.R")
+
 page_one_sidepanel <- sidebarPanel(
+  "Contents",
   selectInput(
-    h2("Contents:"),
+    "Choose from the following options:",
     choices = list("Purpose of the project" = "purpose",
                    "About the project" = "about",
                    "Research" = "research")
   )
 )
 page_one_mainpanel <- mainPanel(
+  "Overview of the Project",
   tags$p(textInput(
     inputId = "overview"
   )),

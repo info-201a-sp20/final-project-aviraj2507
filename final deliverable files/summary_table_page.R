@@ -27,7 +27,8 @@ summary_table <- cali_hs_sat_zip_df %>%
 # how to make datatable in shiny
 #output$foo <- DT::renderDataTable({ data })
 
-sum_tb <- DT::datatable(summary_table)
-sum_tb
+sum_tb <- function(data) {
+  return(datatable(summary_table))
+}
 
 sum_table <- "descrition of the summary table"
