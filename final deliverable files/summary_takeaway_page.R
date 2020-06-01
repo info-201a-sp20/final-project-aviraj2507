@@ -15,19 +15,17 @@ than other places. Students near Fresno seem to have significantly lower perform
 than others."
 
 #use tags$p in ui file to write it in the form of a paragraph
-takeaways$second_visualisation <- "From this scatterplot, we observe a linear relationship between SAT scores and income.
-We can easily follow the trendline to see a trend up in SAT scores as median zip code income increases. The correlation 
-between the two is `r corr_sat_income`. Based on the trendline, there seemed to be several high schools that outperformed
+takeaways$second_visualisation <- "From this scatterplot, we observe a positive linear relationship between SAT scores and 
+median income. Based on the trendline, there seemed to be several high schools that outperformed
 their expected SAT score based on their zip code median income, as well as some underperforming richer high schools. 
-To the top right of the graph, schools that are well above the trendline shows the schools despite having access to more
-resources, performed about as well with other schools with less resources."
+For example in the Los Angelos area zip code (900) the school with the highest median income (86.573k) 
+only had a score 1221 while the school with the lowest (21.009k) had a score of 1129. Another interesting trend is 
+that some schools despite having the same median income had a wide range in SAT scores. In the San Francisco area 
+zip code (941) schools with a median income of around 121k had a range of scores 1725 to 1089."
 
 #use tags$p in ui file to write it in the form of a paragraph
-takeaways$third_visualisation <- "From the bar chart, we observe an upward trend as SAT score and median income 
-increase. Towards the 1500 range in SAT score, not only do we see a concentration of data but the color key reflects
-that many of the zip codes are 955xx which is Humboldt county. Towards the upper boundary of highest SAT scores
-we see more 945xx zip codes which is Alameda county in the Bay area. This further confirms what we see from our
-map visualization."
+takeaways$third_visualisation <- "From the bar chart, we a see a linear trend between income bin and 
+Total SAT score that transcends all sections of the test. "
 
 #use tags$p in ui file to write it in the form of a paragraph
 takeaways$conclusion <- "Still to decide the conclusion"

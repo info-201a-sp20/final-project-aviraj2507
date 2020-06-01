@@ -17,10 +17,10 @@ plot_scatter <- function(data,  search = "", xvar = "TotalSatScore", yvar = "Med
                mode="markers", 
                marker = list(
                  opacity = .4, 
-                 size = 10
+                 size = 8
                )) %>% 
-    layout(xaxis = list(range = c(0, xmax), title = xvar), 
-           yaxis = list(range = c(0, ymax), title = yvar)
+    layout(xaxis = list(range = c(0, xmax), title = "High School SAT Score"), 
+           yaxis = list(range = c(0, ymax), title = "Median Household Income (by zip code)")
     )
   return(p)
 }
@@ -31,13 +31,15 @@ scatter_sidebar_content <- sidebarPanel(
 
 
 scatter_main_content <- mainPanel(
+  p("The purpose of this visualization is to plot HS average SAT score and median income by zip code.
+    We have an input function for users to visualize specifc areas by zip code."),
   plotlyOutput("scatter")
 )
 
 page_four <- tabPanel(
   "Scatter Plot",
   
-  titlePanel("Total SAT Score v.s. Median Household Income"),
+  titlePanel("High School SAT Score v.s. Median Household Income"),
   
   sidebarLayout(
      scatter_sidebar_content,
