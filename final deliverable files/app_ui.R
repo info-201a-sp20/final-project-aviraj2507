@@ -39,10 +39,6 @@ page_one <- tabPanel(
 
 page_two <- tabPanel(
   "Summary Table",
-  tags$p(textInput(
-    label = NULL,
-    inputId = "sum_table"
-  )),
   dataTableOutput(
     outputId = "summary_table"
   )
