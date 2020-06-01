@@ -12,6 +12,8 @@ cali_hs_sat_zip_df <- read.csv("../data/cali_hs_sat_zip.csv",
 )
 
 cali_hs_sat_zip_df <- na.omit(cali_hs_sat_zip_df)
+
+
 server <- function(input, output) {
   #Income Bar for Interactive Page 3 -- EJ
   output$income_bar <- renderPlotly(
