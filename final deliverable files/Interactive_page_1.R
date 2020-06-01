@@ -57,8 +57,8 @@ map_gen <- function(type, year) {
 }
 
 page_three <- tabPanel(
-  h1("Map"),
-  h1("Map of Percentage of Student that passed SAT in Counties"),
+  "Map",
+  h3("Map of Percentage of Student that passed SAT in Counties"),
   sidebarLayout(
     sidebarPanel(
       selectInput(

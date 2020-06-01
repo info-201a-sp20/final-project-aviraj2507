@@ -7,6 +7,7 @@ source("Interactive_page_1.R")
 source("interactive_page_3.R")
 source("interactive_page_2.R")
 source("summary_table_page.R")
+source("overview.R")
 
 cali_hs_sat_zip_df <- read.csv("../data/cali_hs_sat_zip.csv",
                                stringsAsFactors
@@ -35,5 +36,9 @@ server <- function(input, output) {
     return(map_gen(
       input$map_vis_type, input$map_vis_year
     ))
+  })
+  
+  output$overview <- renderUI({
+    return(overview_gen(input$p1_content))
   })
 }
