@@ -94,6 +94,8 @@ third_page_sidebar <- sidebarPanel(
                step = 1000))
 
 third_page_main <- mainPanel(
-  plotlyOutput("income_bar"),
+  plotlyOutput(
+    outputId = "income_bar"
+  ),
   titlePanel("SAT Scores binned by Income")
 )

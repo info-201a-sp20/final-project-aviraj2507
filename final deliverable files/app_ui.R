@@ -23,12 +23,11 @@ page_one_sidepanel <- sidebarPanel(
 )
 page_one_mainpanel <- mainPanel(
   "Overview of the Project",
-  tags$p(textInput(
-    inputId = "overview",
-    label = NULL
+  tags$p(textOutput(
+    outputId = "overview"
   )),
   tags$img(src = "https://www.fccnn.com/incoming/4676816-7wuexj-SAT/alternates/BASE_LANDSCAPE/SAT"),
-  tags$img(src = "https://sierranewsonline.com/wp-content/uploads/2018/01/California-Department-of-Education-e1516666248141.png")
+  tags$img(src = "https://sierranewsonline.com/wp-content/uploads/2018/01/California-Department-of-Education-e1516666248141.png",)
 )
 
 page_one <- tabPanel(
@@ -37,18 +36,15 @@ page_one <- tabPanel(
   page_one_mainpanel
 )
 
-page_two <- fluidPage(
+page_two <- tabPanel(
   h1("Summary Table"),
-  tags$p(textInput(
-    label = NULL,
-    inputId = "sum_table"
-  )),
-  tableOutput(
+    dataTableOutput(
     outputId = "summary_table"
   )
 )
 
 page_three <- tabPanel(
+  "Third Visualisation",
   third_page_sidebar,
   third_page_main
 )
@@ -59,30 +55,29 @@ page_six_sidepanel <- sidebarPanel(
     h2("Contents:"),
     choices = list("Summary Table" = "summary_table",
                    "Map" = "first_visualisation",
-                   "Column Chart" = "second_visualisation",
-                   "Scatter Plot" = "third_visualisation",
+                   "Scatter Plot" = "second_visualisation",
+                   "Bar Chart" = "third_visualisation",
                    "Conclusion" = "conclusion")
   )
 )
 
 page_six_mainpanel <- mainPanel(
-  tags$p(textInput(
-    inputId = "takeaway",
-    label = NULL
+  tags$p(textOutput(
+    outputId = "takeaway",
   ))
 )
 
-# page_six <- tabPanel(
-#   h1("Project Takeaways"),
-#   page_five_sidepanel,
-#   page_five_mainpanel
-# )
+page_six <- tabPanel(
+  h1("Project Takeaways"),
+  page_six_sidepanel,   
+  page_six_mainpanel
+)
 ui <- navbarPage(
   "Standardised Testing and Median Household Income in California",
   page_one,
   page_two,
   page_three,
-  page_four
+  page_four,
   # page_five,
-  # page_six
+  page_six
 )
