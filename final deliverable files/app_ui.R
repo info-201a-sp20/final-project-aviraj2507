@@ -10,6 +10,7 @@ source("summary_takeaway_page.R")
 source("interactive_page_3.R")
 source("interactive_page_2.R")
 source("summary_table_page.R")
+source("overview.R")
 
 page_one_sidepanel <- sidebarPanel(
   "Contents",
@@ -17,38 +18,38 @@ page_one_sidepanel <- sidebarPanel(
     "p1_content",
     "Choose from the following options:",
     choices = list("Purpose of the project" = "purpose",
-                   "About the project" = "about",
-                   "Research" = "research")
-  )
+                   "Data source" = "data",
+                   "Relavent Research" = "research"),
+    
+  ),
+  img(src = "https://www.fccnn.com/incoming/4676816-7wuexj-SAT/alternates/BASE_LANDSCAPE/SAT",
+      width = "70vw"),
+  img(src = "https://sierranewsonline.com/wp-content/uploads/2018/01/California-Department-of-Education-e1516666248141.png",
+      width = "70vw")
 )
 page_one_mainpanel <- mainPanel(
-  "Overview of the Project",
-  tags$p(textInput(
-    inputId = "overview",
-    label = NULL
-  )),
-  tags$img(src = "https://www.fccnn.com/incoming/4676816-7wuexj-SAT/alternates/BASE_LANDSCAPE/SAT"),
-  tags$img(src = "https://sierranewsonline.com/wp-content/uploads/2018/01/California-Department-of-Education-e1516666248141.png")
+  uiOutput("overview")
 )
 
 page_one <- tabPanel(
-  h1("Project Overview"),
+  "Project Overview",
   page_one_sidepanel,
   page_one_mainpanel
 )
 
-page_two <- fluidPage(
-  h1("Summary Table"),
+page_two <- tabPanel(
+  "Summary Table",
   tags$p(textInput(
     label = NULL,
     inputId = "sum_table"
   )),
-  tableOutput(
+  dataTableOutput(
     outputId = "summary_table"
   )
 )
 
 page_three <- tabPanel(
+  "Bar Chart",
   third_page_sidebar,
   third_page_main
 )
@@ -59,30 +60,31 @@ page_six_sidepanel <- sidebarPanel(
     h2("Contents:"),
     choices = list("Summary Table" = "summary_table",
                    "Map" = "first_visualisation",
-                   "Column Chart" = "second_visualisation",
-                   "Scatter Plot" = "third_visualisation",
+                   "Scatter Plot" = "second_visualisation",
+                   "Bar Chart" = "third_visualisation",
                    "Conclusion" = "conclusion")
   )
 )
 
 page_six_mainpanel <- mainPanel(
-  tags$p(textInput(
-    inputId = "takeaway",
-    label = NULL
+  tags$p(textOutput(
+    outputId = "takeaway",
   ))
 )
 
-# page_six <- tabPanel(
-#   h1("Project Takeaways"),
-#   page_five_sidepanel,
-#   page_five_mainpanel
-# )
+page_six <- tabPanel(
+  "Project Takeaways",
+  page_six_sidepanel,   
+  page_six_mainpanel
+)
 ui <- navbarPage(
   "Standardised Testing and Median Household Income in California",
   page_one,
   page_two,
+  page_map,
   page_three,
-  page_four
+  page_four,
   # page_five,
-  # page_six
+  page_six
 )
+

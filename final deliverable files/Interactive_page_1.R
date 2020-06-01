@@ -6,10 +6,11 @@ library("tidyr")
 library("ggplot2")
 library("leaflet")
 library("lintr")
-
+library("shiny")
 
 # This function cleans up the raw data and returns a map.
-map_gen <- function(pop_to_plot) {
+map_gen <- function(type, year) {
+  data_to_plot = paste0("Pct", type, "Benchmark", year)
   ca_sat19 <- read.csv("../data/ca-sat19.csv", stringsAsFactors = F)
   ca_income <- read.csv("../data/ca-county_income.csv", stringsAsFactors = F)
   ca_school <- read.csv("../data/ca-pubschls.csv", stringsAsFactors = F)
@@ -48,10 +49,34 @@ map_gen <- function(pop_to_plot) {
       popup = ~ paste0(
         NameClean, " County", "<br>",
         vis_data,
-        "% of 12th grade student passed benchmark."
+        "% of student passed benchmark."
       )
     ) %>%
-    addLegend("topright", pal, values = ~ vis_data,
-              title = "% Student Passed BM",
+    addLegend("topright", pal, values = ~ vis_data, title = "",
               labFormat = labelFormat(suffix = "%"), opacity = 1)
 }
+
+page_map <- tabPanel(
+  "Map",
+  h3("Map of Percentage of Student that passed SAT in Counties"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(
+        "map_vis_type",
+        "Type of test",
+        list("Evidence-Based Reading and Writing" = "ERW",
+             "Math" = "Math",
+             "Combined" = "Both")
+      ),
+      radioButtons(
+        "map_vis_year",
+        "Year of student",
+        list("12th Grade" = 12,
+             "11th Grade" = 11)
+      )
+    ),
+    mainPanel(
+      leafletOutput("map_vis")
+    )
+  )
+)
