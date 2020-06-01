@@ -79,6 +79,67 @@ binned_income_interactive <- function(dataframe, bin, yvar = "AvgTotalSATScore")
 
 binned_income_interactive(cali_hs_sat_zip_df, 25000, yvar = "AvgTotalSATScore")
 
+binned_income_summary <- function(dataframe, bin, yvar = "AvgTotalSATScore"){
+  df <- dataframe %>%
+    filter(MedianHouseholdIncome != is.na(MedianHouseholdIncome)) %>%
+    mutate(income_bin_primary =
+             if(min(floor(MedianHouseholdIncome / bin)) == 0){
+               (floor(MedianHouseholdIncome / bin) + 1)
+             } else {
+               (floor(MedianHouseholdIncome / bin))
+             }) %>%
+    mutate(income_bin =
+             ifelse(income_bin_primary > 10,
+                    10,
+                    income_bin_primary)
+    ) %>%
+    group_by(income_bin) %>%
+    summarize(AvgTotalSATScore = mean(TotalSatScore),
+              AvgRead = mean(AvgScrRead),
+              AvgMath = mean(AvgScrMath),
+              AvgWrite = mean(AvgScrWrite))
+  
+  max_bin <- df %>%
+    filter(income_bin == max(income_bin)) %>%
+    pull(income_bin)
+  
+  max_bin_amount <- (max_bin - 1) * bin
+  
+  max_bin_score <- df %>%
+    filter(income_bin == max(income_bin)) %>%
+    pull(yvar)
+  
+  min_bin_score <- df %>%
+    filter(income_bin == min(income_bin)) %>%
+    pull(yvar)
+  
+  message1 <- paste0("Income Bin 1 is Zip Codes with Median
+                   Household Income (MHI) under $",
+                   bin,
+                   ". Bin 2 is between $",
+                   bin,
+                   " and $",
+                   round(2 * bin),
+                   " and so forth. Income Bin ",
+                   max_bin,
+                   " is Zip Codes with MHI
+                   above $",
+                   max_bin_amount,
+                   "."
+                    )
+  message2 <- paste0("The test score difference 
+                     between Income Bin 1 and
+                     Income Bin ",
+                     max_bin,
+                     " is ",
+                     round(max_bin_score - min_bin_score),
+                     ".")
+  
+  message <- paste(message1, "\n", message2)
+  
+  return(message)  
+}
+
 third_page_sidebar <- sidebarPanel(
   selectInput("y_var_bar", label = "SAT Score Breakdown",
               choices = list(
@@ -90,12 +151,18 @@ third_page_sidebar <- sidebarPanel(
                label = "Income Bin Breakdown",
                value = 25000,
                min = 10000,
-               max = 10000,
-               step = 1000))
+               max = 100000,
+               step = 5000),
+  p("In this panel, choose which portion of the test
+    you would like to measure, or if you would like to
+    show the total score of the SAT. You can also group
+    Zip Codes by Income, based on the bin number above."))
 
 third_page_main <- mainPanel(
   titlePanel("SAT Scores Binned by Income"),
   plotlyOutput(
     outputId = "income_bar"
-  )
+   ),
+  h3("Information about the Graph:"),
+  uiOutput("income_bin_summary")
 )

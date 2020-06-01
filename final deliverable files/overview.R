@@ -2,8 +2,14 @@ overview_purpose = "These days, more universities decided to waive SAT
           requirements in their undergraduate admission process. As UW students, 
           most of us have experience taking the SAT or the ACT at some point in our
           lives, thus choosing this topic. It is interesting to see this transition 
-          happening and it would be awesome if we can find a way to explain such transitions
-          with data collected across different demographic/socioeconomic groups."
+          happening and we hope we can find a way to explain such transitions
+          with data collected across different demographic/socioeconomic groups.
+          As colleges and universities place a high level of value on standardized
+          tests, often people of lower socioeconomic groups are unable to access 
+          resources that others are able to, such as SAT prep courses. We hope to
+          show you that standardized tests may contribute to social inequality as
+          they can more often represent one's socioeconomic status moreso than their
+          educational aptitude."
 income_url = "http://www.usa.com/rank/california-state--median-household-income--zip-code-rank.htm"
 
 r1_link = "https://www.racecounts.org/"

@@ -25,7 +25,10 @@ zip code (941) schools with a median income of around 121k had a range of scores
 
 #use tags$p in ui file to write it in the form of a paragraph
 takeaways$third_visualisation <- "From the bar chart, we a see a linear trend between income bin and 
-Total SAT score that transcends all sections of the test. "
+Total SAT score that transcends all sections of the test. While only a small difference, zip codes
+in lower income bins (ie of lower socioeconomic status) tend to perform worse on math parts of the
+exam. As we change between the tests, the higher income bins stay relatively the same across all tests,
+but the lower bins perform worse on math."
 
 #use tags$p in ui file to write it in the form of a paragraph
 takeaways$conclusion <- "Still to decide the conclusion"
