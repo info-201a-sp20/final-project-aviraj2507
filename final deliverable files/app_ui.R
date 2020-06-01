@@ -81,6 +81,7 @@ ui <- navbarPage(
   "Standardised Testing and Median Household Income in California",
   page_one,
   page_two,
+  page_map,
   page_three,
   page_four,
   # page_five,

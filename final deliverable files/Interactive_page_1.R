@@ -56,7 +56,7 @@ map_gen <- function(type, year) {
               labFormat = labelFormat(suffix = "%"), opacity = 1)
 }
 
-page_three <- tabPanel(
+page_map <- tabPanel(
   "Map",
   h3("Map of Percentage of Student that passed SAT in Counties"),
   sidebarLayout(
