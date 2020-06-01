@@ -4,8 +4,7 @@ overview_purpose = "These days, more universities decided to waive SAT
           lives, thus choosing this topic. It is interesting to see this transition 
           happening and it would be awesome if we can find a way to explain such transitions
           with data collected across different demographic/socioeconomic groups."
-irs_url = "https://www.irs.gov/statistics/soi-tax-stats-i
-ndividual-income-tax-statistics-2017-zip-code-data-soi"
+income_url = "http://www.usa.com/rank/california-state--median-household-income--zip-code-rank.htm"
 
 r1_link = "https://www.racecounts.org/"
 r2_link = "http://californiadatacollaborative.org/"
@@ -29,8 +28,8 @@ overview_gen = function(content) {
             href="https://www.cde.ca.gov/ds/sp/ai/"
             ),
           " as well as the ",
-          a("IRS website",
-            href=irs_url),".")
+          a("American Community Survey from 2010 - 2014",
+            href=income_url),".")
       )
     )
   } else if (content == "research") {

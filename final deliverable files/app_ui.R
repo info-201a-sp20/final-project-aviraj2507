@@ -49,7 +49,7 @@ page_two <- tabPanel(
 )
 
 page_three <- tabPanel(
-  "Third Visualisation",
+  "Bar Chart",
   third_page_sidebar,
   third_page_main
 )
