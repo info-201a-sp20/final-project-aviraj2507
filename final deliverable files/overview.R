@@ -20,7 +20,7 @@ overview_gen = function(content) {
   if (content == "purpose"){
     return(
       div(
-        h1("Purpose of our project"),
+        h1("Purpose of Our Project"),
         p(overview_purpose)
         )
     )

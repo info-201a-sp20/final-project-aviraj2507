@@ -17,8 +17,8 @@ page_one_sidepanel <- sidebarPanel(
   selectInput(
     "p1_content",
     "Choose from the following options:",
-    choices = list("Purpose of the project" = "purpose",
-                   "Data source" = "data",
+    choices = list("Purpose of Our Project" = "purpose",
+                   "Data Sources" = "data",
                    "Relavent Research" = "research"),
     
   ),

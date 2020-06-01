@@ -140,6 +140,11 @@ binned_income_summary <- function(dataframe, bin, yvar = "AvgTotalSATScore"){
   return(message)  
 }
 
+explanation <- "In the below graph, we attempt to answer how the average test
+    score differs when we group high schools by their area's 
+    Median Household Income. We also are trying to visualize any trends
+    between the different portions of the exam."
+
 third_page_sidebar <- sidebarPanel(
   selectInput("y_var_bar", label = "SAT Score Breakdown",
               choices = list(
@@ -160,6 +165,8 @@ third_page_sidebar <- sidebarPanel(
 
 third_page_main <- mainPanel(
   titlePanel("SAT Scores Binned by Income"),
+  h3("Questions and Explanation of the Information:"),
+  p(explanation),
   plotlyOutput(
     outputId = "income_bar"
    ),
