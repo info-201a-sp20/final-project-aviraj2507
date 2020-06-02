@@ -26,6 +26,12 @@ server <- function(input, output) {
                                      input$income_bin_var,
                                      yvar = input$y_var_bar))
   )
+  
+  output$income_bin_summary <- renderUI({
+    return(binned_income_summary(cali_hs_sat_zip_df,
+                                 input$income_bin_var,
+                                 yvar = input$y_var_bar))
+  })
   # SAT Score scatter for Interactive page 2 -- Brandon
   output$scatter <- renderPlotly({
     return(plot_scatter(cali_hs_sat_zip_df, input$search))
@@ -52,5 +58,5 @@ server <- function(input, output) {
   output$overview <- renderUI({
     return(overview_gen(input$p1_content))
   })
+  
 }
-

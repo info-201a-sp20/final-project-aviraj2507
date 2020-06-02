@@ -30,4 +30,7 @@ sum_tb <- function(data) {
   return(datatable(summary_table))
 }
 
-sum_table <- "descrition of the summary table"
+summ_table <- list()
+summ_table$sum_table <- "The summary table portrays how total SAT score and mean household income
+are different for different areas(Zip code) in California."
+

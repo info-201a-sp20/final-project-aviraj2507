@@ -19,7 +19,7 @@ plot_scatter <- function(data,  search = "", xvar = "TotalSatScore", yvar = "Med
                  opacity = .4, 
                  size = 8
                )) %>% 
-    layout(xaxis = list(range = c(0, xmax), title = "High School SAT Score"), 
+    layout(xaxis = list(range = c(0, 2400), title = "High School SAT Score"), 
            yaxis = list(range = c(0, ymax), title = "Median Household Income (by zip code)")
     )
   return(p)
