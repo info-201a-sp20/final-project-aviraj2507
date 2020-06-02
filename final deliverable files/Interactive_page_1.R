@@ -38,7 +38,7 @@ map_gen <- function(type, year) {
     ca_coord, c("NameClean" = "County")
   )
   pal <- colorNumeric(
-    palette = c("white", "navy"),
+    palette = c("white", "steelblue"),
     domain = ca_income_sat_loc$vis_data
   )
   map <- leaflet(ca_income_sat_loc) %>% addTiles()
