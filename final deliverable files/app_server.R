@@ -15,7 +15,7 @@ cali_hs_sat_zip_df <- read.csv("../data/cali_hs_sat_zip.csv",
                                stringsAsFactors
                                = FALSE
 )
-View(cali_hs_sat_zip_df)
+
 cali_hs_sat_zip_df <- na.omit(cali_hs_sat_zip_df)
 
 

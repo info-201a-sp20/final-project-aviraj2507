@@ -32,20 +32,26 @@ page_one_mainpanel <- mainPanel(
 )
 
 page_one <- tabPanel(
-  "Project Overview",
+  tags$div(
+    id = "test_color",
+  "Project Overview"),
   page_one_sidepanel,
   page_one_mainpanel
 )
 
 page_two <- tabPanel(
-  "Summary Table",
+  tags$div(
+    id = "test_color",
+    "Summary Table"),
   dataTableOutput(
     outputId = "summary_table"
   )
 )
 
 page_three <- tabPanel(
-  "Bar Chart",
+  tags$div(
+    id = "test_color",
+    "Bar Chart"),
   third_page_sidebar,
   third_page_main
 )
@@ -63,17 +69,21 @@ page_six_sidepanel <- sidebarPanel(
 )
 
 page_six_mainpanel <- mainPanel(
-  tags$p(textOutput(
+      textOutput(
     outputId = "takeaway",
   ))
-)
+
 
 page_six <- tabPanel(
-  "Project Takeaways",
+  tags$div(
+    id = "test_color",
+    "Project Takeaways"),
   page_six_sidepanel,   
   page_six_mainpanel
 )
-ui <- navbarPage(
+ui <- fluidPage(
+  includeCSS("style.css"),
+  navbarPage(
   "Standardised Testing and Median Household Income in California",
   page_one,
   page_two,
@@ -82,5 +92,5 @@ ui <- navbarPage(
   page_four,
   # page_five,
   page_six
-)
+))
 
