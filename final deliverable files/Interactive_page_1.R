@@ -76,6 +76,10 @@ page_map <- tabPanel(
       )
     ),
     mainPanel(
+      p("The purpose of this visualization is to highlight the 
+        potential relationship between geographical locations and the 
+        average SAT performace. Using map visualization, we can get a better 
+        insight on location vs. SAT performance. Here is the visualization:"),
       leafletOutput("map_vis")
     )
   )
