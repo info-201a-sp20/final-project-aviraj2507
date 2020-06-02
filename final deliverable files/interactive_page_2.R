@@ -39,8 +39,7 @@ scatter_main_content <- mainPanel(
 page_four <- tabPanel(
   tags$div( id = "test_color",
   "Scatter Plot"),
-  
-  titlePanel("High School SAT Score v.s. Median Household Income"),
+    titlePanel("High School SAT Score v.s. Median Household Income"),
   
   sidebarLayout(
      scatter_sidebar_content,

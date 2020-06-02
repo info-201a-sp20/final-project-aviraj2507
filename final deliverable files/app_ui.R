@@ -84,7 +84,7 @@ page_six <- tabPanel(
 ui <- fluidPage(
   includeCSS("style.css"),
   navbarPage(
-  "Standardised Testing and Median Household Income in California",
+  h4("Standardized Testing and Median Household Income in California"),
   page_one,
   page_two,
   page_map,
