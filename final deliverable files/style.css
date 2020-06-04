@@ -3,6 +3,22 @@ color: deepskyblue;
 }
 
 h4 {
-  color: black;
+  color: white;
  
+}
+
+#background_color {
+  background-color: darkblue;
+}
+
+h3 {
+  font-family: 'helvetica', cursive;
+  line-height: 1.1;
+  color: #1f77b4;
+}
+
+.navbar-static-top {
+  position: static;
+  margin-bottom: 0px;
+  background-color: #133C55;
 }

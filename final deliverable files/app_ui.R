@@ -52,6 +52,7 @@ page_three <- tabPanel(
   tags$div(
     id = "test_color",
     "Bar Chart"),
+  titlePanel("SAT Scores Binned by Income"),
   third_page_sidebar,
   third_page_main
 )
@@ -81,16 +82,16 @@ page_six <- tabPanel(
   page_six_sidepanel,   
   page_six_mainpanel
 )
+
 ui <- fluidPage(
   includeCSS("style.css"),
   navbarPage(
-  h4("Standardized Testing and Median Household Income in California"),
-  page_one,
-  page_two,
-  page_map,
-  page_three,
-  page_four,
-  # page_five,
-  page_six
-))
-
+    h4("Standardized Testing and Median Household Income in California"),
+    page_one,
+    page_two,
+    page_map,
+    page_three,
+    page_four,
+    # page_five,
+    page_six)
+)

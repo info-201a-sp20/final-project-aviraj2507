@@ -173,6 +173,11 @@ explanation <- "In the below graph, we attempt to answer how the average test
      Median Household Income. We also are trying to visualize any trends
     between the different portions of the exam."
 
+sidebar_info <- "In this panel, choose which portion of the test
+    you would like to measure, or if you would like to
+    show the total score of the SAT. You can also group
+    Zip Codes by Income, based on the bin number above."
+
 third_page_sidebar <- sidebarPanel(
   selectInput("y_var_bar",
     label = "SAT Score Breakdown",
@@ -190,19 +195,16 @@ third_page_sidebar <- sidebarPanel(
     max = 100000,
     step = 5000
   ),
-  p("In this panel, choose which portion of the test
-    you would like to measure, or if you would like to
-    show the total score of the SAT. You can also group
-    Zip Codes by Income, based on the bin number above.")
+  p(sidebar_info)
 )
 
 third_page_main <- mainPanel(
-  titlePanel("SAT Scores Binned by Income"),
+  includeCSS("style.css"),
   h3("Questions and Explanation of the Information:"),
   p(explanation),
   plotlyOutput(
     outputId = "income_bar"
   ),
   h3("Information about the Graph:"),
-  uiOutput("income_bin_summary")
+  uiOutput("income_bin_summary"),
 )
