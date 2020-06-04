@@ -1,8 +1,18 @@
 #test_color {
 color: deepskyblue;
+font-family: sans-serif;
+font-size: 20px;
+font-style: normal;
+border-bottom: 2;
 }
 
 h4 {
   color: black;
- 
+  font-size: 25px;
+  font-family: sans-serif;
+  font-style: normal;
+}
+
+#sixth_page_background {
+  background-image: url("https://lh3.googleusercontent.com/proxy/m__6AULWA7WgqM2rUuaPcxmRGRtkTGc3NCXyyIdVjhk6kL21CXwbHtU6u78jbqa43aBBM8cPcRS-zxBIqIw2mDrKztAzu8QLviC3XB9qIZgJWPbxXwxsxhnNCmPOwtvdDn_IyrB5roov1F0vTI7Cr_qRpTzynNk8E3w");
 }

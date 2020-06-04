@@ -30,6 +30,4 @@ in lower income bins (ie of lower socioeconomic status) tend to perform worse on
 exam. As we change between the tests, the higher income bins stay relatively the same across all tests,
 but the lower bins perform worse on math."
 
-#use tags$p in ui file to write it in the form of a paragraph
-takeaways$conclusion <- "Still to decide the conclusion"
 

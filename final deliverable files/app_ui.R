@@ -63,8 +63,7 @@ page_six_sidepanel <- sidebarPanel(
     choices = list("Summary Table" = "summary_table",
                    "Map" = "first_visualisation",
                    "Scatter Plot" = "second_visualisation",
-                   "Bar Chart" = "third_visualisation",
-                   "Conclusion" = "conclusion")
+                   "Bar Chart" = "third_visualisation")
   )
 )
 
@@ -75,6 +74,9 @@ page_six_mainpanel <- mainPanel(
 
 
 page_six <- tabPanel(
+  tags$body(
+    id = "sixth_page_background"
+  ),
   tags$div(
     id = "test_color",
     "Project Takeaways"),
