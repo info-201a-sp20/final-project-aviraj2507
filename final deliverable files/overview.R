@@ -1,3 +1,5 @@
+
+#text for purpose of the project
 overview_purpose = "These days, more universities decided to waive SAT
           requirements in their undergraduate admission process. As UW students, 
           most of us have experience taking the SAT or the ACT at some point in our
@@ -8,14 +10,18 @@ overview_purpose = "These days, more universities decided to waive SAT
           tests, often people of lower socioeconomic groups are unable to access 
           resources that others are able to, such as SAT prep courses. We hope to
           show you that standardized tests may contribute to social inequality as
-          they can more often represent one's socioeconomic status moreso than their
+          they can more often represent one's socioeconomic status more so than their
           educational aptitude."
+
+#links saved into variables for hyperlinks
 income_url = "http://www.usa.com/rank/california-state--median-household-income--zip-code-rank.htm"
 
 r1_link = "https://www.racecounts.org/"
 r2_link = "http://californiadatacollaborative.org/"
 r3_link = "https://www.lacountyartsedcollective.org/models-reso
 urces/resources/california-arts-education-data-project"
+
+#function that structures the page
 overview_gen = function(content) {
   if (content == "purpose"){
     return(

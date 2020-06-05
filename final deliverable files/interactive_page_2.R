@@ -25,11 +25,12 @@ plot_scatter <- function(data,  search = "", xvar = "TotalSatScore", yvar = "Med
   return(p)
 }
 
+#creates the side panel for the page
 scatter_sidebar_content <- sidebarPanel(
-  textInput("search", label = "Find a Zip code", value = "")
+  textInput("search", label = h2("Find a Zip code"), value = "")
 )
 
-
+#creates the main panel for the page
 scatter_main_content <- mainPanel(
   h3("Questions and Explanation of the Information:"),
   p("The purpose of this visualization is to plot HS average SAT score and median income by zip code.
@@ -37,6 +38,7 @@ scatter_main_content <- mainPanel(
   plotlyOutput("scatter")
 )
 
+#creates the page
 page_four <- tabPanel(
   tags$div( id = "test_color",
   "Scatter Plot"),

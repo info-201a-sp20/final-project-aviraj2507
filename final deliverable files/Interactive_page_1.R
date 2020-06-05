@@ -64,14 +64,14 @@ page_map <- tabPanel(
     sidebarPanel(
       selectInput(
         "map_vis_type",
-        "Type of test",
+        h2("Type of test"),
         list("Evidence-Based Reading and Writing" = "ERW",
              "Math" = "Math",
              "Combined" = "Both")
       ),
       radioButtons(
         "map_vis_year",
-        "Year of student",
+        h2("Year of student"),
         list("12th Grade" = 12,
              "11th Grade" = 11)
       )

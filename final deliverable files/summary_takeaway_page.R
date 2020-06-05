@@ -1,4 +1,4 @@
-
+#this file contains the function which structures the takeaway page
 
 takeaway_gen = function(content) {
   if (content == "summary_table"){

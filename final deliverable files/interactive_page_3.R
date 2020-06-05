@@ -168,6 +168,7 @@ binned_income_summary <- function(dataframe, bin, yvar = "AvgTotalSATScore") {
   return(message)
 }
 
+#information about the visualisation
 explanation <- "In the below graph, we attempt to answer how the average test
     score differs when we group high schools by their area's
      Median Household Income. We also are trying to visualize any trends
@@ -180,7 +181,7 @@ sidebar_info <- "In this panel, choose which portion of the test
 
 third_page_sidebar <- sidebarPanel(
   selectInput("y_var_bar",
-    label = "SAT Score Breakdown",
+    label = h2("SAT Score Breakdown"),
     choices = list(
       "Total" = "AvgTotalSATScore",
       "Reading" = "AvgRead",
@@ -189,7 +190,7 @@ third_page_sidebar <- sidebarPanel(
     )
   ),
   numericInput("income_bin_var",
-    label = "Income Bin Breakdown",
+    label = h2("Income Bin Breakdown"),
     value = 25000,
     min = 10000,
     max = 100000,

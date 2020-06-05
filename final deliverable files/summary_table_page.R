@@ -24,15 +24,10 @@ summary_table <- cali_hs_sat_zip_df %>%
   arrange(overall_sat_score)
 
 colnames(summary_table) <- c("ZIP Code", "Household Income", "Overall SAT Score")
-# how to make datatable in shiny
-#output$foo <- DT::renderDataTable({ data })
 
 sum_tb <- function(data) {
   return(datatable(summary_table))
 }
 
-summ_table <- list()
-summ_table$sum_intro <- "The summary table portrays how total SAT score and mean household income
-are different for different areas(Zip code) in California."
 
 

@@ -4,7 +4,7 @@ library(plotly)
 library(shiny)
 library(DT)
 
-
+#source files for all pages
 source("intro_page.R")
 source("summary_takeaway_page.R")
 source("interactive_page_3.R")
@@ -12,8 +12,9 @@ source("interactive_page_2.R")
 source("summary_table_page.R")
 source("overview.R")
 
+#first page sidepanel
 page_one_sidepanel <- sidebarPanel(
-  "Contents",
+  h2("Contents"),
   selectInput(
     "p1_content",
     "Choose from the following options:",
@@ -27,10 +28,13 @@ page_one_sidepanel <- sidebarPanel(
   img(src = "https://sierranewsonline.com/wp-content/uploads/2018/01/California-Department-of-Education-e1516666248141.png",
       width = "70vw")
 )
+
+#first page mainpanel
 page_one_mainpanel <- mainPanel(
   uiOutput("overview")
 )
 
+#first page
 page_one <- tabPanel(
   tags$div(
     id = "test_color",
@@ -39,6 +43,7 @@ page_one <- tabPanel(
   page_one_mainpanel
 )
 
+#second page
 page_two <- tabPanel(
   tags$div(
     id = "test_color",
@@ -48,6 +53,7 @@ page_two <- tabPanel(
   )
 )
 
+#third page
 page_three <- tabPanel(
   tags$div(
     id = "test_color",
@@ -57,6 +63,7 @@ page_three <- tabPanel(
   third_page_main
 )
 
+#sixth page sidepanel
 page_six_sidepanel <- sidebarPanel(
   selectInput(
     "p6_content",
@@ -68,11 +75,12 @@ page_six_sidepanel <- sidebarPanel(
   )
 )
 
+#sixth page mainpanel
 page_six_mainpanel <- mainPanel(
     uiOutput("takeaway")
 )
 
-
+#sixth page
 page_six <- tabPanel(
   tags$div(
     id = "test_color",
@@ -84,6 +92,7 @@ page_six <- tabPanel(
   page_six_mainpanel
 )
 
+#ui function used in app.R file
 ui <- fluidPage(
   includeCSS("style.css"),
   navbarPage(
@@ -93,7 +102,6 @@ ui <- fluidPage(
     page_map,
     page_three,
     page_four,
-    # page_five,
     page_six)
 )
 
