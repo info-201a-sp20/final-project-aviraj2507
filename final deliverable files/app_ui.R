@@ -69,9 +69,8 @@ page_six_sidepanel <- sidebarPanel(
 )
 
 page_six_mainpanel <- mainPanel(
-      textOutput(
-    outputId = "takeaway",
-  ))
+    uiOutput("takeaway")
+)
 
 
 page_six <- tabPanel(

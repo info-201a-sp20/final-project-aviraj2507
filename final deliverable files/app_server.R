@@ -42,11 +42,8 @@ server <- function(input, output) {
       return(datatable(summary_table))
   })
   
-  output$overview <- renderText({
-    return(summary[[input$p1_content]])
-  })
-  output$takeaway <- renderText({
-    return(takeaways[[input$p6_content]])
+  output$takeaway <- renderUI({
+    return(takeaway_gen(input$p6_content))
   })
   
   output$map_vis <- renderLeaflet({
