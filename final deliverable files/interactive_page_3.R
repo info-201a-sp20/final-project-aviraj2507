@@ -74,14 +74,14 @@ binned_income_interactive <- function(dataframe,
       "SAT Score"
     )
   }
-  
+
   plot <- plot_ly(df,
     x = df$income_bin,
     y = df[[yvar]],
     type = "bar",
-    hoverinfo = 'text',
-    text = ~paste0("</br> Income Group: $", (df$income_bin-1) * bin,
-                  " - $", df$income_bin * bin, 
+    hoverinfo = "text",
+    text = ~paste0("</br> Income Group: $", (df$income_bin - 1) * bin,
+                  " - $", df$income_bin * bin,
                   "</br> Avg Score:", round(df[[yvar]]))
   ) %>%
     layout(
@@ -94,7 +94,7 @@ binned_income_interactive <- function(dataframe,
         title = y_title,
         zeroline = FALSE,
         range = c(0, y_lim)
-      ) 
+      )
     )
 
   return(plot)
@@ -203,7 +203,7 @@ third_page_sidebar <- sidebarPanel(
   p(sidebar_info)
 )
 
-options(scipen=999)
+options(scipen = 999)
 
 third_page_main <- mainPanel(
   includeCSS("style.css"),
@@ -215,4 +215,3 @@ third_page_main <- mainPanel(
   h3("Information about the Graph:"),
   uiOutput("income_bin_summary"),
 )
-

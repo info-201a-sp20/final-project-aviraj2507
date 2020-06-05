@@ -6,8 +6,8 @@ library(DT)
 
 
 cali_hs_sat_zip_df <- read.csv("../data/cali_hs_sat_zip.csv",
-                               stringsAsFactors
-                               = FALSE
+  stringsAsFactors
+  = FALSE
 )
 
 # omits the NA values
@@ -23,11 +23,10 @@ summary_table <- cali_hs_sat_zip_df %>%
   ) %>%
   arrange(overall_sat_score)
 
-colnames(summary_table) <- c("ZIP Code", "Household Income", "Overall SAT Score")
+colnames(summary_table) <- c("ZIP Code",
+                             "Household Income",
+                             "Overall SAT Score")
 
 sum_tb <- function(data) {
   return(datatable(summary_table))
 }
-
-
-
