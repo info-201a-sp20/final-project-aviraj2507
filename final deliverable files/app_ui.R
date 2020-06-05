@@ -25,14 +25,11 @@ page_one_sidepanel <- sidebarPanel(
     ),
   ),
   img(
-    src = "https://www.fccnn.com/incoming/
-    4676816-7wuexj-SAT/alternates/BASE_LANDSCAPE/SAT",
+    src = "https://www.fccnn.com/incoming/4676816-7wuexj-SAT/alternates/BASE_LANDSCAPE/SAT",
     width = "70vw"
   ),
   img(
-    src = "https://sierranewsonline.com/wp-content/
-    uploads/2018/01/
-    California-Department-of-Education-e1516666248141.png",
+    src = "https://sierranewsonline.com/wp-content/uploads/2018/01/California-Department-of-Education-e1516666248141.png",
     width = "70vw"
   )
 )

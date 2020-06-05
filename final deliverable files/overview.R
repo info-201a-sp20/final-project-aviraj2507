@@ -14,13 +14,11 @@ overview_purpose <- "These days, more universities decided to waive SAT
           socioeconomic status more so than their educational aptitude."
 
 # links saved into variables for hyperlinks
-income_url <- "http://www.usa.com/rank/
-california-state--median-household-income--zip-code-rank.htm"
+income_url <- "http://www.usa.com/rank/california-state--median-household-income--zip-code-rank.htm"
 
 r1_link <- "https://www.racecounts.org/"
 r2_link <- "http://californiadatacollaborative.org/"
-r3_link <- "https://www.lacountyartsedcollective.org/models-reso
-urces/resources/california-arts-education-data-project"
+r3_link <- "https://www.lacountyartsedcollective.org/models-resources/resources/california-arts-education-data-project"
 
 # function that structures the page
 overview_gen <- function(content) {
@@ -29,8 +27,8 @@ overview_gen <- function(content) {
       div(
         h1("Purpose of Our Project"),
         p(overview_purpose),
-        img(src = "https://vpandey26.files.wordpress.com/
-            2019/03/n-college-acceptance-628x314.jpg?w=640")
+        img(src =
+              "https://vpandey26.files.wordpress.com/2019/03/n-college-acceptance-628x314.jpg?w=640")
       )
     )
   } else if (content == "data") {
@@ -48,9 +46,7 @@ overview_gen <- function(content) {
             href = income_url
           ), "."
         ),
-        img(src = "https://www.connectva.org/wp-content/
-            uploads/2014/10/uuidf5c0f158-233b-427c-9f3a-
-            769ddb11123bgroupId10157t14121755898705.jpeg")
+        img(src = "https://www.connectva.org/wp-content/uploads/2014/10/uuidf5c0f158-233b-427c-9f3a-769ddb11123bgroupId10157t14121755898705.jpeg")
       )
     )
   } else if (content == "research") {
