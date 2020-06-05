@@ -21,7 +21,7 @@ takeaway_gen = function(content) {
             )
           )
         ),
-        img(src = "https://vpandey26.files.wordpress.com/2019/03/n-college-acceptance-628x314.jpg?w=640")
+        img(src = "https://i.ibb.co/YpYkMgb/Screenshot-2020-06-04-at-8-51-36-PM.png")
       )
     )
   } else if (content == "first_visualisation") {
@@ -42,7 +42,8 @@ takeaway_gen = function(content) {
                than others."
             )
           )
-        )
+        ),
+        img(src = "https://i.ibb.co/xfGkSt1/Screenshot-2020-06-04-at-8-48-21-PM.png")
       )
     )
   } else if (content == "second_visualisation") {
@@ -70,7 +71,7 @@ takeaway_gen = function(content) {
               of scores 1725 to 1089."
             )
         ),
-        img(src = "https://i.ibb.co/sg7pysb/collage.png")
+        img(src = "https://i.ibb.co/Fh2z6N4/Screenshot-2020-06-04-at-8-49-36-PM.png")
         )
       )
     )
@@ -94,7 +95,7 @@ takeaway_gen = function(content) {
             )
           )
         ),
-          img(src = "https://i.ibb.co/sg7pysb/collage.png")
+          img(src = "https://i.ibb.co/s6KB9cS/Screenshot-2020-06-04-at-5-43-27-PM.png")
       )
     )
   }
