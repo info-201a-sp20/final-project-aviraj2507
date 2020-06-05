@@ -62,13 +62,19 @@ takeaway_gen = function(content) {
             p(
               "For example in the Los Angelos area zip code (900) the school with the highest median income (86.573k) 
               only had a score 1221 while the school with the lowest (21.009k) had a score of 1129. Another interesting trend is 
-              that some schools, despite having the same median income, had a wide range in SAT scores."
+              that some schools, despite having the same median income, had a wide range in SAT scores. In the San Francisco area zip code (941) schools with a median income of around 121k had a range
+              of scores between 1089 to 1725."
             )
           ),
           tags$li(
             p(
-              "In the San Francisco area zip code (941) schools with a median income of around 121k had a range
-              of scores between 1089 to 1725."
+              "When analyzing the Los Angelos area, there is a huge disparity between median income. The LA area consists of
+              diverse areas ranging from the affluent suburbs of Beverely Hills to extreme homelessness on Skid Row. Although 
+              most of the data confirms that there is a linear relationship between Median Income and SAT score, in some cases
+              Income and resources did not factor into SAT performance. This was also confirmed in the San Francisco area when
+              the range of scores varied despite having the same Median Income. With the the surge in tech companies in the 
+              Bay area the median income tended to be higher which could explain the disperition of scores. As schools tend to 
+              have higher median income the scores have a higher variance."
             )
         ),
         img(src = "https://i.ibb.co/Fh2z6N4/Screenshot-2020-06-04-at-8-49-36-PM.png")
