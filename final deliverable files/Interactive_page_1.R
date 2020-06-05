@@ -82,7 +82,11 @@ page_map <- tabPanel(
         potential relationship between geographical locations and the 
         average SAT performace. Using map visualization, we can get a better 
         insight on location vs. SAT performance. Here is the visualization:"),
-      leafletOutput("map_vis")
+      leafletOutput("map_vis"),
+      p("From the map visualization, we can see there seems to be a higher percentage
+      of students passing the performance benchmark near San Francisco and Sacramento
+      than other places. Students near Fresno seem to have significantly lower performance 
+      than others.")
     )
   )
 )
