@@ -19,9 +19,21 @@ takeaway_gen = function(content) {
              scores) are the areas with high average household incomes and higher SAT
              scores."
             )
+          ),
+          tags$li(
+            p(
+              "From the abovementioned takeaways, we can infer that the household income
+              impacts the overall SAT score for students. Moreover the ZIP codes starting
+              with 94(Los Angeles Area) were the areas with higher average SAT
+              score.The Los Angeles area is particularly famous for celebrities and hollywood.
+              The presence of these people impacts the average household income for that 
+              area, ultimatley impacting the average SAT score. Whereas, the areas with ZIP codes
+              starting with 93(King County) are less populated areas with small local businesses.
+              Hence, the average income is low leading to low average SAT scores."
+            )
           )
         ),
-        img(src = "https://i.ibb.co/YpYkMgb/Screenshot-2020-06-04-at-8-51-36-PM.png")
+        img(src = "https://i.ibb.co/DMvcgp6/Screenshot-2020-06-05-at-12-27-47-PM.png")
       )
     )
   } else if (content == "first_visualisation") {
