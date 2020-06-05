@@ -55,22 +55,31 @@ takeaway_gen <- function(content) {
           tags$li(
             p(
               "From the map visualization, we can
-              see there seems to be a higher percentage
-               of students passing the performance
-               benchmark near San Francisco and Sacramento
-               than other places."
+              see the average test performance of students
+              near San Francisco and Sacramento performes
+              better in the California area. In addition
+              students near Fresno and southern California
+              seems to relatively underperform."
             )
           ),
+          img(src = "https://i.ibb.co/xfGkSt1/Screenshot
+            -2020-06-04-at-8-48-21-PM.png",
+              style="width: 60vw"),
           tags$li(
             p(
-              "In addition, students near Fresno seem to
-              have significantly lower performance
-               than others."
+              "I suspect this might be explanined in the
+              area's average income as well as their 
+              population. Counties such as Colusa and Inyo
+              had a relativly low percentage of students 
+              passing the benchmark due to their geographical
+              location being far from other big cities. Also 
+              those cities has low populations comparing to 
+              others."
             )
-          )
-        ),
-        img(src = "https://i.ibb.co/xfGkSt1/Screenshot
-            -2020-06-04-at-8-48-21-PM.png")
+          ),
+          img(src = "https://i.ibb.co/RvZ1vLy/colusa.png"),
+          img(src = "https://i.ibb.co/PhR3MHc/inyo.png")
+        )
       )
     )
   } else if (content == "second_visualisation") {
