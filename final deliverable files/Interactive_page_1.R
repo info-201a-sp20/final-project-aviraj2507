@@ -59,7 +59,7 @@ map_gen <- function(type, year) {
 page_map <- tabPanel(
   tags$div( id = "test_color",
     "Map"),
-  h3("Map of Percentage of Student that passed SAT in Counties"),
+  titlePanel("Map of Percentage of Students That Passed SAT by Counties"),
   sidebarLayout(
     sidebarPanel(
       selectInput(
@@ -77,6 +77,7 @@ page_map <- tabPanel(
       )
     ),
     mainPanel(
+      h3("Questions and Explanation of the Information:"),
       p("The purpose of this visualization is to highlight the 
         potential relationship between geographical locations and the 
         average SAT performace. Using map visualization, we can get a better 

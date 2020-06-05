@@ -21,7 +21,8 @@ overview_gen = function(content) {
     return(
       div(
         h1("Purpose of Our Project"),
-        p(overview_purpose)
+        p(overview_purpose),
+        img(src = "https://vpandey26.files.wordpress.com/2019/03/n-college-acceptance-628x314.jpg?w=640")
         )
     )
   } else if (content == "data") {
@@ -35,7 +36,8 @@ overview_gen = function(content) {
             ),
           " as well as the ",
           a("American Community Survey from 2010 - 2014",
-            href=income_url),".")
+            href=income_url),"."),
+        img(src = "https://www.connectva.org/wp-content/uploads/2014/10/uuidf5c0f158-233b-427c-9f3a-769ddb11123bgroupId10157t14121755898705.jpeg")
       )
     )
   } else if (content == "research") {
@@ -74,9 +76,11 @@ overview_gen = function(content) {
             of water rate changes."
             )
           )
-        )
+        ),
+        img(src = "https://i.ibb.co/sg7pysb/collage.png")
       )
     )
     
   }
 }
+
