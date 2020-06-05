@@ -5,17 +5,17 @@ takeaway_gen = function(content) {
     return(
       div(
         h1("Takeaways from Summary Table:"),
-        tags$ol(
+        tags$ul(
           tags$li(
             p(
-            "we can clearly observe that zip codes in the beggining 
+            "From the summary table, we can clearly observe that zip codes in the beggining 
             (low SAT scores)of the list are the areas with low average 
             household income."
             )
           ),
           tags$li(
             p(
-            "whereas zip codes towards the end of the list(high SAT  
+            "The zip codes towards the end of the list(high SAT  
              scores) are the areas with high average household incomes and higher SAT
              scores."
             )
@@ -28,7 +28,7 @@ takeaway_gen = function(content) {
     return(
       div(
         h1("Takeaways from the Map:"),
-        tags$ol(
+        tags$ul(
           tags$li(
             p(
               "From the map visualization, we can see there seems to be a higher percentage
@@ -48,8 +48,8 @@ takeaway_gen = function(content) {
   } else if (content == "second_visualisation") {
     return(
       div(
-        h1("Takeaway from the Scatterplot"),
-        tags$ol(
+        h1("Takeaways from the Scatterplot"),
+        tags$ul(
           tags$li(
             p(
               "From this scatterplot, we observe a positive linear relationship between SAT scores and 
@@ -78,8 +78,8 @@ takeaway_gen = function(content) {
   } else if (content == "third_visualisation") {
     return(
       div(
-        h1("Takeaway from the Bar Chart"),
-        tags$ol(
+        h1("Takeaways from the Bar Chart"),
+        tags$ul(
           tags$li(
             p(
               "From the bar chart, we a see a linear trend between income bin and 
