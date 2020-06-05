@@ -48,6 +48,11 @@ page_two <- tabPanel(
   tags$div(
     id = "test_color",
     "Summary Table"),
+  titlePanel("Table of California Zip Codes, Income, and SAT Scores"),
+  h3("Information About the Table:"),
+  p("In this tab, we have organized economic data and SAT scores 
+    from California High Schools and grouped them by Zip Code. You
+    can arrange the data or search for a specific Zip Code."),
   dataTableOutput(
     outputId = "summary_table"
   )
