@@ -41,6 +41,10 @@ h3 {
     background-color: #07161f;
 }
 
+#map_vis {
+    margin: 10px 0;
+}
+
 p {
   font-size: 15px;
   font-family: sans-serif;
