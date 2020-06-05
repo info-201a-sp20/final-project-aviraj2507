@@ -65,9 +65,9 @@ overview_gen = function(content) {
               "California Arts Education Data Project",
               href=r3_link
             ),
-            ": The Data Project is designed to increase participation in arts education 
-            across the state by analyzing and reporting school-level data on arts educa
-            tion courses and grades 6 through 12 enrollment."
+            ": The Data Project is designed to increase participation in arts education
+            across the state by analyzing and reporting school-level data on arts
+            education courses and grades 6 through 12 enrollment."
             )
           ),
           tags$li(
@@ -75,10 +75,10 @@ overview_gen = function(content) {
               "California Data Collaborative",
               href=r2_link
             ),
-            ": Their analytics help water managers plan for and achieve their new water e
-            fficiency goals. CaDC tools make use of agency and external data to assist sta
-            ff with tasks like understanding water efficiency in their service area, analy
-            zing the water savings of water efficiency rebates, and forecasting the impact
+            ": Their analytics help water managers plan for and achieve their new water 
+            efficiency goals. CaDC tools make use of agency and external data to assist
+            staff with tasks like understanding water efficiency in their service area,
+            analyzing the water savings of water efficiency rebates, and forecasting the impact
             of water rate changes."
             )
           )

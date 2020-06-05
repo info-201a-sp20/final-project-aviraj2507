@@ -33,11 +33,11 @@ scatter_sidebar_content <- sidebarPanel(
 #creates the main panel for the page
 scatter_main_content <- mainPanel(
   h3("Questions and Explanation of the Information:"),
-  p("The purpose of this visualization is to plot HS average SAT scores and median income by zip code.
+  p("The purpose of this visualization is to plot high school average SAT scores and median income by zip code.
     This is to visualize any particular trends among specific zip codes."),
   plotlyOutput("scatter"),
   h3("Information about the Plot:"),
-  p("By referenecing our summary table, the user is able to input the first three numbers of any zip
+  p("By referenecing our summary table, the user is able to input the first three digits of any zip
   code of a high school to find trends in specific areas across California.")
 )
 
