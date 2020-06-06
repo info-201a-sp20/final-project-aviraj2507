@@ -11,13 +11,13 @@ library("shiny")
 # This function cleans up the raw data and returns a map.
 map_gen <- function(type, year) {
   data_to_plot <- paste0("Pct", type, "Benchmark", year)
-  ca_sat19 <- read.csv("../data/ca-sat19.csv",
+  ca_sat19 <- read.csv("data/ca-sat19.csv",
     stringsAsFactors = F
   )
-  ca_income <- read.csv("../data/ca-county_income.csv",
+  ca_income <- read.csv("data/ca-county_income.csv",
     stringsAsFactors = F
   )
-  ca_school <- read.csv("../data/ca-pubschls.csv",
+  ca_school <- read.csv("data/ca-pubschls.csv",
     stringsAsFactors = F
   )
 

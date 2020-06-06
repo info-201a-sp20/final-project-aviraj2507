@@ -10,9 +10,9 @@ rm(list = ls())
 
 # This function cleans up the raw data and returns a map.
 map_gen <- function() {
-  ca_sat19 <- read.csv("../data/ca-sat19.csv", stringsAsFactors = F)
-  ca_income <- read.csv("../data/ca-county_income.csv", stringsAsFactors = F)
-  ca_school <- read.csv("../data/ca-pubschls.csv", stringsAsFactors = F)
+  ca_sat19 <- read.csv("../final deliverable files/data/ca-sat19.csv", stringsAsFactors = F)
+  ca_income <- read.csv("../final deliverable files/data/ca-county_income.csv", stringsAsFactors = F)
+  ca_school <- read.csv("../final deliverable files/data/ca-pubschls.csv", stringsAsFactors = F)
 
   ca_coord <- select(ca_school, Latitude, Longitude, County) %>%
     group_by(County) %>%

@@ -5,7 +5,7 @@ library(ggplot2)
 library(plotly)
 library(shiny)
 
-cali_hs_sat_zip_df <- read.csv("../data/cali_hs_sat_zip.csv",
+cali_hs_sat_zip_df <- read.csv("data/cali_hs_sat_zip.csv",
   stringsAsFactors
   = FALSE
 )

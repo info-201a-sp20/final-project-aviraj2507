@@ -7,7 +7,7 @@ library(plotly)
 rm(list = ls())
 
 # reads in the csv files and converts into a dataframe
-data <- cali_hs_sat_zip_df <- read.csv("../data/cali_hs_sat_zip.csv",
+data <- cali_hs_sat_zip_df <- read.csv("../final deliverable files/data/cali_hs_sat_zip.csv",
   stringsAsFactors
   = FALSE
 )

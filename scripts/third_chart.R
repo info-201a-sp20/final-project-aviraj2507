@@ -6,19 +6,19 @@ library(ggplot2)
 rm(list = ls())
 
 # Getting the datasets
-cali_sat <- read.csv("../data/ca-sat15.csv",
+cali_sat <- read.csv("../final deliverable files/data/ca-sat15.csv",
   stringsAsFactors = FALSE
 )
 
-cali_school_info <- read.csv("../data/ca-pubschls.csv",
+cali_school_info <- read.csv("../final deliverable files/data/ca-pubschls.csv",
   stringsAsFactors = FALSE
 )
 
-cali_county_income <- read.csv("../data/ca-county_income.csv",
+cali_county_income <- read.csv("../final deliverable files/data/ca-county_income.csv",
   stringsAsFactors = FALSE
 )
 
-cali_zip <- read.csv("../data/ca-zip-mhi.csv",
+cali_zip <- read.csv("../final deliverable files/data/ca-zip-mhi.csv",
   stringsAsFactors = FALSE
 )
 # Source is http://www.usa.com/rank/california-state--median-household-income--zip-code-rank.html
@@ -82,7 +82,7 @@ names(cali_hs_sat_zip)[7] <- "MedianHouseholdIncome"
 
 # Beginning Third Chart
 
-cali_hs_sat_zip_df <- read.csv("../data/cali_hs_sat_zip.csv",
+cali_hs_sat_zip_df <- read.csv("../final deliverable files/data/cali_hs_sat_zip.csv",
   stringsAsFactors
   = FALSE
 )

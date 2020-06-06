@@ -5,7 +5,7 @@ library(dplyr)
 rm(list = ls())
 
 #reads in csv file to convert into a dataframe
-cali_hs_sat_zip_df <- read.csv("../data/cali_hs_sat_zip.csv",
+cali_hs_sat_zip_df <- read.csv("../final deliverable files/data/cali_hs_sat_zip.csv",
   stringsAsFactors
   = FALSE
 )
